@@ -19,6 +19,7 @@
 		7E2D47B51BF02B5100FDEA98 /* TelaCadastro.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E2D47B41BF02B5100FDEA98 /* TelaCadastro.swift */; };
 		7E2D47B71BF02B7600FDEA98 /* TelaLogin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E2D47B61BF02B7600FDEA98 /* TelaLogin.swift */; };
 		7E2D47B91BF044FF00FDEA98 /* CSCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E2D47B81BF044FF00FDEA98 /* CSCell.swift */; };
+		7EFB8B261BF142EF0086F37E /* server_api_min.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EFB8B251BF142EF0086F37E /* server_api_min.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +58,7 @@
 		7E2D47B41BF02B5100FDEA98 /* TelaCadastro.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TelaCadastro.swift; sourceTree = "<group>"; };
 		7E2D47B61BF02B7600FDEA98 /* TelaLogin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TelaLogin.swift; sourceTree = "<group>"; };
 		7E2D47B81BF044FF00FDEA98 /* CSCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CSCell.swift; sourceTree = "<group>"; };
+		7EFB8B251BF142EF0086F37E /* server_api_min.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = server_api_min.swift; path = servidor/server_api_min.swift; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +109,7 @@
 		7E2D477F1BF017C900FDEA98 /* tiCti */ = {
 			isa = PBXGroup;
 			children = (
+				7EFB8B251BF142EF0086F37E /* server_api_min.swift */,
 				7E2D47801BF017C900FDEA98 /* AppDelegate.swift */,
 				7E2D47821BF017C900FDEA98 /* ViewController.swift */,
 				7E2D47AE1BF0195000FDEA98 /* ScreenCell.swift */,
@@ -291,6 +294,7 @@
 				7E2D47B51BF02B5100FDEA98 /* TelaCadastro.swift in Sources */,
 				7E2D47AF1BF0195000FDEA98 /* ScreenCell.swift in Sources */,
 				7E2D47B71BF02B7600FDEA98 /* TelaLogin.swift in Sources */,
+				7EFB8B261BF142EF0086F37E /* server_api_min.swift in Sources */,
 				7E2D47831BF017C900FDEA98 /* ViewController.swift in Sources */,
 				7E2D47811BF017C900FDEA98 /* AppDelegate.swift in Sources */,
 				7E2D47B91BF044FF00FDEA98 /* CSCell.swift in Sources */,
@@ -520,6 +524,7 @@
 				7E2D47A71BF017C900FDEA98 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		7E2D47A81BF017C900FDEA98 /* Build configuration list for PBXNativeTarget "tiCtiTests" */ = {
 			isa = XCConfigurationList;
@@ -528,6 +533,7 @@
 				7E2D47AA1BF017C900FDEA98 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		7E2D47AB1BF017C900FDEA98 /* Build configuration list for PBXNativeTarget "tiCtiUITests" */ = {
 			isa = XCConfigurationList;
@@ -536,6 +542,7 @@
 				7E2D47AD1BF017C900FDEA98 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
