@@ -19,6 +19,8 @@
 		7E2D47B51BF02B5100FDEA98 /* TelaCadastro.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E2D47B41BF02B5100FDEA98 /* TelaCadastro.swift */; };
 		7E2D47B71BF02B7600FDEA98 /* TelaLogin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E2D47B61BF02B7600FDEA98 /* TelaLogin.swift */; };
 		7E2D47B91BF044FF00FDEA98 /* CSCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E2D47B81BF044FF00FDEA98 /* CSCell.swift */; };
+		7E60003C1BF2B30F00B72AEA /* LSCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E60003B1BF2B30F00B72AEA /* LSCell.swift */; };
+		7E60003F1BF3C0B800B72AEA /* PerfilViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E60003E1BF3C0B800B72AEA /* PerfilViewController.swift */; };
 		7EFB8B261BF142EF0086F37E /* server_api_min.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EFB8B251BF142EF0086F37E /* server_api_min.swift */; };
 /* End PBXBuildFile section */
 
@@ -58,6 +60,8 @@
 		7E2D47B41BF02B5100FDEA98 /* TelaCadastro.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TelaCadastro.swift; sourceTree = "<group>"; };
 		7E2D47B61BF02B7600FDEA98 /* TelaLogin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TelaLogin.swift; sourceTree = "<group>"; };
 		7E2D47B81BF044FF00FDEA98 /* CSCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CSCell.swift; sourceTree = "<group>"; };
+		7E60003B1BF2B30F00B72AEA /* LSCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LSCell.swift; sourceTree = "<group>"; };
+		7E60003E1BF3C0B800B72AEA /* PerfilViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PerfilViewController.swift; sourceTree = "<group>"; };
 		7EFB8B251BF142EF0086F37E /* server_api_min.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = server_api_min.swift; path = servidor/server_api_min.swift; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
@@ -120,6 +124,7 @@
 				7E2D478C1BF017C900FDEA98 /* Info.plist */,
 				7E2D47B31BF028AD00FDEA98 /* Cadastro */,
 				7E2D47B21BF028A300FDEA98 /* Login */,
+				7E60003D1BF3C04E00B72AEA /* Perfil/Jogos */,
 			);
 			path = tiCti;
 			sourceTree = "<group>";
@@ -146,6 +151,7 @@
 			isa = PBXGroup;
 			children = (
 				7E2D47B61BF02B7600FDEA98 /* TelaLogin.swift */,
+				7E60003B1BF2B30F00B72AEA /* LSCell.swift */,
 			);
 			name = Login;
 			sourceTree = "<group>";
@@ -157,6 +163,14 @@
 				7E2D47B81BF044FF00FDEA98 /* CSCell.swift */,
 			);
 			name = Cadastro;
+			sourceTree = "<group>";
+		};
+		7E60003D1BF3C04E00B72AEA /* Perfil/Jogos */ = {
+			isa = PBXGroup;
+			children = (
+				7E60003E1BF3C0B800B72AEA /* PerfilViewController.swift */,
+			);
+			name = Perfil/Jogos;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -294,9 +308,11 @@
 				7E2D47B51BF02B5100FDEA98 /* TelaCadastro.swift in Sources */,
 				7E2D47AF1BF0195000FDEA98 /* ScreenCell.swift in Sources */,
 				7E2D47B71BF02B7600FDEA98 /* TelaLogin.swift in Sources */,
+				7E60003F1BF3C0B800B72AEA /* PerfilViewController.swift in Sources */,
 				7EFB8B261BF142EF0086F37E /* server_api_min.swift in Sources */,
 				7E2D47831BF017C900FDEA98 /* ViewController.swift in Sources */,
 				7E2D47811BF017C900FDEA98 /* AppDelegate.swift in Sources */,
+				7E60003C1BF2B30F00B72AEA /* LSCell.swift in Sources */,
 				7E2D47B91BF044FF00FDEA98 /* CSCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

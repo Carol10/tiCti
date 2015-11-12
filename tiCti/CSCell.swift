@@ -14,6 +14,8 @@ class CSCell: UITableViewCell {
     
     @IBOutlet weak var Title: UILabel!
     
+    var i = 0
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -23,6 +25,9 @@ class CSCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
 
         // Configure the view for the selected state
+        
+        Title.layer.cornerRadius = 10.0
+        Title.clipsToBounds = true 
         
         //arrendondando e pondo sombra na label
         Title.layer.shadowOpacity = 1.0
