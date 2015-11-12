@@ -12,22 +12,29 @@ protocol tictiDelegate{
     //MARK: jogando
     func recebeuUmMovimento(de:String, dados:String)
     //MARK: interface
-//    func atualiza()
+    //    func atualiza()
     func pareou(com:String, jogo:UInt)
+    func adversarioConectou(apelido:String)
 }
 extension tictiDelegate{
     func recebeuUmMovimento(de:String, dados:String){
         print("Recebi um movimento de \(de): \(dados)")
     }
-//    func atualiza(){
-//        print("Dados do app se tornaram desatualizados")
-//    }
+    //    func atualiza(){
+    //        print("Dados do app se tornaram desatualizados")
+    //    }
     func pareou(com:String, jogo:UInt){
         print("Pareei com \(com) no jogo com id \(jogo)")
+    }
+    func adversarioConectou(apelido:String){
+        print("\(apelido) chegou!")
     }
 }
 
 class ticti: NSObject , NSStreamDelegate{
+    
+    let tictiQueue = dispatch_get_main_queue()
+    
     var meuApelido:String = ""
     var inimigoApelido:String = ""
     var Hh = "172.16.3.33" // "10.0.0.102"
@@ -129,25 +136,28 @@ class ticti: NSObject , NSStreamDelegate{
     func manageRecievedData(data:NSDictionary){
         let type = data["type"] as! String
         switch type {
-            case "movimento":
-                delegate?.recebeuUmMovimento(((data["info"] as! NSDictionary)["from"] as! String), dados: data["data"] as! String)
-                break;
-            case "pareou":
-                delegate?.pareou(data["com"] as! String, jogo: UInt(data["jogo"] as! String)!)
-                break;
-//            case "atualiza":
-//                delegate?.atualiza()
-//                break;
-            default:
-                print("Mensagem recebida, mas tipo desconhecido:")
-                print(data)
-                break;
+        case "movimento":
+            delegate?.recebeuUmMovimento(((data["info"] as! NSDictionary)["from"] as! String), dados: data["data"] as! String)
+            break;
+        case "pareou":
+            delegate?.pareou(data["com"] as! String, jogo: UInt(data["jogo"] as! String)!)
+            break;
+        case "chegou":
+            delegate?.adversarioConectou(data["apelido"] as! String)
+            break;
+            //            case "atualiza":
+            //                delegate?.atualiza()
+            //                break;
+        default:
+            print("Mensagem recebida, mas tipo desconhecido:")
+            print(data)
+            break;
         }
     }
     
     // MARK: requisições pelo python
     func entreiNoJogo(){
-        let dic = ["type":"entrei","apelido":meuApelido];
+        let dic = ["type":"entrei","apelido":meuApelido,"contra":inimigoApelido];
         send(dic)
     }
     
@@ -180,9 +190,11 @@ class ticti: NSObject , NSStreamDelegate{
     }
     
     func sair(){
-        let url: NSURL = NSURL(string: host+"?action=saiuDoJogo&apelido=\(meuApelido)")!
-        let task = NSURLSession.sharedSession().dataTaskWithURL(url)
-        task.resume()
+        let dic = ["type":"sair","apelido":meuApelido,"inimigo":inimigoApelido];
+        send(dic)
+        //        let url: NSURL = NSURL(string: host+"?action=saiuDoJogo&apelido=\(meuApelido)")!
+        //        let task = NSURLSession.sharedSession().dataTaskWithURL(url)
+        //        task.resume()
     }
     
     // MARK: funções de interface
@@ -198,7 +210,7 @@ class ticti: NSObject , NSStreamDelegate{
             }
         }
         task.resume()
-
+        
     }
     func cadastra(nome:String, senha:String, apelido:String, callback:(sucesso:Bool) -> ()){
         let url: NSURL = NSURL(string: host+"?action=cadastra&nome=\(nome)&senha=\(senha)&apelido=\(apelido)")!
@@ -285,7 +297,7 @@ class ticti: NSObject , NSStreamDelegate{
         var nome:String!,apelido:String!,jogando:Bool!,vitorias:UInt!,derrotas:UInt!,imagem:UIImage!;
         let task = NSURLSession.sharedSession().dataTaskWithURL(NSURL(string:url)!) { (data, response, error) -> Void in
             
-           let dic = try! NSJSONSerialization.JSONObjectWithData(data!, options: NSJSONReadingOptions(rawValue: 0)) as! NSDictionary
+            let dic = try! NSJSONSerialization.JSONObjectWithData(data!, options: NSJSONReadingOptions(rawValue: 0)) as! NSDictionary
             nome = dic["nome"] as! String
             apelido = dic["apelido"] as! String
             jogando = Int(dic["jogando"] as! String) == 0 ? false : true
@@ -314,23 +326,23 @@ class ticti: NSObject , NSStreamDelegate{
     }
     
     //qqjoq -> quem quer jogar o quê
-//    func atualizarDados(ranking:Bool, minhasInfo:Bool, jogos:Bool, qqjoq:Bool, callback:(NSDictionary) ->()){
-//        let url: NSURL = NSURL(string: host+"?action=disponibilidade&apelido=")!
-//        var result = NSDictionary()
-//        let task = NSURLSession.sharedSession().dataTaskWithURL(url) { (data, response, error) -> Void in
-//            result = try! NSJSONSerialization.JSONObjectWithData(data!, options: NSJSONReadingOptions(rawValue: 0)) as! NSDictionary
-//            callback(result);
-//        }
-//        task.resume()
-//    }
+    //    func atualizarDados(ranking:Bool, minhasInfo:Bool, jogos:Bool, qqjoq:Bool, callback:(NSDictionary) ->()){
+    //        let url: NSURL = NSURL(string: host+"?action=disponibilidade&apelido=")!
+    //        var result = NSDictionary()
+    //        let task = NSURLSession.sharedSession().dataTaskWithURL(url) { (data, response, error) -> Void in
+    //            result = try! NSJSONSerialization.JSONObjectWithData(data!, options: NSJSONReadingOptions(rawValue: 0)) as! NSDictionary
+    //            callback(result);
+    //        }
+    //        task.resume()
+    //    }
     // ----
-//    func acessURL(urlPath:String) -> NSDictionary{
-//        let url: NSURL = NSURL(string: urlPath)!
-//        var result = NSDictionary()
-//        let task = NSURLSession.sharedSession().dataTaskWithURL(url) { (data, response, error) -> Void in
-//            result = try! NSJSONSerialization.JSONObjectWithData(data!, options: NSJSONReadingOptions(rawValue: 0)) as! NSDictionary
-//        }
-//        task.resume()
-//        return result
-//    }
+    //    func acessURL(urlPath:String) -> NSDictionary{
+    //        let url: NSURL = NSURL(string: urlPath)!
+    //        var result = NSDictionary()
+    //        let task = NSURLSession.sharedSession().dataTaskWithURL(url) { (data, response, error) -> Void in
+    //            result = try! NSJSONSerialization.JSONObjectWithData(data!, options: NSJSONReadingOptions(rawValue: 0)) as! NSDictionary
+    //        }
+    //        task.resume()
+    //        return result
+    //    }
 }
