@@ -33,7 +33,7 @@ extension tictiDelegate{
 
 class ticti: NSObject , NSStreamDelegate{
     
-    let tictiQueue = dispatch_get_main_queue()
+    let tictiQueue = dispatch_get_main_queue()//dispatch_queue_create("tiCti.Queue", DISPATCH_QUEUE_SERIAL)
     
     var meuApelido:String = ""
     var inimigoApelido:String = ""
@@ -45,41 +45,42 @@ class ticti: NSObject , NSStreamDelegate{
     var outputStream: NSOutputStream?
     
     func connect(){
-        var readStream: Unmanaged<CFReadStream>?
-        var writeStream: Unmanaged<CFWriteStream>?
-        CFStreamCreatePairWithSocketToHost(kCFAllocatorDefault, Hh, 86, &readStream, &writeStream)
-        inputStream = readStream?.takeRetainedValue()
-        outputStream = writeStream?.takeRetainedValue()
-        
-        inputStream!.delegate=self
-        outputStream!.delegate=self
-        
-        inputStream!.setProperty(kCFBooleanTrue, forKey: kCFStreamPropertyShouldCloseNativeSocket as String)
-        outputStream!.setProperty(kCFBooleanTrue, forKey: kCFStreamPropertyShouldCloseNativeSocket as String)
-        inputStream?.scheduleInRunLoop(NSRunLoop.currentRunLoop(), forMode: NSDefaultRunLoopMode)
-        outputStream?.scheduleInRunLoop(NSRunLoop.currentRunLoop(), forMode: NSDefaultRunLoopMode)
-        
-        inputStream?.open()
-        outputStream?.open()
+        print("tentando conectar ao servidor")
+        dispatch_async(tictiQueue) { () -> Void in
+            var readStream: Unmanaged<CFReadStream>?
+            var writeStream: Unmanaged<CFWriteStream>?
+            CFStreamCreatePairWithSocketToHost(kCFAllocatorDefault, self.Hh, 86, &readStream, &writeStream)
+            self.inputStream = readStream?.takeRetainedValue()
+            self.outputStream = writeStream?.takeRetainedValue()
+            
+            self.inputStream!.delegate=self
+            self.outputStream!.delegate=self
+            
+            self.inputStream!.setProperty(kCFBooleanTrue, forKey: kCFStreamPropertyShouldCloseNativeSocket as String)
+            self.outputStream!.setProperty(kCFBooleanTrue, forKey: kCFStreamPropertyShouldCloseNativeSocket as String)
+            self.inputStream?.scheduleInRunLoop(NSRunLoop.currentRunLoop(), forMode: NSDefaultRunLoopMode)
+            self.outputStream?.scheduleInRunLoop(NSRunLoop.currentRunLoop(), forMode: NSDefaultRunLoopMode)
+            
+            self.inputStream?.open()
+            self.outputStream?.open()
+        }
     }
     func inputStreamHandleEvent(eventCode:NSStreamEvent){
         switch(eventCode){
         case NSStreamEvent.OpenCompleted :
             print("Conectado com o servidor")
-            //if(outputOpened && ) // should send some message to server?
-            // sim. Envia o apelido.
             break
         case NSStreamEvent.HasBytesAvailable :
-            if(inputStream!.hasBytesAvailable){
+            if(self.inputStream!.hasBytesAvailable){
                 // read bytes
                 let bufferSize = 7168
                 var buffer = Array<UInt8>(count: bufferSize, repeatedValue: 0)
                 var len:Int?;
-                while(inputStream!.hasBytesAvailable){
-                    len = inputStream!.read(&buffer, maxLength: bufferSize*sizeof(UInt8))
+                while(self.inputStream!.hasBytesAvailable){
+                    len = self.inputStream!.read(&buffer, maxLength: bufferSize*sizeof(UInt8))
                     let dString = NSData(bytes: buffer, length: len!)
                     let dic:NSDictionary = try! NSJSONSerialization.JSONObjectWithData(dString, options: NSJSONReadingOptions(rawValue: 0)) as! NSDictionary
-                    manageRecievedData(dic)
+                    self.manageRecievedData(dic)
                 }
             }
             break;
@@ -88,7 +89,7 @@ class ticti: NSObject , NSStreamDelegate{
             break;
         case NSStreamEvent.ErrorOccurred :
             print("Erro ao conectar com o servidor. Tentando novamente em 5 segundos");
-            reconnect()
+            self.reconnect()
             break;
         case NSStreamEvent.EndEncountered:
             // ignore.
@@ -100,28 +101,27 @@ class ticti: NSObject , NSStreamDelegate{
     }
     
     func disconnect(){
-        if(inputStream != nil){
-            inputStream?.delegate=nil
-            inputStream?.removeFromRunLoop(NSRunLoop.mainRunLoop(), forMode: NSDefaultRunLoopMode as String)
-            inputStream?.close()
-            inputStream = nil
+        if(self.inputStream != nil){
+            self.inputStream?.delegate=nil
+            self.inputStream?.removeFromRunLoop(NSRunLoop.mainRunLoop(), forMode: NSDefaultRunLoopMode as String)
+            self.inputStream?.close()
+            self.inputStream = nil
         }
-        if(outputStream != nil){
-            outputStream?.delegate=nil
-            outputStream?.removeFromRunLoop(NSRunLoop.mainRunLoop(), forMode: NSDefaultRunLoopMode as String)
-            outputStream?.close()
-            outputStream = nil
+        if(self.outputStream != nil){
+            self.outputStream?.delegate=nil
+            self.outputStream?.removeFromRunLoop(NSRunLoop.mainRunLoop(), forMode: NSDefaultRunLoopMode as String)
+            self.outputStream?.close()
+            self.outputStream = nil
         }
     }
     
     func reconnect(){
-        disconnect()
+        self.disconnect()
         dispatch_after(dispatch_time(DISPATCH_TIME_NOW, Int64(5 * NSEC_PER_SEC)), dispatch_get_main_queue()) { () -> Void in
             self.connect()
         }
     }
     func stream(aStream: NSStream, handleEvent eventCode: NSStreamEvent) {
-        //dispatch_async(dispatch_get_main_queue()) { () -> Void in
         if(aStream == self.inputStream){
             self.inputStreamHandleEvent(eventCode)
         }
@@ -129,29 +129,33 @@ class ticti: NSObject , NSStreamDelegate{
     
     // MARK: Send and recieve
     func send(let data:NSDictionary){
-        let jdata = try! NSJSONSerialization.dataWithJSONObject(data, options: NSJSONWritingOptions(rawValue: 0))
-        outputStream!.write(UnsafePointer<UInt8>(jdata.bytes), maxLength: jdata.length)
+        dispatch_async(tictiQueue) { () -> Void in
+            let jdata = try! NSJSONSerialization.dataWithJSONObject(data, options: NSJSONWritingOptions(rawValue: 0))
+            self.outputStream!.write(UnsafePointer<UInt8>(jdata.bytes), maxLength: jdata.length)
+        }
     }
     
     func manageRecievedData(data:NSDictionary){
-        let type = data["type"] as! String
-        switch type {
-        case "movimento":
-            delegate?.recebeuUmMovimento(((data["info"] as! NSDictionary)["from"] as! String), dados: data["data"] as! String)
-            break;
-        case "pareou":
-            delegate?.pareou(data["com"] as! String, jogo: UInt(data["jogo"] as! String)!)
-            break;
-        case "chegou":
-            delegate?.adversarioConectou(data["apelido"] as! String)
-            break;
-            //            case "atualiza":
-            //                delegate?.atualiza()
-            //                break;
-        default:
-            print("Mensagem recebida, mas tipo desconhecido:")
-            print(data)
-            break;
+        dispatch_async(tictiQueue) { () -> Void in
+            let type = data["type"] as! String
+            switch type {
+            case "movimento":
+                self.delegate?.recebeuUmMovimento(((data["info"] as! NSDictionary)["from"] as! String), dados: data["data"] as! String)
+                break;
+            case "pareou":
+                self.delegate?.pareou(data["com"] as! String, jogo: UInt(data["jogo"] as! String)!)
+                break;
+            case "chegou":
+                self.delegate?.adversarioConectou(data["apelido"] as! String)
+                break;
+                //            case "atualiza":
+                //                delegate?.atualiza()
+                //                break;
+            default:
+                print("Mensagem recebida, mas tipo desconhecido:")
+                print(data)
+                break;
+            }
         }
     }
     
