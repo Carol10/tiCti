@@ -63,13 +63,13 @@ class TelaLogin: UIViewController, UITableViewDelegate, UITableViewDataSource {
     ///funções do teclado
     func keyboardWillShow(sender: NSNotification) {
         if(i==1){
-            self.view.frame.origin.y -= 100
+            self.view.frame.origin.y -= 50
             i = 2
         }
     }
     func keyboardWillHide(sender: NSNotification) {
         if(i==2){
-            self.view.frame.origin.y += 100
+            self.view.frame.origin.y += 50
             i = 1 
         }
     }
