@@ -208,9 +208,13 @@ class ticti: NSObject , NSStreamDelegate{
         let task = NSURLSession.sharedSession().dataTaskWithURL(url) { (data, response, error) -> Void in
             result = try! NSJSONSerialization.JSONObjectWithData(data!, options: NSJSONReadingOptions(rawValue: 0)) as! NSDictionary
             if(result["status"] as! String == "sucess" ){
-                callback(sucesso: true, nome: result["nome"] as! String)
+                dispatch_async(self.tictiQueue, { () -> Void in
+                    callback(sucesso: true, nome: result["nome"] as! String)
+                })
             }else{
-                callback(sucesso: false, nome: "")
+                dispatch_async(self.tictiQueue, { () -> Void in
+                    callback(sucesso: false, nome: "")
+                })
             }
         }
         task.resume()
@@ -324,16 +328,18 @@ class ticti: NSObject , NSStreamDelegate{
         let task = NSURLSession.sharedSession().dataTaskWithURL(url) { (data, response, error) -> Void in
             let arr = try! NSJSONSerialization.JSONObjectWithData(data!, options: NSJSONReadingOptions(rawValue: 0)) as! NSArray
             let iarr = NSMutableArray();
+            var n = 0;
             for p:NSDictionary in (arr as! [NSDictionary]){
                 let URL = self.host+"?action=getImage&email=\(p["email"])"
-                var n = 0;
                 NSURLSession.sharedSession().dataTaskWithURL(NSURL(string: URL)!, completionHandler: { (data, response, error) -> Void in
                     iarr.addObject(UIImage(data: data!)!)
                     n++;
                     if(n == 3){
-                        callback(dados: arr, imagens: iarr)
+                        dispatch_async(self.tictiQueue, { () -> Void in
+                            callback(dados: arr, imagens: iarr)
+                        })
                     }
-                })
+                }).resume()
             }
             //callback(arr)
             

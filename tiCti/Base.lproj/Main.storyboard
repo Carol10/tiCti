@@ -321,7 +321,6 @@
                                 </state>
                                 <connections>
                                     <action selector="EntarNaConta:" destination="0Vd-7S-9Bo" eventType="touchUpInside" id="63u-qw-bSi"/>
-                                    <segue destination="IBy-U1-fdm" kind="show" id="XeF-r9-Pjd"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -335,11 +334,12 @@
                         <outlet property="Login" destination="HKd-Wj-KVc" id="8P0-RQ-Cgo"/>
                         <outlet property="Senha" destination="gtR-1m-xB1" id="7vL-Bh-LHA"/>
                         <outlet property="cadastrar" destination="lEO-0A-8Sv" id="ImN-tH-6ea"/>
+                        <segue destination="IBy-U1-fdm" kind="show" identifier="Logar" id="FFs-HM-lbR"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rE9-Ai-JJ2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1177" y="1189"/>
+            <point key="canvasLocation" x="1189" y="1137"/>
         </scene>
         <!--Perfil-->
         <scene sceneID="t53-oa-ePH">
@@ -533,19 +533,28 @@
                                 <rect key="frame" x="189" y="896" width="130" height="128"/>
                                 <animations/>
                                 <color key="backgroundColor" red="0.98823529409999999" green="0.58431372550000005" blue="0.031372549020000001" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <state key="normal">
+                                    <color key="titleColor" red="0.1137254902" green="0.2156862745" blue="0.23529411759999999" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aDE-Ne-Mm8">
                                 <rect key="frame" x="449" y="960" width="130" height="64"/>
                                 <animations/>
                                 <color key="backgroundColor" red="0.98823529409999999" green="0.58431372550000005" blue="0.031372549020000001" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <state key="normal">
+                                    <color key="titleColor" red="0.1137254902" green="0.2156862745" blue="0.23529411759999999" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lUe-uF-1Ee">
                                 <rect key="frame" x="319" y="803" width="130" height="221"/>
                                 <animations/>
                                 <color key="backgroundColor" red="0.86274509799999999" green="0.3803921569" blue="0.035294117649999998" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <state key="normal">
+                                    <color key="titleColor" red="0.1137254902" green="0.2156862745" blue="0.23529411759999999" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rpc-oG-ZXD">
                                 <rect key="frame" x="189" y="859" width="130" height="37"/>
@@ -569,15 +578,11 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="boI-dV-iLe">
-                                <rect key="frame" x="319" y="642" width="130" height="130"/>
-                                <animations/>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="oDt-BC-Rlc">
-                                <rect key="frame" x="189" y="728" width="130" height="130"/>
+                                <rect key="frame" x="324" y="651" width="120" height="120"/>
                                 <animations/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mDw-Sz-FnI">
-                                <rect key="frame" x="449" y="794" width="130" height="130"/>
+                                <rect key="frame" x="454" y="803" width="120" height="120"/>
                                 <animations/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DYP-8H-6dm">
@@ -601,6 +606,10 @@
                                 <color key="textColor" red="1" green="0.97580491309999995" blue="0.95658120430000004" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="oDt-BC-Rlc">
+                                <rect key="frame" x="194" y="740" width="120" height="120"/>
+                                <animations/>
+                            </imageView>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" red="0.74901960779999999" green="0.75294117650000003" blue="0.74117647060000003" alpha="1" colorSpace="calibratedRGB"/>
@@ -645,7 +654,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="R0O-m5-qy3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1177" y="2324"/>
+            <point key="canvasLocation" x="1189" y="2332"/>
         </scene>
     </scenes>
     <resources>

@@ -122,17 +122,32 @@ class TelaCadastro: UIViewController, UITableViewDataSource, UITableViewDelegate
         Registro()
         
         if(j == 1){
-            tic.cadastra(arrayDados[2], senha: arrayDados[1], email: arrayDados[0], callback: { (sucesso) -> () in
-                if(sucesso){self.performSegueWithIdentifier("ligaLogin", sender: self)}
-                else{
+            tic.verificaDisponibilidadeDoemail(arrayDados[0], callback: { (disponivel) -> () in
+                if(disponivel){
+                    self.tic.cadastra(self.arrayDados[2], senha: self.arrayDados[1], email: self.arrayDados[0], callback: { (sucesso) -> () in
+                        if(sucesso){
+                            
+                            self.performSegueWithIdentifier("ligaLogin", sender: self)
+                        }
+                        else{
+                            let alert = UIAlertView()
+                            alert.title = "Inconsistencia no cadastro"
+                            alert.message = "vc pode não estar conectado a internet"
+                            alert.addButtonWithTitle("Close")
+                            alert.show()
+                            
+                        }
+                    })
+                }else{
                     let alert = UIAlertView()
                     alert.title = "Inconsistencia no cadastro"
-                    alert.message = "vc pode não estar conectado a internet"
+                    alert.message = "Este email já está cadastrado."
                     alert.addButtonWithTitle("Close")
                     alert.show()
-                
                 }
             })
+            
+
             
         }
         

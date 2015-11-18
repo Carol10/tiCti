@@ -8,8 +8,12 @@
 
 import UIKit
 
-class Jogos: UIViewController {
+class Jogos: UIViewController{
 
+    //servidor 
+    let tic = ticti()
+    
+    
     @IBOutlet weak var Bdamas: UIButton!
     @IBOutlet weak var Bvelha: UIButton!
     @IBOutlet weak var Bpontos: UIButton!
@@ -38,7 +42,34 @@ class Jogos: UIViewController {
 
         // Do any additional setup after loading the view.
         
+        pedestal1.enabled = false
+        pedestal2.enabled = false
+        pedestal3.enabled = false
+        
+        foto1.layer.cornerRadius=60
+        foto2.layer.cornerRadius=60
+        foto3.layer.cornerRadius=60
+        
         self.navigationItem.title = "Jogos"
+        
+        tic.connect()
+        
+        
+        tic.pegarRanking { (dados, imagens) -> () in
+            print("chamou")
+            //dispatch_async(<#T##queue: dispatch_queue_t##dispatch_queue_t#>, <#T##block: dispatch_block_t##dispatch_block_t##() -> Void#>)
+            self.nome1.text = (dados[0] as! NSDictionary)["nome"] as? String
+            self.nome2.text = (dados[1] as! NSDictionary)["nome"] as? String
+            self.nome3.text = (dados[2] as! NSDictionary)["nome"] as? String
+            
+            self.pedestal1.setTitle("\((dados[0] as! NSDictionary)["vitorias"] as! String) pts", forState: .Disabled)
+            self.pedestal2.setTitle("\((dados[1] as! NSDictionary)["vitorias"] as! String) pts", forState: .Disabled)
+            self.pedestal3.setTitle("\((dados[2] as! NSDictionary)["vitorias"] as! String) pts", forState: .Disabled)
+            
+            self.foto1.image = imagens[0] as? UIImage;
+            self.foto2.image = imagens[1] as? UIImage;
+            self.foto3.image = imagens[2] as? UIImage;
+        }
         
        
     }

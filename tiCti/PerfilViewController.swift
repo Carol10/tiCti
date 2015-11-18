@@ -8,7 +8,13 @@
 
 import UIKit
 
-class PerfilViewController: UIViewController {
+class PerfilViewController: UIViewController, tictiDelegate{
+    
+    var meu_email:String = ""
+    
+    //conestando com o servidor 
+    let tic = ticti()
+    
     
     //outras variáveis
     @IBOutlet weak var fotoPerfil: UIImageView!
@@ -28,10 +34,17 @@ class PerfilViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        print("email: \(meu_email)")
+        //conectar com o servidor
+        tic.connect()
+        
+        tic.dadosDoUsuario(meu_email) { (nome, email, jogando, vitorias, derrotas, imagem) -> () in
+            self.nomeUser.text = nome
+            self.pts.text = "\(vitorias) pts"
+            self.fotoPerfil.image = imagem 
+        }
 
         // Do any additional setup after loading the view.
-        pts.text = "1000 pts"
-        nomeUser.text = "Ana Caroline"
 
         UIBarButtonItem.appearance().setTitleTextAttributes([NSFontAttributeName: UIFont(name: "Helvetica", size: 30)!], forState: .Normal)
         self.navigationController?.navigationBar.tintColor = UIColor(red:(29.0/255.0),green:(55.0/255.0),blue:(60.0/255.0),alpha:1.0)
@@ -52,7 +65,6 @@ class PerfilViewController: UIViewController {
     
         
         //deixando a foto do perfil arredondada
-        fotoPerfil.image = UIImage(named: "Captura de Tela 2015-09-17 às 17.13.20.png")
         fotoPerfil.layer.cornerRadius = self.fotoPerfil.frame.size.width / 2
         self.fotoPerfil.clipsToBounds = true;
         

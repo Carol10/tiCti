@@ -8,8 +8,12 @@
 
 import UIKit
 
-class TelaLogin: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class TelaLogin: UIViewController, UITableViewDelegate, UITableViewDataSource, tictiDelegate{
 
+    //conectar com servidor
+    let tic = ticti()
+    
+    
     
     //tableview do icone ta tela de login
     @IBOutlet weak var LIconTable: UITableView!
@@ -35,6 +39,9 @@ class TelaLogin: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
         // Do any additional setup after loading the view.
         
+        //conectar com o servidor
+        tic.connect()
+        
         //fazer a tela subir com o teclado
         NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("keyboardWillShow:"), name:UIKeyboardWillShowNotification, object: nil);
         NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("keyboardWillHide:"), name:UIKeyboardWillHideNotification, object: nil);
@@ -47,6 +54,8 @@ class TelaLogin: UIViewController, UITableViewDelegate, UITableViewDataSource {
         Login.layer.cornerRadius = 12.0
         Login.layer.shadowOpacity = 1.0
         Login.layer.shadowOffset = CGSize(width: 3.0, height: 2.0)
+        Senha.secureTextEntry = true 
+        
         
         
         
@@ -67,11 +76,28 @@ class TelaLogin: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     @IBAction func EntarNaConta(sender: AnyObject)
     {
-        if(j==1){
-            self.performSegueWithIdentifier("Logar", sender: self)
-        
+        tic.login(Email.text!, senha: Senha.text!) { (sucesso, nome) -> () in
+            if(sucesso){
+                //self.presentViewController(nav, animated: true, completion: nil)
+                self.performSegueWithIdentifier("Logar", sender: self)
+            }else{
+                let alert = UIAlertView()
+                alert.title = "Inconsistencia no login"
+                alert.message = "Usuário ou senha incorretos."
+                alert.addButtonWithTitle("Close")
+                alert.show()
+                
+            }
+            
         }
     
+    }
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if(segue.identifier == "Logar"){
+            let nav = segue.destinationViewController as! UINavigationController;
+            let perfil = nav.topViewController as! PerfilViewController;
+            perfil.meu_email = self.Email.text!
+        }
     }
     
     ///funções do teclado
