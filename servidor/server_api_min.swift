@@ -326,11 +326,15 @@ class ticti: NSObject , NSStreamDelegate{
             let iarr = NSMutableArray();
             for p:NSDictionary in (arr as! [NSDictionary]){
                 let URL = self.host+"?action=getImage&email=\(p["email"])"
+                var n = 0;
                 NSURLSession.sharedSession().dataTaskWithURL(NSURL(string: URL)!, completionHandler: { (data, response, error) -> Void in
                     iarr.addObject(UIImage(data: data!)!)
+                    n++;
+                    if(n == 3){
+                        callback(dados: arr, imagens: iarr)
+                    }
                 })
             }
-            callback(dados: arr, imagens: iarr)
             //callback(arr)
             
         }
