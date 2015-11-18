@@ -318,12 +318,20 @@ class ticti: NSObject , NSStreamDelegate{
         }
         task.resume()
     }
-    func pegarRanking(callback:(NSArray)->()){
+    func pegarRanking(callback:(dados:NSArray,imagens:NSArray)->()){
         let urlStr = host+"?action=getRanking"
         let url = NSURL(string: urlStr)!;
         let task = NSURLSession.sharedSession().dataTaskWithURL(url) { (data, response, error) -> Void in
             let arr = try! NSJSONSerialization.JSONObjectWithData(data!, options: NSJSONReadingOptions(rawValue: 0)) as! NSArray
-            callback(arr)
+            let iarr = NSMutableArray();
+            for p:NSDictionary in (arr as! [NSDictionary]){
+                let URL = self.host+"?action=getImage&email=\(p["email"])"
+                NSURLSession.sharedSession().dataTaskWithURL(NSURL(string: URL)!, completionHandler: { (data, response, error) -> Void in
+                    iarr.addObject(UIImage(data: data!)!)
+                })
+            }
+            callback(dados: arr, imagens: iarr)
+            //callback(arr)
             
         }
         task.resume()
