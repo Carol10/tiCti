@@ -8,8 +8,11 @@
 
 import UIKit
 
-class TelaCadastro: UIViewController, UITableViewDataSource, UITableViewDelegate, UIAlertViewDelegate{
+class TelaCadastro: UIViewController, UITableViewDataSource, UITableViewDelegate, UIAlertViewDelegate, tictiDelegate{
 
+    //servidor
+    let tic = ticti()
+    
     ///tabela do icone na tela de cadastro
     @IBOutlet weak var CIconTable: UITableView!
     
@@ -57,6 +60,10 @@ class TelaCadastro: UIViewController, UITableViewDataSource, UITableViewDelegate
         self.CIconTable.dataSource = self
         self.CIconTable.delegate = self
         //--------------------------------------------------------------------------------------------------
+        
+        //conectar com o servidor 
+        tic.connect()
+        
         
         emailField.placeholder = "email@exemplo.com"
         nomeField.placeholder = "Ana Caroline"
@@ -115,14 +122,20 @@ class TelaCadastro: UIViewController, UITableViewDataSource, UITableViewDelegate
         Registro()
         
         if(j == 1){
-           self.performSegueWithIdentifier("ligaLogin", sender: self)
+            tic.cadastra(arrayDados[2], senha: arrayDados[1], email: arrayDados[0], callback: { (sucesso) -> () in
+                if(sucesso){self.performSegueWithIdentifier("ligaLogin", sender: self)}
+                else{
+                    let alert = UIAlertView()
+                    alert.title = "Inconsistencia no cadastro"
+                    alert.message = "vc pode não estar conectado a internet"
+                    alert.addButtonWithTitle("Close")
+                    alert.show()
+                
+                }
+            })
+            
         }
         
-        print(" ")
-        print(arrayDados[0])
-        print(arrayDados[1])
-        print(arrayDados[2])
-        print(" ")
         
     }
 

@@ -19,8 +19,10 @@
 		7E2D47B51BF02B5100FDEA98 /* TelaCadastro.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E2D47B41BF02B5100FDEA98 /* TelaCadastro.swift */; };
 		7E2D47B71BF02B7600FDEA98 /* TelaLogin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E2D47B61BF02B7600FDEA98 /* TelaLogin.swift */; };
 		7E2D47B91BF044FF00FDEA98 /* CSCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E2D47B81BF044FF00FDEA98 /* CSCell.swift */; };
+		7E5F79801BFB69CF0031B22F /* Jogos.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E5F797F1BFB69CF0031B22F /* Jogos.swift */; };
 		7E60003C1BF2B30F00B72AEA /* LSCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E60003B1BF2B30F00B72AEA /* LSCell.swift */; };
 		7E60003F1BF3C0B800B72AEA /* PerfilViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E60003E1BF3C0B800B72AEA /* PerfilViewController.swift */; };
+		7E8C068A1BFBC57900524B91 /* Captura de Tela 2015-11-17 às 17.27.59.png in Resources */ = {isa = PBXBuildFile; fileRef = 7E8C06891BFBC57900524B91 /* Captura de Tela 2015-11-17 às 17.27.59.png */; };
 		7EFB8B261BF142EF0086F37E /* server_api_min.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EFB8B251BF142EF0086F37E /* server_api_min.swift */; };
 /* End PBXBuildFile section */
 
@@ -60,8 +62,10 @@
 		7E2D47B41BF02B5100FDEA98 /* TelaCadastro.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TelaCadastro.swift; sourceTree = "<group>"; };
 		7E2D47B61BF02B7600FDEA98 /* TelaLogin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TelaLogin.swift; sourceTree = "<group>"; };
 		7E2D47B81BF044FF00FDEA98 /* CSCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CSCell.swift; sourceTree = "<group>"; };
+		7E5F797F1BFB69CF0031B22F /* Jogos.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Jogos.swift; sourceTree = "<group>"; };
 		7E60003B1BF2B30F00B72AEA /* LSCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LSCell.swift; sourceTree = "<group>"; };
 		7E60003E1BF3C0B800B72AEA /* PerfilViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PerfilViewController.swift; sourceTree = "<group>"; };
+		7E8C06891BFBC57900524B91 /* Captura de Tela 2015-11-17 às 17.27.59.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Captura de Tela 2015-11-17 às 17.27.59.png"; path = "../../Captura de Tela 2015-11-17 às 17.27.59.png"; sourceTree = "<group>"; };
 		7EFB8B251BF142EF0086F37E /* server_api_min.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = server_api_min.swift; path = servidor/server_api_min.swift; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
@@ -118,13 +122,18 @@
 				7E2D47821BF017C900FDEA98 /* ViewController.swift */,
 				7E2D47AE1BF0195000FDEA98 /* ScreenCell.swift */,
 				7E2D47841BF017C900FDEA98 /* Main.storyboard */,
+				7E8C06891BFBC57900524B91 /* Captura de Tela 2015-11-17 às 17.27.59.png */,
 				7E2D47B01BF01F8F00FDEA98 /* Captura de Tela 2015-09-17 às 17.13.20.png */,
 				7E2D47871BF017C900FDEA98 /* Assets.xcassets */,
 				7E2D47891BF017C900FDEA98 /* LaunchScreen.storyboard */,
 				7E2D478C1BF017C900FDEA98 /* Info.plist */,
 				7E2D47B31BF028AD00FDEA98 /* Cadastro */,
 				7E2D47B21BF028A300FDEA98 /* Login */,
-				7E60003D1BF3C04E00B72AEA /* Perfil/Jogos */,
+				7E60003D1BF3C04E00B72AEA /* Perfil */,
+				7E5F797E1BFB69820031B22F /* MenuJogos */,
+				7ECAAFA51BFCF33800B26C0E /* JogoDaVelha */,
+				7ECAAFA41BFCF31800B26C0E /* LigarPontos */,
+				7ECAAFA31BFCF30700B26C0E /* Damas */,
 			);
 			path = tiCti;
 			sourceTree = "<group>";
@@ -165,12 +174,45 @@
 			name = Cadastro;
 			sourceTree = "<group>";
 		};
-		7E60003D1BF3C04E00B72AEA /* Perfil/Jogos */ = {
+		7E5F797E1BFB69820031B22F /* MenuJogos */ = {
+			isa = PBXGroup;
+			children = (
+				7E5F797F1BFB69CF0031B22F /* Jogos.swift */,
+			);
+			name = MenuJogos;
+			path = ..;
+			sourceTree = "<group>";
+		};
+		7E60003D1BF3C04E00B72AEA /* Perfil */ = {
 			isa = PBXGroup;
 			children = (
 				7E60003E1BF3C0B800B72AEA /* PerfilViewController.swift */,
 			);
-			name = Perfil/Jogos;
+			name = Perfil;
+			sourceTree = "<group>";
+		};
+		7ECAAFA31BFCF30700B26C0E /* Damas */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Damas;
+			path = ..;
+			sourceTree = "<group>";
+		};
+		7ECAAFA41BFCF31800B26C0E /* LigarPontos */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = LigarPontos;
+			path = ..;
+			sourceTree = "<group>";
+		};
+		7ECAAFA51BFCF33800B26C0E /* JogoDaVelha */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = JogoDaVelha;
+			path = ..;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -277,6 +319,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7E8C068A1BFBC57900524B91 /* Captura de Tela 2015-11-17 às 17.27.59.png in Resources */,
 				7E2D478B1BF017C900FDEA98 /* LaunchScreen.storyboard in Resources */,
 				7E2D47881BF017C900FDEA98 /* Assets.xcassets in Resources */,
 				7E2D47B11BF01F8F00FDEA98 /* Captura de Tela 2015-09-17 às 17.13.20.png in Resources */,
@@ -305,6 +348,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7E5F79801BFB69CF0031B22F /* Jogos.swift in Sources */,
 				7E2D47B51BF02B5100FDEA98 /* TelaCadastro.swift in Sources */,
 				7E2D47AF1BF0195000FDEA98 /* ScreenCell.swift in Sources */,
 				7E2D47B71BF02B7600FDEA98 /* TelaLogin.swift in Sources */,
@@ -459,6 +503,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = br.ufpe.cin.bepid.Carol.tiCti;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -470,6 +515,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = br.ufpe.cin.bepid.Carol.tiCti;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};

@@ -17,6 +17,7 @@ class TelaLogin: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     //outras variáreis 
     var i = 1
+    var j = 0
     
    
     @IBOutlet weak var Email: UITextField!
@@ -52,6 +53,11 @@ class TelaLogin: UIViewController, UITableViewDelegate, UITableViewDataSource {
         //tableview
         self.LIconTable.dataSource = self
         self.LIconTable.delegate = self
+        
+        
+        self.navigationItem.hidesBackButton = true
+        self.navigationController?.navigationBarHidden = true
+
     }
 
     override func didReceiveMemoryWarning() {
@@ -59,6 +65,14 @@ class TelaLogin: UIViewController, UITableViewDelegate, UITableViewDataSource {
         // Dispose of any resources that can be recreated.
     }
     
+    @IBAction func EntarNaConta(sender: AnyObject)
+    {
+        if(j==1){
+            self.performSegueWithIdentifier("Logar", sender: self)
+        
+        }
+    
+    }
     
     ///funções do teclado
     func keyboardWillShow(sender: NSNotification) {
@@ -84,7 +98,7 @@ class TelaLogin: UIViewController, UITableViewDelegate, UITableViewDataSource {
     {
         let celll : LSCell = tableView.dequeueReusableCellWithIdentifier("LCell") as! LSCell
         
-        celll.backgroundColor = UIColor(red: 39.0, green: 71.0, blue: 76.0, alpha: 1.0)
+        celll.backgroundColor = UIColor(red:(29.0/255.0),green:(55.0/255.0),blue:(60.0/255.0),alpha:1.0)
         
         celll.setLSCell("Captura de Tela 2015-09-17 às 17.13.20.png")
         

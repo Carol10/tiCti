@@ -11,8 +11,8 @@ import UIKit
 protocol tictiDelegate{
     //MARK: jogando
     func recebeuUmMovimento(de:String, dados:String)
-    //MARK: interface
-    //    func atualiza()
+    //MARK: interface    //    func atualiza()
+
     func pareou(com:String, jogo:UInt)
     func adversarioConectou(email:String)
 }
