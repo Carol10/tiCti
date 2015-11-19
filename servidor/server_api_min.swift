@@ -37,8 +37,8 @@ class ticti: NSObject , NSStreamDelegate{
     
     var meuemail:String = ""
     var inimigoemail:String = ""
-    let Hh =  "172.16.3.33" // "10.0.0.103" //
-    let host = "http://172.16.3.33"// "http://10.0.0.103" //
+    let Hh =  "172.22.72.68" //"172.16.3.33" // "10.0.0.103" //
+    let host = "http://172.22.72.68" //"http://172.16.3.33"// "http://10.0.0.103" //
     var delegate = tictiDelegate?()
     
     var inputStream: NSInputStream?
