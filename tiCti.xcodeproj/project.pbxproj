@@ -23,6 +23,10 @@
 		7E60003C1BF2B30F00B72AEA /* LSCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E60003B1BF2B30F00B72AEA /* LSCell.swift */; };
 		7E60003F1BF3C0B800B72AEA /* PerfilViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E60003E1BF3C0B800B72AEA /* PerfilViewController.swift */; };
 		7E8C068A1BFBC57900524B91 /* Captura de Tela 2015-11-17 às 17.27.59.png in Resources */ = {isa = PBXBuildFile; fileRef = 7E8C06891BFBC57900524B91 /* Captura de Tela 2015-11-17 às 17.27.59.png */; };
+		7EF595271BFE45230072215B /* AlterarDadosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EF595261BFE45230072215B /* AlterarDadosViewController.swift */; };
+		7EF595291BFE45340072215B /* velhaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EF595281BFE45340072215B /* velhaViewController.swift */; };
+		7EF5952B1BFE45470072215B /* pontosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EF5952A1BFE45470072215B /* pontosViewController.swift */; };
+		7EF5952D1BFE45530072215B /* DamasViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EF5952C1BFE45530072215B /* DamasViewController.swift */; };
 		7EFB8B261BF142EF0086F37E /* server_api_min.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EFB8B251BF142EF0086F37E /* server_api_min.swift */; };
 /* End PBXBuildFile section */
 
@@ -66,6 +70,10 @@
 		7E60003B1BF2B30F00B72AEA /* LSCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LSCell.swift; sourceTree = "<group>"; };
 		7E60003E1BF3C0B800B72AEA /* PerfilViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PerfilViewController.swift; sourceTree = "<group>"; };
 		7E8C06891BFBC57900524B91 /* Captura de Tela 2015-11-17 às 17.27.59.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Captura de Tela 2015-11-17 às 17.27.59.png"; path = "../../Captura de Tela 2015-11-17 às 17.27.59.png"; sourceTree = "<group>"; };
+		7EF595261BFE45230072215B /* AlterarDadosViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlterarDadosViewController.swift; sourceTree = "<group>"; };
+		7EF595281BFE45340072215B /* velhaViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = velhaViewController.swift; sourceTree = "<group>"; };
+		7EF5952A1BFE45470072215B /* pontosViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = pontosViewController.swift; sourceTree = "<group>"; };
+		7EF5952C1BFE45530072215B /* DamasViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DamasViewController.swift; sourceTree = "<group>"; };
 		7EFB8B251BF142EF0086F37E /* server_api_min.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = server_api_min.swift; path = servidor/server_api_min.swift; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
@@ -130,6 +138,7 @@
 				7E2D47B31BF028AD00FDEA98 /* Cadastro */,
 				7E2D47B21BF028A300FDEA98 /* Login */,
 				7E60003D1BF3C04E00B72AEA /* Perfil */,
+				7EF595251BFE44E50072215B /* AlterarDados */,
 				7E5F797E1BFB69820031B22F /* MenuJogos */,
 				7ECAAFA51BFCF33800B26C0E /* JogoDaVelha */,
 				7ECAAFA41BFCF31800B26C0E /* LigarPontos */,
@@ -194,6 +203,7 @@
 		7ECAAFA31BFCF30700B26C0E /* Damas */ = {
 			isa = PBXGroup;
 			children = (
+				7EF5952C1BFE45530072215B /* DamasViewController.swift */,
 			);
 			name = Damas;
 			path = ..;
@@ -202,6 +212,7 @@
 		7ECAAFA41BFCF31800B26C0E /* LigarPontos */ = {
 			isa = PBXGroup;
 			children = (
+				7EF5952A1BFE45470072215B /* pontosViewController.swift */,
 			);
 			name = LigarPontos;
 			path = ..;
@@ -210,9 +221,18 @@
 		7ECAAFA51BFCF33800B26C0E /* JogoDaVelha */ = {
 			isa = PBXGroup;
 			children = (
+				7EF595281BFE45340072215B /* velhaViewController.swift */,
 			);
 			name = JogoDaVelha;
 			path = ..;
+			sourceTree = "<group>";
+		};
+		7EF595251BFE44E50072215B /* AlterarDados */ = {
+			isa = PBXGroup;
+			children = (
+				7EF595261BFE45230072215B /* AlterarDadosViewController.swift */,
+			);
+			name = AlterarDados;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -353,11 +373,15 @@
 				7E2D47AF1BF0195000FDEA98 /* ScreenCell.swift in Sources */,
 				7E2D47B71BF02B7600FDEA98 /* TelaLogin.swift in Sources */,
 				7E60003F1BF3C0B800B72AEA /* PerfilViewController.swift in Sources */,
+				7EF595271BFE45230072215B /* AlterarDadosViewController.swift in Sources */,
 				7EFB8B261BF142EF0086F37E /* server_api_min.swift in Sources */,
+				7EF595291BFE45340072215B /* velhaViewController.swift in Sources */,
 				7E2D47831BF017C900FDEA98 /* ViewController.swift in Sources */,
+				7EF5952B1BFE45470072215B /* pontosViewController.swift in Sources */,
 				7E2D47811BF017C900FDEA98 /* AppDelegate.swift in Sources */,
 				7E60003C1BF2B30F00B72AEA /* LSCell.swift in Sources */,
 				7E2D47B91BF044FF00FDEA98 /* CSCell.swift in Sources */,
+				7EF5952D1BFE45530072215B /* DamasViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

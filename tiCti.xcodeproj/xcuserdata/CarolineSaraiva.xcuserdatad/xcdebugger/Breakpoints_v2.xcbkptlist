@@ -2,4 +2,54 @@
 <Bucket
    type = "1"
    version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "tiCti/PerfilViewController.swift"
+            timestampString = "469655104.536304"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "114"
+            endingLineNumber = "114"
+            landmarkName = "imagePickerController(_:didFinishPickingImage:editingInfo:)"
+            landmarkType = "5">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "tiCti.PerfilViewController.(imagePickerController (tiCti.PerfilViewController) -&gt; (__ObjC.UIImagePickerController, didFinishPickingImage : __ObjC.UIImage, editingInfo : Swift.Optional&lt;Swift.Dictionary&lt;Swift.String, Swift.AnyObject&gt;&gt;) -&gt; ()).(closure #1)"
+                  moduleName = "tiCti"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/CarolineSaraiva/Desktop/tiCti/tiCti/PerfilViewController.swift"
+                  timestampString = "469655145.716867"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "114"
+                  endingLineNumber = "114"
+                  offsetFromSymbolStart = "36">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "tiCti.PerfilViewController.(imagePickerController (tiCti.PerfilViewController) -&gt; (__ObjC.UIImagePickerController, didFinishPickingImage : __ObjC.UIImage, editingInfo : Swift.Optional&lt;Swift.Dictionary&lt;Swift.String, Swift.AnyObject&gt;&gt;) -&gt; ()).(closure #1).(closure #1)"
+                  moduleName = "tiCti"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/CarolineSaraiva/Desktop/tiCti/tiCti/PerfilViewController.swift"
+                  timestampString = "469655145.71708"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "115"
+                  endingLineNumber = "115"
+                  offsetFromSymbolStart = "20">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
 </Bucket>

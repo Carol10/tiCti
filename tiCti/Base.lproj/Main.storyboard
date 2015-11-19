@@ -341,6 +341,115 @@
             </objects>
             <point key="canvasLocation" x="1189" y="1137"/>
         </scene>
+        <!--Alterar Dados View Controller-->
+        <scene sceneID="wey-tC-rl7">
+            <objects>
+                <viewController id="798-er-rhP" customClass="AlterarDadosViewController" customModule="tiCti" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="5vK-KB-b9W"/>
+                        <viewControllerLayoutGuide type="bottom" id="QCk-5Y-G3S"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="lN4-3J-dNO">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Nome" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hwu-FP-dNt">
+                                <rect key="frame" x="20" y="234" width="80" height="47"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <color key="textColor" red="0.1137254902" green="0.2156862745" blue="0.23529411759999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Senha" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0St-Ly-y6N">
+                                <rect key="frame" x="20" y="355" width="85" height="47"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <color key="textColor" red="0.1137254902" green="0.2156862745" blue="0.23529411759999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ECu-kD-yFt">
+                                <rect key="frame" x="20" y="162" width="548" height="47"/>
+                                <animations/>
+                                <color key="backgroundColor" red="1" green="0.97580491309999995" blue="0.95658120430000004" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="33"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="SoV-ga-8MX">
+                                <rect key="frame" x="20" y="289" width="548" height="47"/>
+                                <animations/>
+                                <color key="backgroundColor" red="1" green="0.97580491309999995" blue="0.95658120430000004" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="33"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="voX-99-1uZ">
+                                <rect key="frame" x="20" y="410" width="548" height="47"/>
+                                <animations/>
+                                <color key="backgroundColor" red="1" green="0.97580491309999995" blue="0.95658120430000004" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="33"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Email" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fSx-eT-que">
+                                <rect key="frame" x="20" y="107" width="77" height="47"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <color key="textColor" red="0.1137254902" green="0.2156862745" blue="0.23529411759999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R13-Uz-ulY">
+                                <rect key="frame" x="589" y="410" width="159" height="47"/>
+                                <animations/>
+                                <color key="backgroundColor" red="0.86274509799999999" green="0.3803921569" blue="0.035294117649999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <state key="normal" title="Atualizar">
+                                    <color key="titleColor" red="1" green="0.97580491309999995" blue="0.95658120430000004" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f6s-Pq-ZCd">
+                                <rect key="frame" x="589" y="289" width="159" height="47"/>
+                                <animations/>
+                                <color key="backgroundColor" red="0.86274509799999999" green="0.3803921569" blue="0.035294117649999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <state key="normal" title="Atualizar">
+                                    <color key="titleColor" red="1" green="0.97580491309999995" blue="0.95658120430000004" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZuY-rJ-CJm">
+                                <rect key="frame" x="589" y="162" width="159" height="47"/>
+                                <animations/>
+                                <color key="backgroundColor" red="0.86274509799999999" green="0.3803921569" blue="0.035294117649999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <state key="normal" title="Atualizar">
+                                    <color key="titleColor" red="1" green="0.97580491309999995" blue="0.95658120430000004" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q2s-eM-0y4">
+                                <rect key="frame" x="20" y="666" width="728" height="57"/>
+                                <animations/>
+                                <color key="backgroundColor" red="0.98823529409999999" green="0.58431372550000005" blue="0.031372549020000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="37"/>
+                                <state key="normal" title=" Atualizar tudo">
+                                    <color key="titleColor" red="1" green="0.97580491309999995" blue="0.95658120430000004" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                            </button>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" red="0.74901960779999999" green="0.75294117650000003" blue="0.74117647060000003" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="iPad"/>
+                    <connections>
+                        <outlet property="atualizaEmail" destination="ZuY-rJ-CJm" id="v7e-WG-9sT"/>
+                        <outlet property="atualizaNome" destination="f6s-Pq-ZCd" id="MJU-0Q-dYa"/>
+                        <outlet property="atualizaSenha" destination="R13-Uz-ulY" id="nHu-uC-rtz"/>
+                        <outlet property="atualizaTudo" destination="Q2s-eM-0y4" id="N5W-2D-Qmv"/>
+                        <outlet property="emailField" destination="ECu-kD-yFt" id="htR-Z8-5yy"/>
+                        <outlet property="nomeField" destination="SoV-ga-8MX" id="ygc-Jx-PEg"/>
+                        <outlet property="senhaField" destination="voX-99-1uZ" id="OwD-Zn-gsh"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nec-X7-VQd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2620" y="1167"/>
+        </scene>
         <!--Perfil-->
         <scene sceneID="t53-oa-ePH">
             <objects>
@@ -391,6 +500,9 @@
                                             <state key="normal" title="Editar foto">
                                                 <color key="titleColor" red="0.96862745100000003" green="0.94509803920000002" blue="0.92941176469999998" alpha="1" colorSpace="calibratedRGB"/>
                                             </state>
+                                            <connections>
+                                                <action selector="EditaFotoA:" destination="kaN-Y5-xGw" eventType="touchUpInside" id="C7K-JS-4UL"/>
+                                            </connections>
                                         </button>
                                     </subviews>
                                     <animations/>
@@ -406,6 +518,9 @@
                                 <state key="normal" title="Altere os seus dados">
                                     <color key="titleColor" red="0.96862745100000003" green="0.94509803920000002" blue="0.92941176469999998" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <segue destination="798-er-rhP" kind="show" id="1dh-G3-CG4"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Iwy-ny-vu4">
                                 <rect key="frame" x="129" y="747" width="511" height="57"/>
@@ -449,6 +564,26 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WF8-og-2hm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2078" y="2324"/>
+        </scene>
+        <!--Pontos View Controller-->
+        <scene sceneID="oqK-ap-NlX">
+            <objects>
+                <viewController id="mAM-8T-xDl" customClass="pontosViewController" customModule="tiCti" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="oDt-ow-6h6"/>
+                        <viewControllerLayoutGuide type="bottom" id="oLb-WX-91k"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Mqv-dl-bDW">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <animations/>
+                        <color key="backgroundColor" red="0.74901960779999999" green="0.75294117650000003" blue="0.74117647060000003" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="iPad"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aFi-VY-nFc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2140" y="3655"/>
         </scene>
         <!--Jogos-->
         <scene sceneID="gtW-Fr-lPS">
@@ -539,7 +674,7 @@
                                 </state>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aDE-Ne-Mm8">
-                                <rect key="frame" x="449" y="960" width="130" height="64"/>
+                                <rect key="frame" x="449" y="949" width="130" height="75"/>
                                 <animations/>
                                 <color key="backgroundColor" red="0.98823529409999999" green="0.58431372550000005" blue="0.031372549020000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
@@ -571,36 +706,32 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aSw-aZ-gab">
-                                <rect key="frame" x="449" y="924" width="130" height="37"/>
+                                <rect key="frame" x="449" y="914" width="130" height="37"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <color key="textColor" red="0.1137254902" green="0.2156862745" blue="0.23529411759999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="boI-dV-iLe">
-                                <rect key="frame" x="324" y="651" width="120" height="120"/>
-                                <animations/>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mDw-Sz-FnI">
-                                <rect key="frame" x="454" y="803" width="120" height="120"/>
+                                <rect key="frame" x="324" y="646" width="120" height="120"/>
                                 <animations/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DYP-8H-6dm">
-                                <rect key="frame" x="327" y="812" width="19" height="35"/>
+                                <rect key="frame" x="319" y="803" width="19" height="35"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="32"/>
                                 <color key="textColor" red="1" green="0.97580491309999995" blue="0.95658120430000004" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="2" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pnv-cR-XOh">
-                                <rect key="frame" x="198" y="904" width="19" height="35"/>
+                                <rect key="frame" x="189" y="896" width="19" height="35"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="32"/>
                                 <color key="textColor" red="1" green="0.97580491309999995" blue="0.95658120430000004" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="3" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pr1-OR-Brq">
-                                <rect key="frame" x="457" y="960" width="19" height="35"/>
+                                <rect key="frame" x="449" y="949" width="19" height="35"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="32"/>
                                 <color key="textColor" red="1" green="0.97580491309999995" blue="0.95658120430000004" alpha="1" colorSpace="calibratedRGB"/>
@@ -608,6 +739,10 @@
                             </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="oDt-BC-Rlc">
                                 <rect key="frame" x="194" y="740" width="120" height="120"/>
+                                <animations/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mDw-Sz-FnI">
+                                <rect key="frame" x="454" y="796" width="120" height="120"/>
                                 <animations/>
                             </imageView>
                         </subviews>
@@ -631,11 +766,34 @@
                         <outlet property="pedestal1" destination="lUe-uF-1Ee" id="Vbt-Qa-geJ"/>
                         <outlet property="pedestal2" destination="Z55-Pm-Rx6" id="RB0-rB-WSl"/>
                         <outlet property="pedestal3" destination="aDE-Ne-Mm8" id="t39-ef-e7z"/>
+                        <segue destination="2t7-IC-AL6" kind="show" id="iqm-te-v8z"/>
+                        <segue destination="mAM-8T-xDl" kind="show" id="8Mn-i6-yMH"/>
+                        <segue destination="msL-hA-ECr" kind="show" id="FaI-mg-tG7"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NG9-Ub-Nt0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3019" y="2324"/>
+            <point key="canvasLocation" x="3019" y="2352"/>
+        </scene>
+        <!--Velha View Controller-->
+        <scene sceneID="Xgv-mM-sVQ">
+            <objects>
+                <viewController id="msL-hA-ECr" customClass="velhaViewController" customModule="tiCti" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="iT6-AS-zoh"/>
+                        <viewControllerLayoutGuide type="bottom" id="dlT-TJ-5zt"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="PcG-9S-6qM">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <animations/>
+                        <color key="backgroundColor" red="0.74901960779999999" green="0.75294117650000003" blue="0.74117647060000003" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="iPad"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zJ2-mP-YJ5" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3135" y="3655"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="JJe-tZ-ivm">
@@ -655,6 +813,26 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="R0O-m5-qy3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1189" y="2332"/>
+        </scene>
+        <!--Damas View Controller-->
+        <scene sceneID="5a1-Vy-bHi">
+            <objects>
+                <viewController id="2t7-IC-AL6" customClass="DamasViewController" customModule="tiCti" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Rps-qS-IBj"/>
+                        <viewControllerLayoutGuide type="bottom" id="pP0-ZP-4XF"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="B8E-Fx-Dpe">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <animations/>
+                        <color key="backgroundColor" red="0.74901960779999999" green="0.75294117650000003" blue="0.74117647060000003" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="iPad"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="77l-iv-Kt9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1189" y="3575"/>
         </scene>
     </scenes>
     <resources>

@@ -8,7 +8,7 @@
 
 import UIKit
 
-class PerfilViewController: UIViewController, tictiDelegate{
+class PerfilViewController: UIViewController, tictiDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate{
     
     var meu_email:String = ""
     
@@ -27,6 +27,7 @@ class PerfilViewController: UIViewController, tictiDelegate{
     @IBOutlet weak var menJogos: UIBarButtonItem!
     
     var i = 0;
+    var imageP = UIImagePickerController()
     
     @IBOutlet weak var tutorial: UIButton!
     @IBOutlet weak var alterarDados: UIButton!
@@ -41,13 +42,20 @@ class PerfilViewController: UIViewController, tictiDelegate{
         tic.dadosDoUsuario(meu_email) { (nome, email, jogando, vitorias, derrotas, imagem) -> () in
             self.nomeUser.text = nome
             self.pts.text = "\(vitorias) pts"
-            self.fotoPerfil.image = imagem 
+            self.fotoPerfil.image = imagem
+            
+            
         }
 
         // Do any additional setup after loading the view.
 
         UIBarButtonItem.appearance().setTitleTextAttributes([NSFontAttributeName: UIFont(name: "Helvetica", size: 30)!], forState: .Normal)
         self.navigationController?.navigationBar.tintColor = UIColor(red:(29.0/255.0),green:(55.0/255.0),blue:(60.0/255.0),alpha:1.0)
+        
+        
+        
+        self.imageP.delegate = self
+        
        
  
         
@@ -89,6 +97,40 @@ class PerfilViewController: UIViewController, tictiDelegate{
         // Dispose of any resources that can be recreated.
     }
     
+    @IBAction func EditaFotoA(sender: AnyObject) {
+        imageP.allowsEditing = false
+        imageP.sourceType = .PhotoLibrary
+        dispatch_async(dispatch_get_main_queue()) { () -> Void in
+            self.presentViewController(self.imageP, animated: true, completion: nil)
+        }
+    }
+    
+    func imagePickerController(picker: UIImagePickerController, didFinishPickingImage image: UIImage, editingInfo: [String : AnyObject]?) {
+        
+        fotoPerfil.image = image
+        
+        tic.meuemail = meu_email
+        dispatch_async(dispatch_get_main_queue()) { () -> Void in
+            self.tic.atualizarFoto(image) { (enviado) -> () in
+                if enviado {
+                    let alert = UIAlertView()
+                    alert.title = "Editar foto"
+                    alert.message = "sua foto foi alterada com sucesso!"
+                    alert.addButtonWithTitle("Close")
+                    alert.show()
+                }else{
+                    let alert = UIAlertView()
+                    alert.title = "Editar foto"
+                    alert.message = "Não foi possível alterar sua foto no momento, tente novamente mais tarde."
+                    alert.addButtonWithTitle("Close")
+                    alert.show()
+                }
+                
+            }
+        }
+        
+    }
+
 
     /*
     // MARK: - Navigation

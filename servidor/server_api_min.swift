@@ -207,6 +207,7 @@ class ticti: NSObject , NSStreamDelegate{
         var result = NSDictionary()
         let task = NSURLSession.sharedSession().dataTaskWithURL(url) { (data, response, error) -> Void in
             result = try! NSJSONSerialization.JSONObjectWithData(data!, options: NSJSONReadingOptions(rawValue: 0)) as! NSDictionary
+            print(result)
             if(result["status"] as! String == "sucess" ){
                 dispatch_async(self.tictiQueue, { () -> Void in
                     callback(sucesso: true, nome: result["nome"] as! String)
@@ -257,7 +258,6 @@ class ticti: NSObject , NSStreamDelegate{
     }
     func atualizarFoto(imagem:UIImage, callback:(enviado:Bool)->()){
         let imageData = UIImagePNGRepresentation(imagem)
-        
         if imageData != nil{
             if(meuemail == ""){
                 print("Não posso enviar imagem porque a variável 'meuemail' está vazia");
@@ -271,7 +271,6 @@ class ticti: NSObject , NSStreamDelegate{
             
             let boundary = NSString(format: "---------------------------14737809831466499882746641449")
             let contentType = NSString(format: "multipart/form-data; boundary=%@",boundary)
-            print("Content Type \(contentType)")
             request.addValue(contentType as String, forHTTPHeaderField: "Content-Type")
             
             let body = NSMutableData()
@@ -279,7 +278,7 @@ class ticti: NSObject , NSStreamDelegate{
             // Title
             body.appendData(NSString(format: "\r\n--%@\r\n",boundary).dataUsingEncoding(NSUTF8StringEncoding)!)
             body.appendData(NSString(format:"Content-Disposition: form-data; name=\"title\"\r\n\r\n").dataUsingEncoding(NSUTF8StringEncoding)!)
-            body.appendData("Hello World".dataUsingEncoding(NSUTF8StringEncoding, allowLossyConversion: true)!)
+            //body.appendData("Hello World".dataUsingEncoding(NSUTF8StringEncoding, allowLossyConversion: true)!)
             
             // Image
             body.appendData(NSString(format: "\r\n--%@\r\n", boundary).dataUsingEncoding(NSUTF8StringEncoding)!)
@@ -292,6 +291,7 @@ class ticti: NSObject , NSStreamDelegate{
             
             NSURLSession.sharedSession().dataTaskWithRequest(request, completionHandler: { (data, response, error) -> Void in
                 let result = try! NSJSONSerialization.JSONObjectWithData(data!, options: NSJSONReadingOptions(rawValue: 0))
+                print(result)
                 if(result["status"] as! String == "sucess"){
                     dispatch_async(self.tictiQueue, { () -> Void in
                         callback(enviado: true);
