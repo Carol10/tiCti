@@ -293,9 +293,13 @@ class ticti: NSObject , NSStreamDelegate{
             NSURLSession.sharedSession().dataTaskWithRequest(request, completionHandler: { (data, response, error) -> Void in
                 let result = try! NSJSONSerialization.JSONObjectWithData(data!, options: NSJSONReadingOptions(rawValue: 0))
                 if(result["status"] as! String == "sucess"){
-                    callback(enviado: true);
+                    dispatch_async(self.tictiQueue, { () -> Void in
+                        callback(enviado: true);
+                    })
                 }else{
-                    callback(enviado: false);
+                    dispatch_async(self.tictiQueue, { () -> Void in
+                        callback(enviado: false);
+                    })
                 }
             }).resume()
         }
@@ -331,6 +335,7 @@ class ticti: NSObject , NSStreamDelegate{
             var n = 0;
             for p:NSDictionary in (arr as! [NSDictionary]){
                 let URL = self.host+"?action=getImage&email=\(p["email"])"
+                print(URL)
                 NSURLSession.sharedSession().dataTaskWithURL(NSURL(string: URL)!, completionHandler: { (data, response, error) -> Void in
                     iarr.addObject(UIImage(data: data!)!)
                     n++;
