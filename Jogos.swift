@@ -8,7 +8,9 @@
 
 import UIKit
 
-class Jogos: UIViewController{
+class Jogos: UIViewController, tictiDelegate{
+    
+    var meu_email = ""
 
     //servidor 
     let tic = ticti()
@@ -51,12 +53,13 @@ class Jogos: UIViewController{
         foto3.layer.cornerRadius=60
         
         self.navigationItem.title = "Jogos"
+        print(meu_email)
         
+        tic.delegate=self
         tic.connect()
         
         
         tic.pegarRanking { (dados, imagens) -> () in
-            print("chamou")
             //dispatch_async(<#T##queue: dispatch_queue_t##dispatch_queue_t#>, <#T##block: dispatch_block_t##dispatch_block_t##() -> Void#>)
             self.nome1.text = (dados[0] as! NSDictionary)["nome"] as? String
             self.nome2.text = (dados[1] as! NSDictionary)["nome"] as? String
@@ -71,12 +74,25 @@ class Jogos: UIViewController{
             self.foto3.image = imagens[2] as? UIImage;
         }
         
+        Bdamas.addTarget(self, action: Selector("goDama"), forControlEvents: UIControlEvents.TouchUpInside)
        
+    }
+    func goDama(){
+        print(meu_email)
+        tic.meuemail = meu_email
+        tic.queroJogar(1)
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    func pareou(com: String, jogo: UInt) {
+        print("pareou!")
+        let vc = DamasViewController()
+        vc.meu_email = meu_email
+        vc.inimigo_email = com
+        self.presentViewController(vc, animated: true, completion: nil)
     }
     
 

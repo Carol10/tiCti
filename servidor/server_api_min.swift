@@ -291,11 +291,8 @@ class ticti: NSObject , NSStreamDelegate{
             
             NSURLSession.sharedSession().dataTaskWithRequest(request, completionHandler: { (data, response, error) -> Void in
                 let result = try! NSJSONSerialization.JSONObjectWithData(data!, options: NSJSONReadingOptions(rawValue: 0))
-<<<<<<< Updated upstream
                 print(result)
-=======
                 
->>>>>>> Stashed changes
                 if(result["status"] as! String == "sucess"){
                     dispatch_async(self.tictiQueue, { () -> Void in
                         callback(enviado: true);

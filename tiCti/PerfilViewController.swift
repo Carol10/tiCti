@@ -96,6 +96,10 @@ class PerfilViewController: UIViewController, tictiDelegate, UIImagePickerContro
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        let jg = segue.destinationViewController as! Jogos;
+        jg.meu_email = meu_email
+    }
     
     @IBAction func EditaFotoA(sender: AnyObject) {
         imageP.allowsEditing = false
@@ -130,6 +134,7 @@ class PerfilViewController: UIViewController, tictiDelegate, UIImagePickerContro
         }
         
     }
+    
 
 
     /*

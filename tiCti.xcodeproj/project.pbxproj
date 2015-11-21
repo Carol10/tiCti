@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		452B4C3E1BFFA92B0037172C /* quadrado.swift in Sources */ = {isa = PBXBuildFile; fileRef = 452B4C3D1BFFA92B0037172C /* quadrado.swift */; };
+		452B4C401BFFA9550037172C /* bolinha.swift in Sources */ = {isa = PBXBuildFile; fileRef = 452B4C3F1BFFA9550037172C /* bolinha.swift */; };
+		452B4C431BFFA9680037172C /* azul.png in Resources */ = {isa = PBXBuildFile; fileRef = 452B4C411BFFA9680037172C /* azul.png */; };
+		452B4C441BFFA9680037172C /* vermelho.png in Resources */ = {isa = PBXBuildFile; fileRef = 452B4C421BFFA9680037172C /* vermelho.png */; };
+		7348760DB427A3584D2C1C43 /* libPods-tiCti.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 808588D88D29D601B9F97784 /* libPods-tiCti.a */; };
 		7E2D47811BF017C900FDEA98 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E2D47801BF017C900FDEA98 /* AppDelegate.swift */; };
 		7E2D47831BF017C900FDEA98 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E2D47821BF017C900FDEA98 /* ViewController.swift */; };
 		7E2D47861BF017C900FDEA98 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7E2D47841BF017C900FDEA98 /* Main.storyboard */; };
@@ -15,14 +20,12 @@
 		7E2D47961BF017C900FDEA98 /* tiCtiTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E2D47951BF017C900FDEA98 /* tiCtiTests.swift */; };
 		7E2D47A11BF017C900FDEA98 /* tiCtiUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E2D47A01BF017C900FDEA98 /* tiCtiUITests.swift */; };
 		7E2D47AF1BF0195000FDEA98 /* ScreenCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E2D47AE1BF0195000FDEA98 /* ScreenCell.swift */; };
-		7E2D47B11BF01F8F00FDEA98 /* Captura de Tela 2015-09-17 às 17.13.20.png in Resources */ = {isa = PBXBuildFile; fileRef = 7E2D47B01BF01F8F00FDEA98 /* Captura de Tela 2015-09-17 às 17.13.20.png */; };
 		7E2D47B51BF02B5100FDEA98 /* TelaCadastro.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E2D47B41BF02B5100FDEA98 /* TelaCadastro.swift */; };
 		7E2D47B71BF02B7600FDEA98 /* TelaLogin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E2D47B61BF02B7600FDEA98 /* TelaLogin.swift */; };
 		7E2D47B91BF044FF00FDEA98 /* CSCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E2D47B81BF044FF00FDEA98 /* CSCell.swift */; };
 		7E5F79801BFB69CF0031B22F /* Jogos.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E5F797F1BFB69CF0031B22F /* Jogos.swift */; };
 		7E60003C1BF2B30F00B72AEA /* LSCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E60003B1BF2B30F00B72AEA /* LSCell.swift */; };
 		7E60003F1BF3C0B800B72AEA /* PerfilViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E60003E1BF3C0B800B72AEA /* PerfilViewController.swift */; };
-		7E8C068A1BFBC57900524B91 /* Captura de Tela 2015-11-17 às 17.27.59.png in Resources */ = {isa = PBXBuildFile; fileRef = 7E8C06891BFBC57900524B91 /* Captura de Tela 2015-11-17 às 17.27.59.png */; };
 		7EF595271BFE45230072215B /* AlterarDadosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EF595261BFE45230072215B /* AlterarDadosViewController.swift */; };
 		7EF595291BFE45340072215B /* velhaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EF595281BFE45340072215B /* velhaViewController.swift */; };
 		7EF5952B1BFE45470072215B /* pontosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EF5952A1BFE45470072215B /* pontosViewController.swift */; };
@@ -48,6 +51,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		452B4C3D1BFFA92B0037172C /* quadrado.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = quadrado.swift; sourceTree = "<group>"; };
+		452B4C3F1BFFA9550037172C /* bolinha.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = bolinha.swift; sourceTree = "<group>"; };
+		452B4C411BFFA9680037172C /* azul.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = azul.png; sourceTree = "<group>"; };
+		452B4C421BFFA9680037172C /* vermelho.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = vermelho.png; sourceTree = "<group>"; };
+		452B4C451BFFAA710037172C /* tiCti-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "tiCti-Bridging-Header.h"; sourceTree = SOURCE_ROOT; };
 		7E2D477D1BF017C900FDEA98 /* tiCti.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = tiCti.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7E2D47801BF017C900FDEA98 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7E2D47821BF017C900FDEA98 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -62,19 +70,20 @@
 		7E2D47A01BF017C900FDEA98 /* tiCtiUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tiCtiUITests.swift; sourceTree = "<group>"; };
 		7E2D47A21BF017C900FDEA98 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7E2D47AE1BF0195000FDEA98 /* ScreenCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScreenCell.swift; sourceTree = "<group>"; };
-		7E2D47B01BF01F8F00FDEA98 /* Captura de Tela 2015-09-17 às 17.13.20.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Captura de Tela 2015-09-17 às 17.13.20.png"; path = "../../Captura de Tela 2015-09-17 às 17.13.20.png"; sourceTree = "<group>"; };
 		7E2D47B41BF02B5100FDEA98 /* TelaCadastro.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TelaCadastro.swift; sourceTree = "<group>"; };
 		7E2D47B61BF02B7600FDEA98 /* TelaLogin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TelaLogin.swift; sourceTree = "<group>"; };
 		7E2D47B81BF044FF00FDEA98 /* CSCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CSCell.swift; sourceTree = "<group>"; };
 		7E5F797F1BFB69CF0031B22F /* Jogos.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Jogos.swift; sourceTree = "<group>"; };
 		7E60003B1BF2B30F00B72AEA /* LSCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LSCell.swift; sourceTree = "<group>"; };
 		7E60003E1BF3C0B800B72AEA /* PerfilViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PerfilViewController.swift; sourceTree = "<group>"; };
-		7E8C06891BFBC57900524B91 /* Captura de Tela 2015-11-17 às 17.27.59.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Captura de Tela 2015-11-17 às 17.27.59.png"; path = "../../Captura de Tela 2015-11-17 às 17.27.59.png"; sourceTree = "<group>"; };
 		7EF595261BFE45230072215B /* AlterarDadosViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlterarDadosViewController.swift; sourceTree = "<group>"; };
 		7EF595281BFE45340072215B /* velhaViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = velhaViewController.swift; sourceTree = "<group>"; };
 		7EF5952A1BFE45470072215B /* pontosViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = pontosViewController.swift; sourceTree = "<group>"; };
 		7EF5952C1BFE45530072215B /* DamasViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DamasViewController.swift; sourceTree = "<group>"; };
 		7EFB8B251BF142EF0086F37E /* server_api_min.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = server_api_min.swift; path = servidor/server_api_min.swift; sourceTree = SOURCE_ROOT; };
+		808588D88D29D601B9F97784 /* libPods-tiCti.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-tiCti.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C7E9E5276DD1689CDC9BC65E /* Pods-tiCti.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-tiCti.debug.xcconfig"; path = "Pods/Target Support Files/Pods-tiCti/Pods-tiCti.debug.xcconfig"; sourceTree = "<group>"; };
+		CB3A39BB14B3511CDAF3603A /* Pods-tiCti.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-tiCti.release.xcconfig"; path = "Pods/Target Support Files/Pods-tiCti/Pods-tiCti.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +91,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7348760DB427A3584D2C1C43 /* libPods-tiCti.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -102,6 +112,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2C6480D55EA97ADD1EEEB472 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C7E9E5276DD1689CDC9BC65E /* Pods-tiCti.debug.xcconfig */,
+				CB3A39BB14B3511CDAF3603A /* Pods-tiCti.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		7E2D47741BF017C900FDEA98 = {
 			isa = PBXGroup;
 			children = (
@@ -109,6 +128,8 @@
 				7E2D47941BF017C900FDEA98 /* tiCtiTests */,
 				7E2D479F1BF017C900FDEA98 /* tiCtiUITests */,
 				7E2D477E1BF017C900FDEA98 /* Products */,
+				2C6480D55EA97ADD1EEEB472 /* Pods */,
+				B74BC0868DE4706A95F3146F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -130,11 +151,10 @@
 				7E2D47821BF017C900FDEA98 /* ViewController.swift */,
 				7E2D47AE1BF0195000FDEA98 /* ScreenCell.swift */,
 				7E2D47841BF017C900FDEA98 /* Main.storyboard */,
-				7E8C06891BFBC57900524B91 /* Captura de Tela 2015-11-17 às 17.27.59.png */,
-				7E2D47B01BF01F8F00FDEA98 /* Captura de Tela 2015-09-17 às 17.13.20.png */,
 				7E2D47871BF017C900FDEA98 /* Assets.xcassets */,
 				7E2D47891BF017C900FDEA98 /* LaunchScreen.storyboard */,
 				7E2D478C1BF017C900FDEA98 /* Info.plist */,
+				452B4C451BFFAA710037172C /* tiCti-Bridging-Header.h */,
 				7E2D47B31BF028AD00FDEA98 /* Cadastro */,
 				7E2D47B21BF028A300FDEA98 /* Login */,
 				7E60003D1BF3C04E00B72AEA /* Perfil */,
@@ -204,6 +224,10 @@
 			isa = PBXGroup;
 			children = (
 				7EF5952C1BFE45530072215B /* DamasViewController.swift */,
+				452B4C3D1BFFA92B0037172C /* quadrado.swift */,
+				452B4C3F1BFFA9550037172C /* bolinha.swift */,
+				452B4C411BFFA9680037172C /* azul.png */,
+				452B4C421BFFA9680037172C /* vermelho.png */,
 			);
 			name = Damas;
 			path = ..;
@@ -235,6 +259,14 @@
 			name = AlterarDados;
 			sourceTree = "<group>";
 		};
+		B74BC0868DE4706A95F3146F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				808588D88D29D601B9F97784 /* libPods-tiCti.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -242,9 +274,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7E2D47A51BF017C900FDEA98 /* Build configuration list for PBXNativeTarget "tiCti" */;
 			buildPhases = (
+				C64F4B223BC7CB4DB3B267D2 /* Check Pods Manifest.lock */,
 				7E2D47791BF017C900FDEA98 /* Sources */,
 				7E2D477A1BF017C900FDEA98 /* Frameworks */,
 				7E2D477B1BF017C900FDEA98 /* Resources */,
+				6562F8F0583A6B58B3C3A447 /* Embed Pods Frameworks */,
+				E5B5FE647886336074724149 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -339,11 +374,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7E8C068A1BFBC57900524B91 /* Captura de Tela 2015-11-17 às 17.27.59.png in Resources */,
+				452B4C441BFFA9680037172C /* vermelho.png in Resources */,
 				7E2D478B1BF017C900FDEA98 /* LaunchScreen.storyboard in Resources */,
 				7E2D47881BF017C900FDEA98 /* Assets.xcassets in Resources */,
-				7E2D47B11BF01F8F00FDEA98 /* Captura de Tela 2015-09-17 às 17.13.20.png in Resources */,
 				7E2D47861BF017C900FDEA98 /* Main.storyboard in Resources */,
+				452B4C431BFFA9680037172C /* azul.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -363,6 +398,54 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		6562F8F0583A6B58B3C3A447 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-tiCti/Pods-tiCti-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C64F4B223BC7CB4DB3B267D2 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		E5B5FE647886336074724149 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-tiCti/Pods-tiCti-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		7E2D47791BF017C900FDEA98 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -371,7 +454,9 @@
 				7E5F79801BFB69CF0031B22F /* Jogos.swift in Sources */,
 				7E2D47B51BF02B5100FDEA98 /* TelaCadastro.swift in Sources */,
 				7E2D47AF1BF0195000FDEA98 /* ScreenCell.swift in Sources */,
+				452B4C3E1BFFA92B0037172C /* quadrado.swift in Sources */,
 				7E2D47B71BF02B7600FDEA98 /* TelaLogin.swift in Sources */,
+				452B4C401BFFA9550037172C /* bolinha.swift in Sources */,
 				7E60003F1BF3C0B800B72AEA /* PerfilViewController.swift in Sources */,
 				7EF595271BFE45230072215B /* AlterarDadosViewController.swift in Sources */,
 				7EFB8B261BF142EF0086F37E /* server_api_min.swift in Sources */,
@@ -456,6 +541,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_BITCODE = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -501,6 +587,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_BITCODE = NO;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -521,24 +608,33 @@
 		};
 		7E2D47A61BF017C900FDEA98 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C7E9E5276DD1689CDC9BC65E /* Pods-tiCti.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = tiCti/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = br.ufpe.cin.bepid.Carol.tiCti;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "tiCti-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
 		7E2D47A71BF017C900FDEA98 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CB3A39BB14B3511CDAF3603A /* Pods-tiCti.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = tiCti/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = br.ufpe.cin.bepid.Carol.tiCti;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "tiCti-Bridging-Header.h";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;

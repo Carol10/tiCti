@@ -766,7 +766,7 @@
                         <outlet property="pedestal1" destination="lUe-uF-1Ee" id="Vbt-Qa-geJ"/>
                         <outlet property="pedestal2" destination="Z55-Pm-Rx6" id="RB0-rB-WSl"/>
                         <outlet property="pedestal3" destination="aDE-Ne-Mm8" id="t39-ef-e7z"/>
-                        <segue destination="2t7-IC-AL6" kind="show" id="iqm-te-v8z"/>
+                        <segue destination="2t7-IC-AL6" kind="show" identifier="proDamas" id="iqm-te-v8z"/>
                         <segue destination="mAM-8T-xDl" kind="show" id="8Mn-i6-yMH"/>
                         <segue destination="msL-hA-ECr" kind="show" id="FaI-mg-tG7"/>
                     </connections>
