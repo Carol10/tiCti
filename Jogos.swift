@@ -20,9 +20,10 @@ class Jogos: UIViewController, tictiDelegate{
     @IBOutlet weak var Bvelha: UIButton!
     @IBOutlet weak var Bpontos: UIButton!
     
-    @IBOutlet weak var I: UIImageView!
-    @IBOutlet weak var J: UIImageView!
-    @IBOutlet weak var K: UIImageView!
+    @IBOutlet weak var I: UILabel!
+    @IBOutlet weak var J: UILabel!
+    @IBOutlet weak var K: UILabel!
+
     
     
     @IBOutlet weak var foto1: UIImageView!
@@ -75,13 +76,24 @@ class Jogos: UIViewController, tictiDelegate{
         }
         
         Bdamas.addTarget(self, action: Selector("goDama"), forControlEvents: UIControlEvents.TouchUpInside)
+        Bvelha.addTarget(self, action: Selector("goVelha"), forControlEvents: UIControlEvents.TouchUpInside)
        
     }
+    
     func goDama(){
-        print(meu_email)
+        self.I.backgroundColor = UIColor(red:(168.0/255.0),green:(200.0/255.0),blue:(89.0/255.0),alpha:1.0)
         tic.meuemail = meu_email
         tic.queroJogar(1)
     }
+    func goVelha(){
+        tic.meuemail = meu_email
+        tic.queroJogar(2)
+        self.J.backgroundColor = UIColor(red:(168.0/255.0),green:(200.0/255.0),blue:(89.0/255.0),alpha:1.0)
+    }
+    func goPontinhos(){
+       self.K.backgroundColor = UIColor(red:(168.0/255.0),green:(200.0/255.0),blue:(89.0/255.0),alpha:1.0)
+    }
+
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -89,10 +101,31 @@ class Jogos: UIViewController, tictiDelegate{
     }
     func pareou(com: String, jogo: UInt) {
         print("pareou!")
-        let vc = DamasViewController()
-        vc.meu_email = meu_email
-        vc.inimigo_email = com
-        self.presentViewController(vc, animated: true, completion: nil)
+        self.I.backgroundColor = UIColor.clearColor()
+        self.J.backgroundColor = UIColor.clearColor()
+        self.K.backgroundColor = UIColor.clearColor()
+        if(jogo == 1){
+            let vc = DamasViewController()
+            vc.meu_email = meu_email
+            vc.inimigo_email = com
+            self.navigationController?.pushViewController(vc, animated: true)
+            //self.presentViewController(vc, animated: true, completion: nil)
+        }else if(jogo == 2){
+//            let vc = velhaViewController()
+            
+            let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("VelhaVC") as! velhaViewController;
+            
+            vc.meu_email = meu_email
+            vc.inimigo_email = com
+            self.navigationController?.pushViewController(vc, animated: true)
+            //3self.presentViewController(vc, animated: true, completion: nil)
+        }else if(jogo == 3){
+//            let vc = pontosViewController()
+//            vc.meu_email = meu_email
+//            vc.inimigo_email = com
+//            self.presentViewController(vc, animated: true, completion: nil)
+        }
+        
     }
     
 

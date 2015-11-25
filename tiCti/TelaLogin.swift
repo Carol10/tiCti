@@ -81,11 +81,12 @@ class TelaLogin: UIViewController, UITableViewDelegate, UITableViewDataSource, t
                 //self.presentViewController(nav, animated: true, completion: nil)
                 self.performSegueWithIdentifier("Logar", sender: self)
             }else{
-                let alert = UIAlertView()
-                alert.title = "Inconsistencia no login"
-                alert.message = "Usuário ou senha incorretos."
-                alert.addButtonWithTitle("Close")
-                alert.show()
+                let Alert1 = UIAlertController(title: "Inconsistencia no login", message:"Usuário ou senha incorretos.", preferredStyle: UIAlertControllerStyle.Alert)
+                
+                Alert1.addAction(UIAlertAction(title: "Close", style: .Default, handler: {
+                    (action: UIAlertAction!) in
+                }))
+                self.presentViewController(Alert1, animated: true, completion: nil)
                 
             }
             

@@ -97,8 +97,10 @@ class PerfilViewController: UIViewController, tictiDelegate, UIImagePickerContro
         // Dispose of any resources that can be recreated.
     }
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        let jg = segue.destinationViewController as! Jogos;
-        jg.meu_email = meu_email
+        if( segue.identifier == "jogosMenu"){
+            let jg = segue.destinationViewController as! Jogos;
+            jg.meu_email = meu_email
+        }
     }
     
     @IBAction func EditaFotoA(sender: AnyObject) {
@@ -117,17 +119,21 @@ class PerfilViewController: UIViewController, tictiDelegate, UIImagePickerContro
         dispatch_async(dispatch_get_main_queue()) { () -> Void in
             self.tic.atualizarFoto(image) { (enviado) -> () in
                 if enviado {
-                    let alert = UIAlertView()
-                    alert.title = "Editar foto"
-                    alert.message = "sua foto foi alterada com sucesso!"
-                    alert.addButtonWithTitle("Close")
-                    alert.show()
+                    let Alert1 = UIAlertController(title: "Editar foto", message:"sua foto foi alterada com sucesso!", preferredStyle: UIAlertControllerStyle.Alert)
+                    
+                    Alert1.addAction(UIAlertAction(title: "Close", style: .Default, handler: {
+                        (action: UIAlertAction!) in
+                    }))
+                    self.presentViewController(Alert1, animated: true, completion: nil)
+                    
                 }else{
-                    let alert = UIAlertView()
-                    alert.title = "Editar foto"
-                    alert.message = "Não foi possível alterar sua foto no momento, tente novamente mais tarde."
-                    alert.addButtonWithTitle("Close")
-                    alert.show()
+                    let Alert2 = UIAlertController(title: "Editar foto", message: "Não foi possível alterar sua foto no momento, tente novamente mais tarde.", preferredStyle: UIAlertControllerStyle.Alert)
+                    
+                    Alert2.addAction(UIAlertAction(title: "Close", style: .Default, handler: {
+                        (action: UIAlertAction!) in
+                    }))
+                    self.presentViewController(Alert2, animated: true, completion: nil)
+                    
                 }
                 
             }

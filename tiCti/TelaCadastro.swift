@@ -130,20 +130,25 @@ class TelaCadastro: UIViewController, UITableViewDataSource, UITableViewDelegate
                             self.performSegueWithIdentifier("ligaLogin", sender: self)
                         }
                         else{
-                            let alert = UIAlertView()
-                            alert.title = "Inconsistencia no cadastro"
-                            alert.message = "vc pode não estar conectado a internet"
-                            alert.addButtonWithTitle("Close")
-                            alert.show()
+                            let Alert1 = UIAlertController(title: "Inconsistencia no cadastro", message: "vc pode não estar conectado a internet", preferredStyle: UIAlertControllerStyle.Alert)
+                            
+                            Alert1.addAction(UIAlertAction(title: "Close", style: .Default, handler: {
+                                (action: UIAlertAction!) in
+                            }))
+                            self.presentViewController(Alert1, animated: true, completion: nil)
+                            
+                            
                             
                         }
                     })
                 }else{
-                    let alert = UIAlertView()
-                    alert.title = "Inconsistencia no cadastro"
-                    alert.message = "Este email já está cadastrado."
-                    alert.addButtonWithTitle("Close")
-                    alert.show()
+                    let Alert2 = UIAlertController(title: "Inconsistencia no cadastro", message:"Este email já está cadastrado.", preferredStyle: UIAlertControllerStyle.Alert)
+                    
+                    Alert2.addAction(UIAlertAction(title: "Close", style: .Default, handler: {
+                        (action: UIAlertAction!) in
+                    }))
+                    self.presentViewController(Alert2, animated: true, completion: nil)
+                    
                 }
             })
             
@@ -162,11 +167,13 @@ class TelaCadastro: UIViewController, UITableViewDataSource, UITableViewDelegate
         
         arrayDados[0] = emailField.text!
         if(verificarEmai(arrayDados[0]) == false){
-            let alert = UIAlertView()
-            alert.title = "Email Inválido"
-            alert.message = "Digite seu email novamente."
-            alert.addButtonWithTitle("Close")
-            alert.show()
+            let Alert3 = UIAlertController(title: "Email Inválido", message:"Digite seu email novamente.", preferredStyle: UIAlertControllerStyle.Alert)
+            
+            Alert3.addAction(UIAlertAction(title: "Close", style: .Default, handler: {
+                (action: UIAlertAction!) in
+            }))
+            self.presentViewController(Alert3, animated: true, completion: nil)
+            
             j = 2
         }else{
             j = 1
