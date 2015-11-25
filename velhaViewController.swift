@@ -171,6 +171,7 @@ class velhaViewController: UIViewController, tictiDelegate{
             verifica()
             jogador = 1
         }
+        ehMinhaVez = false
     }
     
     @IBAction func B12(sender: AnyObject) {
@@ -190,6 +191,7 @@ class velhaViewController: UIViewController, tictiDelegate{
             verifica()
             jogador = 1
         }
+        ehMinhaVez = false
     }
     
     @IBAction func B13(sender: AnyObject) {
@@ -209,6 +211,7 @@ class velhaViewController: UIViewController, tictiDelegate{
             verifica()
             jogador = 1
         }
+        ehMinhaVez = false
     }
     
     @IBAction func B21(sender: AnyObject) {
@@ -228,6 +231,7 @@ class velhaViewController: UIViewController, tictiDelegate{
             verifica()
             jogador = 1
         }
+        ehMinhaVez = false
     }
     
     @IBAction func B22(sender: AnyObject) {
@@ -247,7 +251,7 @@ class velhaViewController: UIViewController, tictiDelegate{
             verifica()
             jogador = 1
         }
-        
+       ehMinhaVez = false
     }
     
     @IBAction func B23(sender: AnyObject) {
@@ -267,7 +271,7 @@ class velhaViewController: UIViewController, tictiDelegate{
             verifica()
             jogador = 1
         }
-        
+        ehMinhaVez = false
     }
     
     @IBAction func B31(sender: AnyObject) {
@@ -287,7 +291,7 @@ class velhaViewController: UIViewController, tictiDelegate{
             verifica()
             jogador = 1
         }
-        
+        ehMinhaVez = false
     }
     
     @IBAction func B32(sender: AnyObject) {
@@ -307,7 +311,7 @@ class velhaViewController: UIViewController, tictiDelegate{
             verifica()
             jogador = 1
         }
-        
+        ehMinhaVez = false
     }
     
     @IBAction func B33(sender: AnyObject) {
@@ -327,6 +331,7 @@ class velhaViewController: UIViewController, tictiDelegate{
             verifica()
             jogador = 1
         }
+        ehMinhaVez = false
     }
     
     func adversarioConectou(email: String) {
@@ -334,165 +339,169 @@ class velhaViewController: UIViewController, tictiDelegate{
         ehMinhaVez = true 
     }
     func recebeuUmMovimento(de: String, dados: String) {
-        switch dados{
-            case "11":
-                if(jogador==2){
-                    tic.movimento("11")
-                    l11 = 2
-                    b11.enabled = false
-                    b11.setTitle("X", forState: .Disabled)
-                    verifica()
-                    jogador = 1
-                }
-                else if(jogador==1){
-                    l11 = 1
-                    b11.enabled = false
-                    b11.setTitle("O", forState: .Disabled)
-                    verifica()
-                    jogador = 2
-                }
-                break;
-            case "12":
-                if(jogador==2){
-                    tic.movimento("12")
-                    l12 = 2
-                    b12.enabled = false
-                    b12.setTitle("X", forState: .Disabled)
-                    verifica()
-                    jogador = 1
-                }
-                else if(jogador==1){
-                    l12 = 1
-                    b12.enabled = false
-                    b12.setTitle("O", forState: .Disabled)
-                    verifica()
-                    jogador = 2
-            }
-            break;
-            case "13":
-                if(jogador==2){
-                    tic.movimento("13")
-                    l13 = 2
-                    b13.enabled = false
-                    b13.setTitle("X", forState: .Disabled)
-                    verifica()
-                    jogador = 1
-                }
-                else if(jogador==1){
-                    l13 = 1
-                    b13.enabled = false
-                    b13.setTitle("O", forState: .Disabled)
-                    verifica()
-                    jogador = 2
-            }
-                break;
-            
-            case "21":
-                if(jogador==2){
-                    tic.movimento("21")
-                    l21 = 2
-                    b21.enabled = false
-                    b21.setTitle("X", forState: .Disabled)
-                    verifica()
-                    jogador = 1
-                }
-                else if(jogador==1){
-                    l21 = 1
-                    b21.enabled = false
-                    b21.setTitle("O", forState: .Disabled)
-                    verifica()
-                    jogador = 2
-            }
-                break;
-            case "22":
-                if(jogador==2){
-                    tic.movimento("22")
-                    l22 = 2
-                    b22.enabled = false
-                    b22.setTitle("X", forState: .Disabled)
-                    verifica()
-                    jogador = 1
-                }
-                else if(jogador==1){
-                    l22 = 1
-                    b22.enabled = false
-                    b22.setTitle("O", forState: .Disabled)
-                    verifica()
-                    jogador = 2
-            }
-                break;
-            case "23":
-                if(jogador==1){
-                    tic.movimento("23")
-                    l23 = 1
-                    b23.enabled = false
-                    b23.setTitle("X", forState: .Disabled)
-                    verifica()
-                    jogador = 2
-                }
-                else if(jogador==2){
-                    l23 = 2
-                    b23.enabled = false
-                    b23.setTitle("O", forState: .Disabled)
-                    verifica()
-                    jogador = 1
-            }
-            break
-            case "31":
-                if(jogador==2){
-                    tic.movimento("31")
-                    l31 = 2
-                    b31.enabled = false
-                    b31.setTitle("X", forState: .Disabled)
-                    verifica()
-                    jogador = 1
-                }
-                else if(jogador==1){
-                    l31 = 1
-                    b31.enabled = false
-                    b31.setTitle("O", forState: .Disabled)
-                    verifica()
-                    jogador = 2
-                }
-                
-            break
-            case "32":
-                if(jogador==2){
-                    tic.movimento("32")
-                    l32 = 2
-                    b32.enabled = false
-                    b32.setTitle("X", forState: .Disabled)
-                    verifica()
-                    jogador = 1
-                }
-                else if(jogador==1){
-                    l32 = 1
-                    b32.enabled = false
-                    b32.setTitle("O", forState: .Disabled)
-                    verifica()
-                    jogador = 2
-                }
-            
-            break
-            case "33":
-                if(jogador==2){
-                    tic.movimento("33")
-                    l33 = 2
-                    b33.enabled = false
-                    b33.setTitle("X", forState: .Disabled)
-                    verifica()
-                    jogador = 1
-                }
-                else if(jogador==1){
-                    l33 = 1
-                    b33.enabled = false
-                    b33.setTitle("O", forState: .Disabled)
-                    verifica()
-                    jogador = 2
-                }
-            break
-            default:
-            break
+        ehMinhaVez = true
+        
+        
+        
+//        switch dados{
+//            case "11":
+//                if(jogador==2){
+//                    tic.movimento("11")
+//                    l11 = 1
+//                    b11.enabled = false
+//                    b11.setTitle("X", forState: .Disabled)
+//                    verifica()
+//                    jogador = 1
+//                }
+//                else if(jogador==1){
+//                    l11 = 2
+//                    b11.enabled = false
+//                    b11.setTitle("O", forState: .Disabled)
+//                    verifica()
+//                    jogador = 2
+//                }
+//                break;
+//            case "12":
+//                if(jogador==2){
+//                    tic.movimento("12")
+//                    l12 = 1
+//                    b12.enabled = false
+//                    b12.setTitle("X", forState: .Disabled)
+//                    verifica()
+//                    jogador = 1
+//                }
+//                else if(jogador==1){
+//                    l12 = 1
+//                    b12.enabled = false
+//                    b12.setTitle("O", forState: .Disabled)
+//                    verifica()
+//                    jogador = 2
+//            }
+//            break;
+//            case "13":
+//                if(jogador==2){
+//                    tic.movimento("13")
+//                    l13 = 2
+//                    b13.enabled = false
+//                    b13.setTitle("X", forState: .Disabled)
+//                    verifica()
+//                    jogador = 1
+//                }
+//                else if(jogador==1){
+//                    l13 = 1
+//                    b13.enabled = false
+//                    b13.setTitle("O", forState: .Disabled)
+//                    verifica()
+//                    jogador = 2
+//            }
+//                break;
+//            
+//            case "21":
+//                if(jogador==2){
+//                    tic.movimento("21")
+//                    l21 = 2
+//                    b21.enabled = false
+//                    b21.setTitle("X", forState: .Disabled)
+//                    verifica()
+//                    jogador = 1
+//                }
+//                else if(jogador==1){
+//                    l21 = 1
+//                    b21.enabled = false
+//                    b21.setTitle("O", forState: .Disabled)
+//                    verifica()
+//                    jogador = 2
+//            }
+//                break;
+//            case "22":
+//                if(jogador==2){
+//                    tic.movimento("22")
+//                    l22 = 2
+//                    b22.enabled = false
+//                    b22.setTitle("X", forState: .Disabled)
+//                    verifica()
+//                    jogador = 1
+//                }
+//                else if(jogador==1){
+//                    l22 = 1
+//                    b22.enabled = false
+//                    b22.setTitle("O", forState: .Disabled)
+//                    verifica()
+//                    jogador = 2
+//            }
+//                break;
+//            case "23":
+//                if(jogador==1){
+//                    tic.movimento("23")
+//                    l23 = 1
+//                    b23.enabled = false
+//                    b23.setTitle("X", forState: .Disabled)
+//                    verifica()
+//                    jogador = 2
+//                }
+//                else if(jogador==2){
+//                    l23 = 2
+//                    b23.enabled = false
+//                    b23.setTitle("O", forState: .Disabled)
+//                    verifica()
+//                    jogador = 1
+//            }
+//            break
+//            case "31":
+//                if(jogador==2){
+//                    tic.movimento("31")
+//                    l31 = 2
+//                    b31.enabled = false
+//                    b31.setTitle("X", forState: .Disabled)
+//                    verifica()
+//                    jogador = 1
+//                }
+//                else if(jogador==1){
+//                    l31 = 1
+//                    b31.enabled = false
+//                    b31.setTitle("O", forState: .Disabled)
+//                    verifica()
+//                    jogador = 2
+//                }
+//                
+//            break
+//            case "32":
+//                if(jogador==2){
+//                    tic.movimento("32")
+//                    l32 = 2
+//                    b32.enabled = false
+//                    b32.setTitle("X", forState: .Disabled)
+//                    verifica()
+//                    jogador = 1
+//                }
+//                else if(jogador==1){
+//                    l32 = 1
+//                    b32.enabled = false
+//                    b32.setTitle("O", forState: .Disabled)
+//                    verifica()
+//                    jogador = 2
+//                }
+//            
+//            break
+//            case "33":
+//                if(jogador==2){
+//                    tic.movimento("33")
+//                    l33 = 2
+//                    b33.enabled = false
+//                    b33.setTitle("X", forState: .Disabled)
+//                    verifica()
+//                    jogador = 1
+//                }
+//                else if(jogador==1){
+//                    l33 = 1
+//                    b33.enabled = false
+//                    b33.setTitle("O", forState: .Disabled)
+//                    verifica()
+//                    jogador = 2
+//                }
+//            break
+//            default:
+//            break
         }
     }
 
