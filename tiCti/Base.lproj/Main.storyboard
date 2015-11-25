@@ -244,7 +244,7 @@
                                 <color key="sectionIndexBackgroundColor" red="0.1137254902" green="0.2156862745" blue="0.23529411759999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="LCell" rowHeight="438" id="1Jc-Lh-AqA" customClass="LSCell" customModule="tiCti" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="768" height="438"/>
+                                        <rect key="frame" x="0.0" y="92" width="768" height="438"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="1Jc-Lh-AqA" id="4qI-eZ-4R6">
                                             <rect key="frame" x="0.0" y="0.0" width="768" height="438"/>
@@ -969,7 +969,7 @@
         <image name="Captura de Tela 2015-11-17 às 17.27.59.png" width="126" height="124"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="9qb-8L-ayC"/>
         <segue reference="zWy-76-Pvd"/>
+        <segue reference="JiL-kU-V3y"/>
     </inferredMetricsTieBreakers>
 </document>

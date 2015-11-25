@@ -11,6 +11,7 @@
 		452B4C401BFFA9550037172C /* bolinha.swift in Sources */ = {isa = PBXBuildFile; fileRef = 452B4C3F1BFFA9550037172C /* bolinha.swift */; };
 		452B4C431BFFA9680037172C /* azul.png in Resources */ = {isa = PBXBuildFile; fileRef = 452B4C411BFFA9680037172C /* azul.png */; };
 		452B4C441BFFA9680037172C /* vermelho.png in Resources */ = {isa = PBXBuildFile; fileRef = 452B4C421BFFA9680037172C /* vermelho.png */; };
+		45F5A1711C063B9C004D13B7 /* botao_ttt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45F5A1701C063B9C004D13B7 /* botao_ttt.swift */; };
 		7348760DB427A3584D2C1C43 /* libPods-tiCti.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 808588D88D29D601B9F97784 /* libPods-tiCti.a */; };
 		7E2D47811BF017C900FDEA98 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E2D47801BF017C900FDEA98 /* AppDelegate.swift */; };
 		7E2D47831BF017C900FDEA98 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E2D47821BF017C900FDEA98 /* ViewController.swift */; };
@@ -56,6 +57,7 @@
 		452B4C411BFFA9680037172C /* azul.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = azul.png; sourceTree = "<group>"; };
 		452B4C421BFFA9680037172C /* vermelho.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = vermelho.png; sourceTree = "<group>"; };
 		452B4C451BFFAA710037172C /* tiCti-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "tiCti-Bridging-Header.h"; sourceTree = SOURCE_ROOT; };
+		45F5A1701C063B9C004D13B7 /* botao_ttt.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = botao_ttt.swift; sourceTree = "<group>"; };
 		7E2D477D1BF017C900FDEA98 /* tiCti.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = tiCti.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7E2D47801BF017C900FDEA98 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7E2D47821BF017C900FDEA98 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -246,6 +248,7 @@
 			isa = PBXGroup;
 			children = (
 				7EF595281BFE45340072215B /* velhaViewController.swift */,
+				45F5A1701C063B9C004D13B7 /* botao_ttt.swift */,
 			);
 			name = JogoDaVelha;
 			path = ..;
@@ -338,7 +341,7 @@
 				TargetAttributes = {
 					7E2D477C1BF017C900FDEA98 = {
 						CreatedOnToolsVersion = 7.1;
-						DevelopmentTeam = C8H24TH83T;
+						DevelopmentTeam = 9T2CY2S9H2;
 					};
 					7E2D47901BF017C900FDEA98 = {
 						CreatedOnToolsVersion = 7.1;
@@ -460,6 +463,7 @@
 				452B4C401BFFA9550037172C /* bolinha.swift in Sources */,
 				7E60003F1BF3C0B800B72AEA /* PerfilViewController.swift in Sources */,
 				7EF595271BFE45230072215B /* AlterarDadosViewController.swift in Sources */,
+				45F5A1711C063B9C004D13B7 /* botao_ttt.swift in Sources */,
 				7EFB8B261BF142EF0086F37E /* server_api_min.swift in Sources */,
 				7EF595291BFE45340072215B /* velhaViewController.swift in Sources */,
 				7E2D47831BF017C900FDEA98 /* ViewController.swift in Sources */,
