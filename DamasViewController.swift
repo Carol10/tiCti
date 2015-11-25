@@ -38,7 +38,6 @@ class DamasViewController: UIViewController, tictiDelegate,ARDAppClientDelegate,
     func colocaTabuleiro(){
         self.view.backgroundColor=UIColor.whiteColor()
         aresta = self.view.frame.size.width/CGFloat(8)
-        let y = fabs(self.view.frame.size.width - self.view.frame.size.height) - 2*aresta
 //        mesa = UIView(frame: CGRect(x: 0, y: y, width: self.view.frame.size.width, height: self.view.frame.size.width))
 //        mesa.backgroundColor=UIColor.grayColor()
 //        self.view.addSubview(mesa)
@@ -107,7 +106,6 @@ class DamasViewController: UIViewController, tictiDelegate,ARDAppClientDelegate,
             }
             p = !p;
         }
-        self.configVideoConferencia(y, sala: "BAAAAAB55569")
     }
     
     
@@ -275,6 +273,12 @@ class DamasViewController: UIViewController, tictiDelegate,ARDAppClientDelegate,
     func adversarioConectou(apelido: String) {
         print("\(apelido) conectou.")
         meu_turno=true;
+    }
+    
+    func recebeuIdDaSala(id: String) {
+        print("id da sala recebido:\n\(id)")
+        let y = fabs(self.view.frame.size.width - self.view.frame.size.height) - 2*aresta
+        self.configVideoConferencia(y, sala: id)
     }
     
     // MARK: Videoconferencia!

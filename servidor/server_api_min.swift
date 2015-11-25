@@ -15,6 +15,7 @@ protocol tictiDelegate{
 
     func pareou(com:String, jogo:UInt)
     func adversarioConectou(email:String)
+    func recebeuIdDaSala(id:String)
 }
 extension tictiDelegate{
     func recebeuUmMovimento(de:String, dados:String){
@@ -28,6 +29,9 @@ extension tictiDelegate{
     }
     func adversarioConectou(email:String){
         print("\(email) chegou!")
+    }
+    func recebeuIdDaSala(id:String){
+        print("id da sala recebido:\n\(id)")
     }
 }
 
@@ -151,6 +155,9 @@ class ticti: NSObject , NSStreamDelegate{
                 //            case "atualiza":
                 //                delegate?.atualiza()
                 //                break;
+            case "sala_id":
+                self.delegate?.recebeuIdDaSala(data["id"] as! String)
+                break;
             default:
                 print("Mensagem recebida, mas tipo desconhecido:")
                 print(data)
