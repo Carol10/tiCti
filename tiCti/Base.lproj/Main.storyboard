@@ -796,7 +796,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T37-oC-F1K">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T37-oC-F1K" customClass="botao_ttt" customModule="tiCti" customModuleProvider="target">
                                 <rect key="frame" x="42" y="279" width="200" height="200"/>
                                 <animations/>
                                 <color key="backgroundColor" red="0.86274509799999999" green="0.3803921569" blue="0.035294117649999998" alpha="1" colorSpace="calibratedRGB"/>
@@ -804,11 +804,8 @@
                                 <state key="normal">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
-                                <connections>
-                                    <action selector="B11:" destination="msL-hA-ECr" eventType="touchUpInside" id="OEV-YD-23A"/>
-                                </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kam-au-jeG">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kam-au-jeG" customClass="botao_ttt" customModule="tiCti" customModuleProvider="target">
                                 <rect key="frame" x="42" y="520" width="200" height="200"/>
                                 <animations/>
                                 <color key="backgroundColor" red="0.98823529409999999" green="0.58431372550000005" blue="0.031372549020000001" alpha="1" colorSpace="calibratedRGB"/>
@@ -816,11 +813,8 @@
                                 <state key="normal">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
-                                <connections>
-                                    <action selector="B21:" destination="msL-hA-ECr" eventType="touchUpInside" id="PGp-3X-N5n"/>
-                                </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qDT-uG-ALv">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qDT-uG-ALv" customClass="botao_ttt" customModule="tiCti" customModuleProvider="target">
                                 <rect key="frame" x="284" y="520" width="200" height="200"/>
                                 <animations/>
                                 <color key="backgroundColor" red="0.86274509799999999" green="0.3803921569" blue="0.035294117649999998" alpha="1" colorSpace="calibratedRGB"/>
@@ -828,11 +822,8 @@
                                 <state key="normal">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
-                                <connections>
-                                    <action selector="B22:" destination="msL-hA-ECr" eventType="touchUpInside" id="xpn-cU-uIG"/>
-                                </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iC2-IN-Kb3">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iC2-IN-Kb3" customClass="botao_ttt" customModule="tiCti" customModuleProvider="target">
                                 <rect key="frame" x="284" y="279" width="200" height="200"/>
                                 <animations/>
                                 <color key="backgroundColor" red="0.98823529409999999" green="0.58431372550000005" blue="0.031372549020000001" alpha="1" colorSpace="calibratedRGB"/>
@@ -840,11 +831,8 @@
                                 <state key="normal">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
-                                <connections>
-                                    <action selector="B12:" destination="msL-hA-ECr" eventType="touchUpInside" id="vWR-bs-4Z3"/>
-                                </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DFW-oT-n9h">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DFW-oT-n9h" customClass="botao_ttt" customModule="tiCti" customModuleProvider="target">
                                 <rect key="frame" x="526" y="279" width="200" height="200"/>
                                 <animations/>
                                 <color key="backgroundColor" red="0.86274509799999999" green="0.3803921569" blue="0.035294117649999998" alpha="1" colorSpace="calibratedRGB"/>
@@ -852,11 +840,8 @@
                                 <state key="normal">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
-                                <connections>
-                                    <action selector="B13:" destination="msL-hA-ECr" eventType="touchUpInside" id="zsf-d1-Tb9"/>
-                                </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tfN-7R-53J">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tfN-7R-53J" customClass="botao_ttt" customModule="tiCti" customModuleProvider="target">
                                 <rect key="frame" x="526" y="520" width="200" height="200"/>
                                 <animations/>
                                 <color key="backgroundColor" red="0.98823529409999999" green="0.58431372550000005" blue="0.031372549020000001" alpha="1" colorSpace="calibratedRGB"/>
@@ -864,11 +849,8 @@
                                 <state key="normal">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
-                                <connections>
-                                    <action selector="B23:" destination="msL-hA-ECr" eventType="touchUpInside" id="JD7-Id-2oX"/>
-                                </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8WR-f7-ZSt">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8WR-f7-ZSt" customClass="botao_ttt" customModule="tiCti" customModuleProvider="target">
                                 <rect key="frame" x="42" y="761" width="200" height="200"/>
                                 <animations/>
                                 <color key="backgroundColor" red="0.86274509799999999" green="0.3803921569" blue="0.035294117649999998" alpha="1" colorSpace="calibratedRGB"/>
@@ -876,11 +858,8 @@
                                 <state key="normal">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
-                                <connections>
-                                    <action selector="B31:" destination="msL-hA-ECr" eventType="touchUpInside" id="OfI-7y-gsk"/>
-                                </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T24-QD-LVT">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T24-QD-LVT" customClass="botao_ttt" customModule="tiCti" customModuleProvider="target">
                                 <rect key="frame" x="284" y="761" width="200" height="200"/>
                                 <animations/>
                                 <color key="backgroundColor" red="0.98823529409999999" green="0.58431372550000005" blue="0.031372549020000001" alpha="1" colorSpace="calibratedRGB"/>
@@ -888,11 +867,8 @@
                                 <state key="normal">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
-                                <connections>
-                                    <action selector="B32:" destination="msL-hA-ECr" eventType="touchUpInside" id="5Hr-0H-anh"/>
-                                </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iV6-5c-UwU">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iV6-5c-UwU" customClass="botao_ttt" customModule="tiCti" customModuleProvider="target">
                                 <rect key="frame" x="526" y="761" width="200" height="200"/>
                                 <animations/>
                                 <color key="backgroundColor" red="0.86274509799999999" green="0.3803921569" blue="0.035294117649999998" alpha="1" colorSpace="calibratedRGB"/>
@@ -900,9 +876,6 @@
                                 <state key="normal">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
-                                <connections>
-                                    <action selector="B33:" destination="msL-hA-ECr" eventType="touchUpInside" id="B7r-Tw-6ca"/>
-                                </connections>
                             </button>
                         </subviews>
                         <animations/>

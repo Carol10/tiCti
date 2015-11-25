@@ -10,4 +10,6 @@ import UIKit
 
 class botao_ttt: UIButton {
     var é_x = false
+    var linha = 0
+    var coluna = 0
 }

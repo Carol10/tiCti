@@ -44,31 +44,35 @@ class velhaViewController: UIViewController, tictiDelegate{
         tic.entreiNoJogo()
         self.navigationItem.title = "Jogo da velha"
         
-        botoes = [[b11,b12,b13],[b21,b22,b33],[b31,b32,b33]]
+        botoes = [[b11,b12,b13],[b21,b22,b23],[b31,b32,b33]]
         
         for(var linha = 0; linha < 3; linha++){
             for(var coluna = 0; coluna < 3; coluna++){
-                botoes[linha][coluna].addTarget(self, action: Selector("num_sei:"), forControlEvents: UIControlEvents.TouchUpInside)
+                (botoes[linha][coluna] as! botao_ttt).linha = linha;
+                (botoes[linha][coluna] as! botao_ttt).coluna = coluna;
+                botoes[linha][coluna].addTarget(self, action: "numSei:", forControlEvents: UIControlEvents.TouchUpInside)
             }
         }
     }
-    func num_sei(bt: botao_ttt){
+    
+    
+    func numSei(sender: botao_ttt){
         if(!ehMinhaVez){ return }
         if(jogador==1){
-            tic.movimento("23")
-            bt.enabled = false
-            bt.setTitle("X", forState: .Disabled)
-            bt.é_x = true
+            sender.enabled = false
+            sender.setTitle("X", forState: .Disabled)
+            sender.é_x = true
             verifica()
-            jogador = 2
+            //jogador = 2
         }
         else if(jogador==2){
-            bt.enabled = false
-            bt.setTitle("O", forState: .Disabled)
-            bt.é_x = false
+            sender.enabled = false
+            sender.setTitle("O", forState: .Disabled)
+            sender.é_x = false
             verifica()
-            jogador = 1
+            //jogador = 1
         }
+        tic.movimento("\(sender.linha) \(sender.coluna)")
         ehMinhaVez = false
     }
     
@@ -113,6 +117,26 @@ class velhaViewController: UIViewController, tictiDelegate{
                 }
             }
         }
+        if((diagonal == 3 || linhas == 3 || colunas == 3)){
+            AlertFunc(1)
+        }else if((diagonal == -3 || linhas == -3 || colunas == -3)){
+            AlertFunc(2)
+        }else{
+            var dv = true;
+            for(var linha = 0; linha < 3; linha++){
+                for(var coluna = 0; coluna < 3; coluna++){
+                    if (botoes[linha][coluna] as! botao_ttt).enabled == true{
+                        dv = false
+                        break;
+                    }
+                }
+            }
+            if(dv){
+                velhaTest=1;
+                AlertFunc(0)
+            }
+        }
+        
         print("diagonal: \(diagonal)\nlinhas: \(linhas)\ncolunas:\(colunas)");
         //
         //        if((l[0][0] == 1 || l[0][0] == 2) || (l[2][0] == 1 || l[2][0] == 2) || (l[1][2] == 1 || l[2][3] == 2)){
@@ -153,9 +177,9 @@ class velhaViewController: UIViewController, tictiDelegate{
         //        }
     }
     
-    func AlertFunc(){
+    func AlertFunc(vencedor: Int){
         if(velhaTest == 0){
-            let Alert1 = UIAlertController(title: "TicTacToe", message: "O vencedor é o jogador \(jogador)", preferredStyle: UIAlertControllerStyle.Alert)
+            let Alert1 = UIAlertController(title: "TicTacToe", message: "O vencedor é o jogador \(vencedor)", preferredStyle: UIAlertControllerStyle.Alert)
             
             Alert1.addAction(UIAlertAction(title: "Close", style: .Default, handler: {
                 (action: UIAlertAction!) in self.ResetGame()
@@ -178,8 +202,8 @@ class velhaViewController: UIViewController, tictiDelegate{
     }
     func recebeuUmMovimento(de: String, dados: String) {
         ehMinhaVez = true
-        let coef:NSArray = dados.componentsSeparatedByString("") // linha, coluna
-        let bt:botao_ttt = botoes[coef[0] as! Int][coef[1] as! Int] as! botao_ttt
+        let coef:NSArray = dados.characters.split{$0 == " "}.map(String.init) // linha, coluna
+        let bt:botao_ttt = botoes[Int(coef[0] as! String)!][Int(coef[1] as! String)!] as! botao_ttt
         if(jogador == 2 ){
             bt.é_x = true
             bt.enabled = false
@@ -189,6 +213,7 @@ class velhaViewController: UIViewController, tictiDelegate{
             bt.enabled = false
             bt.setTitle("O", forState: .Disabled)
         }
+        verifica()
         
     }
     //    @IBAction func B11(sender: AnyObject) {
