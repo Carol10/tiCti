@@ -22,7 +22,7 @@ class DamasViewController: UIViewController, tictiDelegate,ARDAppClientDelegate,
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        print("ondamas")
         colocaTabuleiro()
         start()
     }
@@ -46,7 +46,7 @@ class DamasViewController: UIViewController, tictiDelegate,ARDAppClientDelegate,
         for(var i:CGFloat = 0; i < 8; i++){ // linhas
             for(var j = 0; j < 8; j++){ // colunas
                 let x:CGFloat, y:CGFloat;
-                x = CGFloat(j)*aresta; y = i*aresta;
+                x = CGFloat(j)*aresta; y = 200+i*aresta;
                 let nome:String = "\(Int(i))\(Int(j))";
                 let B = quadrado(frame: CGRect(x: x,y: y,width: aresta,height: aresta))
                 B.usavel=true
@@ -270,9 +270,11 @@ class DamasViewController: UIViewController, tictiDelegate,ARDAppClientDelegate,
             })
         }
     }
-    func adversarioConectou(apelido: String) {
+    func adversarioConectou(apelido: String, sala_id:String) {
         print("\(apelido) conectou.")
         meu_turno=true;
+        let y = fabs(self.view.frame.size.width - self.view.frame.size.height) - 2*aresta
+        self.configVideoConferencia(y, sala: sala_id)
     }
     
     func recebeuIdDaSala(id: String) {

@@ -14,7 +14,7 @@ protocol tictiDelegate{
     //MARK: interface    //    func atualiza()
 
     func pareou(com:String, jogo:UInt)
-    func adversarioConectou(email:String)
+    func adversarioConectou(email:String, sala_id:String)
     func recebeuIdDaSala(id:String)
 }
 extension tictiDelegate{
@@ -27,8 +27,8 @@ extension tictiDelegate{
     func pareou(com:String, jogo:UInt){
         print("Pareei com \(com) no jogo com id \(jogo)")
     }
-    func adversarioConectou(email:String){
-        print("\(email) chegou!")
+    func adversarioConectou(email:String, sala_id:String){
+        print("\(email) chegou na sala: \(sala_id)")
     }
     func recebeuIdDaSala(id:String){
         print("id da sala recebido:\n\(id)")
@@ -83,6 +83,9 @@ class ticti: NSObject , NSStreamDelegate{
                 while(self.inputStream!.hasBytesAvailable){
                     len = self.inputStream!.read(&buffer, maxLength: bufferSize*sizeof(UInt8))
                     let dString = NSData(bytes: buffer, length: len!)
+                    let str = String(data: dString, encoding: NSASCIIStringEncoding)
+                    print("ola")
+                    print(str!)
                     let dic:NSDictionary = try! NSJSONSerialization.JSONObjectWithData(dString, options: NSJSONReadingOptions(rawValue: 0)) as! NSDictionary
                     self.manageRecievedData(dic)
                 }
@@ -150,7 +153,7 @@ class ticti: NSObject , NSStreamDelegate{
                 self.delegate?.pareou(data["com"] as! String, jogo: UInt(data["jogo"] as! String)!)
                 break;
             case "chegou":
-                self.delegate?.adversarioConectou(data["email"] as! String)
+                self.delegate?.adversarioConectou(data["email"] as! String, sala_id: data["sala_id"] as! String)
                 break;
                 //            case "atualiza":
                 //                delegate?.atualiza()
