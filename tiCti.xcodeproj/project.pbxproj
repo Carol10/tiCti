@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		451F92D01C078A7E009B6F85 /* azul_dama.png in Resources */ = {isa = PBXBuildFile; fileRef = 451F92CE1C078A7E009B6F85 /* azul_dama.png */; };
+		451F92D11C078A7E009B6F85 /* vermelho_dama.png in Resources */ = {isa = PBXBuildFile; fileRef = 451F92CF1C078A7E009B6F85 /* vermelho_dama.png */; };
 		452B4C3E1BFFA92B0037172C /* quadrado.swift in Sources */ = {isa = PBXBuildFile; fileRef = 452B4C3D1BFFA92B0037172C /* quadrado.swift */; };
 		452B4C401BFFA9550037172C /* bolinha.swift in Sources */ = {isa = PBXBuildFile; fileRef = 452B4C3F1BFFA9550037172C /* bolinha.swift */; };
 		452B4C431BFFA9680037172C /* azul.png in Resources */ = {isa = PBXBuildFile; fileRef = 452B4C411BFFA9680037172C /* azul.png */; };
@@ -52,6 +54,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		451F92CE1C078A7E009B6F85 /* azul_dama.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = azul_dama.png; sourceTree = "<group>"; };
+		451F92CF1C078A7E009B6F85 /* vermelho_dama.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = vermelho_dama.png; sourceTree = "<group>"; };
 		452B4C3D1BFFA92B0037172C /* quadrado.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = quadrado.swift; sourceTree = "<group>"; };
 		452B4C3F1BFFA9550037172C /* bolinha.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = bolinha.swift; sourceTree = "<group>"; };
 		452B4C411BFFA9680037172C /* azul.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = azul.png; sourceTree = "<group>"; };
@@ -230,6 +234,8 @@
 				452B4C3F1BFFA9550037172C /* bolinha.swift */,
 				452B4C411BFFA9680037172C /* azul.png */,
 				452B4C421BFFA9680037172C /* vermelho.png */,
+				451F92CE1C078A7E009B6F85 /* azul_dama.png */,
+				451F92CF1C078A7E009B6F85 /* vermelho_dama.png */,
 			);
 			name = Damas;
 			path = ..;
@@ -378,6 +384,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				451F92D01C078A7E009B6F85 /* azul_dama.png in Resources */,
+				451F92D11C078A7E009B6F85 /* vermelho_dama.png in Resources */,
 				452B4C441BFFA9680037172C /* vermelho.png in Resources */,
 				7E2D478B1BF017C900FDEA98 /* LaunchScreen.storyboard in Resources */,
 				7E2D47881BF017C900FDEA98 /* Assets.xcassets in Resources */,

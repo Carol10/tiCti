@@ -216,6 +216,10 @@ class velhaViewController: UIViewController, tictiDelegate{
         verifica()
         
     }
+    
+    override func viewWillDisappear(animated: Bool) {
+        tic.sair()
+    }
     //    @IBAction func B11(sender: AnyObject) {
     //        if(!ehMinhaVez){ return }
     //        if(jogador==1){
