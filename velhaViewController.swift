@@ -515,4 +515,4 @@ class velhaViewController: UIViewController, tictiDelegate{
     }
     */
     
-}
+
