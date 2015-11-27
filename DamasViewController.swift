@@ -8,7 +8,7 @@
 
 import UIKit
 
-class DamasViewController: UIViewController, tictiDelegate,ARDAppClientDelegate, RTCEAGLVideoViewDelegate {
+class DamasViewController: UIViewController, tictiDelegate, ARDAppClientDelegate, RTCEAGLVideoViewDelegate {
     
     var meu_email = ""
     var inimigo_email = ""
@@ -25,6 +25,7 @@ class DamasViewController: UIViewController, tictiDelegate,ARDAppClientDelegate,
         print("ondamas")
         colocaTabuleiro()
         start()
+        (UIApplication.sharedApplication().delegate as! AppDelegate).dama=self
     }
     
     func start(){
@@ -209,13 +210,20 @@ class DamasViewController: UIViewController, tictiDelegate,ARDAppClientDelegate,
                         
                         if novo_quadrado.linha == 0{
                             fez_dama = "sim"
+                            self.primeira_bolinha!.image=UIImage(named: "azul_dama.png")
                         }
                         
                         string_for_server = "{\"de\":\"\(7-uql)\(7-uqc)\",\"para\":\"\(7-nql)\(7-nqc)\",\"comeu\":\"sim\",\"comido\":\"\(7-cql)\(7-cqc)\",\"qts\":\"\(Int(peças_comidas))\", \"fez_dama\": \"\(fez_dama)\"}"
                     }
                 }
             }else{ // é dama!
-                print("é dama")
+                print("ola!")
+                let vlinhas = fabs(novo_quadrado.linha - ultimo_quadrado.linha)
+                let vcolunas = fabs(novo_quadrado.coluna - ultimo_quadrado.coluna)
+                if(vlinhas == vcolunas){
+                    movimento_aceito = true
+                }
+                string_for_server = "{}"
             }
             
             
@@ -284,7 +292,7 @@ class DamasViewController: UIViewController, tictiDelegate,ARDAppClientDelegate,
             })
         }
         if(js["fez_dama"] as! String == "sim"){
-            novo_quadrado!.bola?.image=(UIImage(named: "vermelho_dama.png"))
+            novo_quadrado!.bola?.image=UIImage(named: "vermelho_dama.png")
         }
     }
     override func viewWillDisappear(animated: Bool) {
@@ -313,10 +321,12 @@ class DamasViewController: UIViewController, tictiDelegate,ARDAppClientDelegate,
         let width:CGFloat = 200// altura/1.4
         remoteView = RTCEAGLVideoView(frame: CGRect(x: self.view.frame.size.width-width, y: 0, width: width, height: 250))
         remoteView.layer.zPosition=100
-        self.view.addSubview(remoteView)
+        //self.view.addSubview(remoteView)
+        UIApplication.sharedApplication().keyWindow?.addSubview(remoteView)
         client = ARDAppClient(delegate: self)
         client.serverHostUrl=videoHost
         client.connectToRoomWithId(sala, options: nil)
+        //remoteView.layer.zPosition = 100
         //client.set
     }
     func appClient(client: ARDAppClient!, didChangeState state: ARDAppClientState) {
@@ -342,6 +352,8 @@ class DamasViewController: UIViewController, tictiDelegate,ARDAppClientDelegate,
     func videoView(videoView: RTCEAGLVideoView!, didChangeVideoSize size: CGSize) {
         print("size changed")
     }
-    
+    func appWillTerminate(){
+        t.sair()
+    }
 }
 
