@@ -19,6 +19,9 @@ class AlterarDadosViewController: UIViewController {
     @IBOutlet weak var atualizaSenha: UIButton!
     @IBOutlet weak var atualizaTudo: UIButton!
     
+    
+    let tic = ticti()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -47,6 +50,17 @@ class AlterarDadosViewController: UIViewController {
         nomeField.layer.cornerRadius = 12.0
         senhaField.layer.cornerRadius = 12.0
         
+        
+        tic.connect()
+        
+        
+        atualizaEmail.addTarget(self, action: Selector("mudarEmail"), forControlEvents: UIControlEvents.TouchUpInside)
+        atualizaNome.addTarget(self, action: Selector("mudarNome"), forControlEvents: UIControlEvents.TouchUpInside)
+        atualizaSenha.addTarget(self, action: Selector("mudarSenha"), forControlEvents: UIControlEvents.TouchUpInside)
+        atualizaTudo.addTarget(self, action: Selector("mudarTudo"), forControlEvents: UIControlEvents.TouchUpInside)
+        
+        
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -54,7 +68,19 @@ class AlterarDadosViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
+    func mudarEmail(){
+        
+    }
+    func mudarNome(){
+        
+    }
+    func mudarSenha(){
+        
+    }
+    func mudarTudo(){
+        
+    }
+    
     /*
     // MARK: - Navigation
 

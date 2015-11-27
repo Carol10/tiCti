@@ -8,7 +8,7 @@
 
 import UIKit
 
-class DamasViewController: UIViewController, tictiDelegate,ARDAppClientDelegate, RTCEAGLVideoViewDelegate {
+class DamasViewController: UIViewController, tictiDelegate, ARDAppClientDelegate, RTCEAGLVideoViewDelegate {
     
     var meu_email = ""
     var inimigo_email = ""
@@ -22,9 +22,10 @@ class DamasViewController: UIViewController, tictiDelegate,ARDAppClientDelegate,
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        print("ondamas")
         colocaTabuleiro()
         start()
+        (UIApplication.sharedApplication().delegate as! AppDelegate).dama=self
     }
     
     func start(){
@@ -38,7 +39,6 @@ class DamasViewController: UIViewController, tictiDelegate,ARDAppClientDelegate,
     func colocaTabuleiro(){
         self.view.backgroundColor=UIColor.whiteColor()
         aresta = self.view.frame.size.width/CGFloat(8)
-        let y = fabs(self.view.frame.size.width - self.view.frame.size.height) - 2*aresta
 //        mesa = UIView(frame: CGRect(x: 0, y: y, width: self.view.frame.size.width, height: self.view.frame.size.width))
 //        mesa.backgroundColor=UIColor.grayColor()
 //        self.view.addSubview(mesa)
@@ -47,7 +47,7 @@ class DamasViewController: UIViewController, tictiDelegate,ARDAppClientDelegate,
         for(var i:CGFloat = 0; i < 8; i++){ // linhas
             for(var j = 0; j < 8; j++){ // colunas
                 let x:CGFloat, y:CGFloat;
-                x = CGFloat(j)*aresta; y = i*aresta;
+                x = CGFloat(j)*aresta; y = 250+i*aresta;
                 let nome:String = "\(Int(i))\(Int(j))";
                 let B = quadrado(frame: CGRect(x: x,y: y,width: aresta,height: aresta))
                 B.usavel=true
@@ -107,7 +107,6 @@ class DamasViewController: UIViewController, tictiDelegate,ARDAppClientDelegate,
             }
             p = !p;
         }
-        self.configVideoConferencia(y, sala: "BAAAAAB55569")
     }
     
     
@@ -170,6 +169,7 @@ class DamasViewController: UIViewController, tictiDelegate,ARDAppClientDelegate,
             //MARK: Regras!
             var movimento_aceito = false
             var string_for_server=""
+            var fez_dama = "nao"
             if(!primeira_bolinha!.é_dama){
                 //MARK: nao pode pular mais de uma casa
                 if(novo_quadrado.linha - ultimo_quadrado.linha == -1 && fabs(novo_quadrado.coluna - ultimo_quadrado.coluna) == 1){
@@ -179,7 +179,11 @@ class DamasViewController: UIViewController, tictiDelegate,ARDAppClientDelegate,
                     let nql = Int(novo_quadrado.linha)
                     let nqc = Int(novo_quadrado.coluna)
                     
-                    string_for_server = "{\"de\":\"\(7-uql)\(7-uqc)\",\"para\":\"\(7-nql)\(7-nqc)\",\"comeu\":\"nao\"}"
+                    if novo_quadrado.linha == 0{
+                        fez_dama = "sim"
+                    }
+                    
+                    string_for_server = "{\"de\":\"\(7-uql)\(7-uqc)\",\"para\":\"\(7-nql)\(7-nqc)\",\"comeu\":\"nao\", \"fez_dama\": \"\(fez_dama)\"}"
                 }
                     
                     //MARK: COMER!
@@ -193,7 +197,7 @@ class DamasViewController: UIViewController, tictiDelegate,ARDAppClientDelegate,
                         self.tabuleiro[nome]!.ocupado=false
                         print(peças_comidas)
                         UIView.animateWithDuration(0.5, animations: { () -> Void in
-                            self.tabuleiro[nome]!.bola?.center=CGPoint(x: 20+self.aresta*self.peças_comidas, y: self.view.frame.size.height - CGFloat(2)*self.aresta)
+                            self.tabuleiro[nome]!.bola?.center=CGPoint(x: 20+self.aresta*self.peças_comidas, y: self.view.frame.size.height + CGFloat(2)*self.aresta)
                             }, completion: { (complete) -> Void in
                                 self.tabuleiro[nome]!.bola=nil;
                         })
@@ -203,10 +207,23 @@ class DamasViewController: UIViewController, tictiDelegate,ARDAppClientDelegate,
                         let nqc = Int(novo_quadrado.coluna)
                         let cql = Int((ultimo_quadrado.linha+novo_quadrado.linha)/2)
                         let cqc = Int((ultimo_quadrado.coluna+novo_quadrado.coluna)/2)
-                        string_for_server = "{\"de\":\"\(7-uql)\(7-uqc)\",\"para\":\"\(7-nql)\(7-nqc)\",\"comeu\":\"sim\",\"comido\":\"\(7-cql)\(7-cqc)\",\"qts\":\"\(Int(peças_comidas))\"}"
+                        
+                        if novo_quadrado.linha == 0{
+                            fez_dama = "sim"
+                            self.primeira_bolinha!.image=UIImage(named: "azul_dama.png")
+                        }
+                        
+                        string_for_server = "{\"de\":\"\(7-uql)\(7-uqc)\",\"para\":\"\(7-nql)\(7-nqc)\",\"comeu\":\"sim\",\"comido\":\"\(7-cql)\(7-cqc)\",\"qts\":\"\(Int(peças_comidas))\", \"fez_dama\": \"\(fez_dama)\"}"
                     }
                 }
-                
+            }else{ // é dama!
+                print("ola!")
+                let vlinhas = fabs(novo_quadrado.linha - ultimo_quadrado.linha)
+                let vcolunas = fabs(novo_quadrado.coluna - ultimo_quadrado.coluna)
+                if(vlinhas == vcolunas){
+                    movimento_aceito = true
+                }
+                string_for_server = "{}"
             }
             
             
@@ -217,6 +234,9 @@ class DamasViewController: UIViewController, tictiDelegate,ARDAppClientDelegate,
                     self.primeira_bolinha?.center=novo_quadrado.center;
                 })
                 novo_quadrado.bola=self.primeira_bolinha!
+                if(fez_dama == "sim"){
+                    self.primeira_bolinha!.é_dama = true
+                }
                 t.movimento(string_for_server)
                 ultimo_quadrado.ocupado=false
                 ultimo_quadrado.bola=nil
@@ -266,15 +286,29 @@ class DamasViewController: UIViewController, tictiDelegate,ARDAppClientDelegate,
             //print(t?.bola)
             t?.ocupado=false
             UIView.animateWithDuration(0.5, animations: { () -> Void in
-                t?.bola?.center=CGPoint(x: 20 + self.aresta*qts, y: self.view.frame.size.height - self.aresta)
+                t?.bola?.center=CGPoint(x: 20 + self.aresta*qts, y: self.view.frame.size.height + self.aresta)
                 }, completion: { (completed) -> Void in
                     t?.bola=nil
             })
         }
+        if(js["fez_dama"] as! String == "sim"){
+            novo_quadrado!.bola?.image=UIImage(named: "vermelho_dama.png")
+        }
     }
-    func adversarioConectou(apelido: String) {
+    override func viewWillDisappear(animated: Bool) {
+        t.sair()
+    }
+    func adversarioConectou(apelido: String, sala_id:String) {
         print("\(apelido) conectou.")
         meu_turno=true;
+        let y = fabs(self.view.frame.size.width - self.view.frame.size.height) - 2*aresta
+        self.configVideoConferencia(y, sala: sala_id)
+    }
+    
+    func recebeuIdDaSala(id: String) {
+        print("id da sala recebido:\n\(id)")
+        let y = fabs(self.view.frame.size.width - self.view.frame.size.height) - 2*aresta
+        self.configVideoConferencia(y, sala: id)
     }
     
     // MARK: Videoconferencia!
@@ -287,10 +321,12 @@ class DamasViewController: UIViewController, tictiDelegate,ARDAppClientDelegate,
         let width:CGFloat = 200// altura/1.4
         remoteView = RTCEAGLVideoView(frame: CGRect(x: self.view.frame.size.width-width, y: 0, width: width, height: 250))
         remoteView.layer.zPosition=100
-        self.view.addSubview(remoteView)
+        //self.view.addSubview(remoteView)
+        UIApplication.sharedApplication().keyWindow?.addSubview(remoteView)
         client = ARDAppClient(delegate: self)
         client.serverHostUrl=videoHost
         client.connectToRoomWithId(sala, options: nil)
+        //remoteView.layer.zPosition = 100
         //client.set
     }
     func appClient(client: ARDAppClient!, didChangeState state: ARDAppClientState) {
@@ -316,6 +352,8 @@ class DamasViewController: UIViewController, tictiDelegate,ARDAppClientDelegate,
     func videoView(videoView: RTCEAGLVideoView!, didChangeVideoSize size: CGSize) {
         print("size changed")
     }
-    
+    func appWillTerminate(){
+        t.sair()
+    }
 }
 
