@@ -827,6 +827,7 @@
         <!--Velha View Controller-->
         <scene sceneID="Xgv-mM-sVQ">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zJ2-mP-YJ5" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController storyboardIdentifier="VelhaVC" id="msL-hA-ECr" customClass="velhaViewController" customModule="tiCti" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="iT6-AS-zoh"/>
@@ -934,7 +935,6 @@
                         <outlet property="b33" destination="iV6-5c-UwU" id="Tgd-g2-DnW"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="zJ2-mP-YJ5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3135" y="3655"/>
         </scene>

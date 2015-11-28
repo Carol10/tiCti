@@ -8,7 +8,7 @@
 
 import UIKit
 
-class velhaViewController: UIViewController, tictiDelegate{
+class velhaViewController: UIViewController, tictiDelegate, ARDAppClientDelegate, RTCEAGLVideoViewDelegate{
     
     let tic = ticti()
     var meu_email = ""
@@ -161,9 +161,10 @@ class velhaViewController: UIViewController, tictiDelegate{
         
     }
     
-    func adversarioConectou(email: String) {
+    func adversarioConectou(email: String, sala_id: String) {
         jogador = 1
         ehMinhaVez = true
+        configVideoConferencia(sala_id)
     }
     func recebeuUmMovimento(de: String, dados: String) {
         ehMinhaVez = true
@@ -185,344 +186,53 @@ class velhaViewController: UIViewController, tictiDelegate{
     override func viewWillDisappear(animated: Bool) {
         tic.sair()
     }
-}
-    //    @IBAction func B11(sender: AnyObject) {
-    //        if(!ehMinhaVez){ return }
-    //        if(jogador==1){
-    //            tic.movimento("11")
-    //            l11 = 1
-    //            b11.enabled = false
-    //            b11.setTitle("X", forState: .Disabled)
-    //            verifica()
-    //            jogador = 2
-    //        }
-    //        else if(jogador==2){
-    //            l11 = 2
-    //            b11.enabled = false
-    //            b11.setTitle("O", forState: .Disabled)
-    //            verifica()
-    //            jogador = 1
-    //        }
-    //    }
-    //
-    //    @IBAction func B12(sender: AnyObject) {
-    //        if(!ehMinhaVez){ return }
-    //        if(jogador==1){
-    //            tic.movimento("12")
-    //            l12 = 1
-    //            b12.enabled = false
-    //            b12.setTitle("X", forState: .Disabled)
-    //            verifica()
-    //            jogador = 2
-    //        }
-    //        else if(jogador==2){
-    //            l12 = 2
-    //            b12.enabled = false
-    //            b12.setTitle("O", forState: .Disabled)
-    //            verifica()
-    //            jogador = 1
-    //        }
-    //    }
-    //
-    //    @IBAction func B13(sender: AnyObject) {
-    //        if(!ehMinhaVez){ return }
-    //        if(jogador==1){
-    //            tic.movimento("13")
-    //            l13 = 1
-    //            b13.enabled = false
-    //            b13.setTitle("X", forState: .Disabled)
-    //            verifica()
-    //            jogador = 2
-    //        }
-    //        else if(jogador==2){
-    //            l13 = 2
-    //            b13.enabled = false
-    //            b13.setTitle("O", forState: .Disabled)
-    //            verifica()
-    //            jogador = 1
-    //        }
-    //    }
-    //
-    //    @IBAction func B21(sender: AnyObject) {
-    //        if(!ehMinhaVez){ return }
-    //        if(jogador==1){
-    //            tic.movimento("21")
-    //            l21 = 1
-    //            b21.enabled = false
-    //            b21.setTitle("X", forState: .Disabled)
-    //            verifica()
-    //            jogador = 2
-    //        }
-    //        else if(jogador==2){
-    //            l21 = 2
-    //            b21.enabled = false
-    //            b21.setTitle("O", forState: .Disabled)
-    //            verifica()
-    //            jogador = 1
-    //        }
-    //    }
-    //
-    //    @IBAction func B22(sender: AnyObject) {
-    //        if(!ehMinhaVez){ return }
-    //        if(jogador==1){
-    //            tic.movimento("22")
-    //            l22 = 1
-    //            b22.enabled = false
-    //            b22.setTitle("X", forState: .Disabled)
-    //            verifica()
-    //            jogador = 2
-    //        }
-    //        else if(jogador==2){
-    //            l22 = 2
-    //            b22.enabled = false
-    //            b22.setTitle("O", forState: .Disabled)
-    //            verifica()
-    //            jogador = 1
-    //        }
-    //
-    //    }
-    //
-    //    @IBAction func B23(sender: AnyObject) {
-    //        if(!ehMinhaVez){ return }
-    //        if(jogador==1){
-    //            tic.movimento("23")
-    //            l23 = 1
-    //            b23.enabled = false
-    //            b23.setTitle("X", forState: .Disabled)
-    //            verifica()
-    //            jogador = 2
-    //        }
-    //        else if(jogador==2){
-    //            l23 = 2
-    //            b23.enabled = false
-    //            b23.setTitle("O", forState: .Disabled)
-    //            verifica()
-    //            jogador = 1
-    //        }
-    //
-    //    }
-    //
-    //    @IBAction func B31(sender: AnyObject) {
-    //        if(!ehMinhaVez){ return }
-    //        if(jogador==1){
-    //            tic.movimento("31")
-    //            l31 = 1
-    //            b31.enabled = false
-    //            b31.setTitle("X", forState: .Disabled)
-    //            verifica()
-    //            jogador = 2
-    //        }
-    //        else if(jogador==2){
-    //            l31 = 2
-    //            b31.enabled = false
-    //            b31.setTitle("O", forState: .Disabled)
-    //            verifica()
-    //            jogador = 1
-    //        }
-    //
-    //    }
-    //
-    //    @IBAction func B32(sender: AnyObject) {
-    //        if(!ehMinhaVez){ return }
-    //        if(jogador==1){
-    //            tic.movimento("32")
-    //            l32 = 1
-    //            b32.enabled = false
-    //            b32.setTitle("X", forState: .Disabled)
-    //            verifica()
-    //            jogador = 2
-    //        }
-    //        else if(jogador==2){
-    //            l32 = 2
-    //            b32.enabled = false
-    //            b32.setTitle("O", forState: .Disabled)
-    //            verifica()
-    //            jogador = 1
-    //        }
-    //
-    //    }
-    //
-    //    @IBAction func B33(sender: AnyObject) {
-    //        if(!ehMinhaVez){ return }
-    //        if(jogador==1){
-    //            tic.movimento("33")
-    //            l33 = 1
-    //            b33.enabled = false
-    //            b33.setTitle("X", forState: .Disabled)
-    //            verifica()
-    //            jogador = 2
-    //        }
-    //        else if(jogador==2){
-    //            l33 = 2
-    //            b33.enabled = false
-    //            b33.setTitle("O", forState: .Disabled)
-    //            verifica()
-    //            jogador = 1
-    //        }
-    //    }
-    //
-    //    func adversarioConectou(email: String) {
-    //        jogador = 1
-    //        ehMinhaVez = true
-    //    }
-    //    func recebeuUmMovimento(de: String, dados: String) {
-    //        switch dados{
-    //            case "11":
-    //                botoes[coef[0] as! Int][coef[1] as! Int]
-    //                break;
-    //            case "12":
-    //                if(jogador==2){
-    //                    tic.movimento("12")
-    //                    l12 = 1
-    //                    l12 = 2
-    //                    b12.enabled = false
-    //                    b12.setTitle("X", forState: .Disabled)
-    //                    verifica()
-    //                    jogador = 1
-    //                }
-    //                else if(jogador==1){
-    //                    l12 = 1
-    //                    b12.enabled = false
-    //                    b12.setTitle("O", forState: .Disabled)
-    //                    verifica()
-    //                    jogador = 2
-    //            }
-    //            break;
-    //            case "13":
-    //                if(jogador==2){
-    //                    tic.movimento("13")
-    //                    l13 = 2
-    //                    b13.enabled = false
-    //                    b13.setTitle("X", forState: .Disabled)
-    //                    verifica()
-    //                    jogador = 1
-    //                }
-    //                else if(jogador==1){
-    //                    l13 = 1
-    //                    b13.enabled = false
-    //                    b13.setTitle("O", forState: .Disabled)
-    //                    verifica()
-    //                    jogador = 2
-    //            }
-    //                break;
-    //
-    //            case "21":
-    //                if(jogador==2){
-    //                    tic.movimento("21")
-    //                    l21 = 2
-    //                    b21.enabled = false
-    //                    b21.setTitle("X", forState: .Disabled)
-    //                    verifica()
-    //                    jogador = 1
-    //                }
-    //                else if(jogador==1){
-    //                    l21 = 1
-    //                    b21.enabled = false
-    //                    b21.setTitle("O", forState: .Disabled)
-    //                    verifica()
-    //                    jogador = 2
-    //            }
-    //                break;
-    //            case "22":
-    //                if(jogador==2){
-    //                    tic.movimento("22")
-    //                    l22 = 2
-    //                    b22.enabled = false
-    //                    b22.setTitle("X", forState: .Disabled)
-    //                    verifica()
-    //                    jogador = 1
-    //                }
-    //                else if(jogador==1){
-    //                    l22 = 1
-    //                    b22.enabled = false
-    //                    b22.setTitle("O", forState: .Disabled)
-    //                    verifica()
-    //                    jogador = 2
-    //            }
-    //                break;
-    //            case "23":
-    //                if(jogador==1){
-    //                    tic.movimento("23")
-    //                    l23 = 1
-    //                    b23.enabled = false
-    //                    b23.setTitle("X", forState: .Disabled)
-    //                    verifica()
-    //                    jogador = 2
-    //                }
-    //                else if(jogador==2){
-    //                    l23 = 2
-    //                    b23.enabled = false
-    //                    b23.setTitle("O", forState: .Disabled)
-    //                    verifica()
-    //                    jogador = 1
-    //            }
-    //            break
-    //            case "31":
-    //                if(jogador==2){
-    //                    tic.movimento("31")
-    //                    l31 = 2
-    //                    b31.enabled = false
-    //                    b31.setTitle("X", forState: .Disabled)
-    //                    verifica()
-    //                    jogador = 1
-    //                }
-    //                else if(jogador==1){
-    //                    l31 = 1
-    //                    b31.enabled = false
-    //                    b31.setTitle("O", forState: .Disabled)
-    //                    verifica()
-    //                    jogador = 2
-    //                }
-    //
-    //            break
-    //            case "32":
-    //                if(jogador==2){
-    //                    tic.movimento("32")
-    //                    l32 = 2
-    //                    b32.enabled = false
-    //                    b32.setTitle("X", forState: .Disabled)
-    //                    verifica()
-    //                    jogador = 1
-    //                }
-    //                else if(jogador==1){
-    //                    l32 = 1
-    //                    b32.enabled = false
-    //                    b32.setTitle("O", forState: .Disabled)
-    //                    verifica()
-    //                    jogador = 2
-    //                }
-    //            
-    //            break
-    //            case "33":
-    //                if(jogador==2){
-    //                    tic.movimento("33")
-    //                    l33 = 2
-    //                    b33.enabled = false
-    //                    b33.setTitle("X", forState: .Disabled)
-    //                    verifica()
-    //                    jogador = 1
-    //                }
-    //                else if(jogador==1){
-    //                    l33 = 1
-    //                    b33.enabled = false
-    //                    b33.setTitle("O", forState: .Disabled)
-    //                    verifica()
-    //                    jogador = 2
-    //                }
-    //            break
-    //            default:
-    //            break
-    //        }
-    //    }
-    //        }
-    //    }
     
-    /*
-    // MARK: - Navigation
-    
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-    // Get the new view controller using segue.destinationViewController.
-    // Pass the selected object to the new view controller.
+    // MARK: Videoconferencia!
+    func recebeuIdDaSala(id: String) {
+        configVideoConferencia(id)
     }
-    */
+    let videoHost = "https://apprtc.appspot.com"
+    var remoteView: RTCEAGLVideoView!//(frame: CGRect())
+    var client:ARDAppClient!
+    var remoteTrack:RTCVideoTrack!
+    func configVideoConferencia(sala:String){
+        //print(">>>> \(altura)")
+        let width:CGFloat = 200// altura/1.4
+        remoteView = RTCEAGLVideoView(frame: CGRect(x: self.view.frame.size.width-width, y: 10, width: width, height: 250))
+        remoteView.layer.zPosition=100
+        //self.view.addSubview(remoteView)
+        UIApplication.sharedApplication().keyWindow?.addSubview(remoteView)
+        client = ARDAppClient(delegate: self)
+        client.serverHostUrl=videoHost
+        client.connectToRoomWithId(sala, options: nil)
+        //remoteView.layer.zPosition = 100
+        //client.set
+    }
+    func appClient(client: ARDAppClient!, didChangeState state: ARDAppClientState) {
+        switch(state){
+        case ARDAppClientState.Connected:
+            print("conectado"); break;
+        case ARDAppClientState.Connecting:
+            print("conectando"); break;
+        case ARDAppClientState.Disconnected:
+            print("desconectado"); /*self.remoteDisconected();*/ break;
+        }
+    }
+    func appClient(client: ARDAppClient!, didReceiveRemoteVideoTrack remoteVideoTrack: RTCVideoTrack!) {
+        self.remoteTrack = remoteVideoTrack
+        self.remoteTrack.addRenderer(self.remoteView)
+    }
+    func appClient(client: ARDAppClient!, didReceiveLocalVideoTrack localVideoTrack: RTCVideoTrack!) {
+        // nada, pois não vemos nosso proprio video
+    }
+    func appClient(client: ARDAppClient!, didError error: NSError!) {
+        print("deu erro")
+    }
+    func videoView(videoView: RTCEAGLVideoView!, didChangeVideoSize size: CGSize) {
+        print("size changed")
+    }
+    func appWillTerminate(){
+        tic.sair()
+    }
+
+}

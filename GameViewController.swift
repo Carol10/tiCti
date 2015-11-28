@@ -469,5 +469,8 @@ class GameViewController: UIViewController, tictiDelegate,  ARDAppClientDelegate
     func appWillTerminate(){
         t.sair()
     }
+    override func viewWillDisappear(animated: Bool) {
+        t.sair()
+    }
 
 }
