@@ -265,7 +265,7 @@ class DamasViewController: UIViewController, tictiDelegate, ARDAppClientDelegate
     
     func recebeuUmMovimento(de: String, dados: String) {
         let dta = dados.dataUsingEncoding(NSASCIIStringEncoding)
-        let js = try! NSJSONSerialization.JSONObjectWithData(dta!, options: NSJSONReadingOptions(rawValue: 0))
+        let js:NSDictionary = try! NSJSONSerialization.JSONObjectWithData(dta!, options: NSJSONReadingOptions(rawValue: 0)) as! NSDictionary
         print(js)
         let antigo_quadrado = tabuleiro[js["de"] as! String];
         antigo_quadrado?.ocupado=false
