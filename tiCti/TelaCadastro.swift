@@ -108,7 +108,7 @@ class TelaCadastro: UIViewController, UITableViewDataSource, UITableViewDelegate
     {
         let cellc : CSCell = tableView.dequeueReusableCellWithIdentifier("CCell") as! CSCell
         
-        cellc.setSCCell("fundochecker.png", "logoentradaTicti.png")
+        cellc.setSCCell("fundochecker.png", center: "logoentradaTicti.png")
         
         return cellc
     }

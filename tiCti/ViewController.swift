@@ -57,7 +57,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     {
         let cell : ScreenCell = tableView.dequeueReusableCellWithIdentifier("MyCell") as! ScreenCell
         
-        cell.setCell("fundochecker.png","logoentradaTicti.png")
+        cell.setCell("fundochecker.png",center: "logoentradaTicti.png")
         
         return cell
     }

@@ -20,6 +20,9 @@ var winner:Int = -1
 
 class GameViewController: UIViewController, tictiDelegate
 {
+    
+    var meu_email = ""
+    var inimigo_email = ""
     var souEu_str = String()
     var minhaVez:Bool = true
     
@@ -237,8 +240,8 @@ class GameViewController: UIViewController, tictiDelegate
         t.delegate = self
         t.connect()
         
-        t.meuemail = "pedro"
-        t.inimigoemail = "phablulo"
+        t.meuemail = meu_email
+        t.inimigoemail = inimigo_email
         
         souEu_str = t.meuemail
         //aqui eu decido quem vai ser o player 1 ou o 2

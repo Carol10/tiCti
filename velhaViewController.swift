@@ -26,7 +26,7 @@ class velhaViewController: UIViewController, tictiDelegate{
     @IBOutlet weak var b32: botao_ttt!
     @IBOutlet weak var b33: botao_ttt!
     
-    var botoes:NSArray!
+    var botoes:[NSArray]!
     
     
     var ehMinhaVez = false
@@ -138,43 +138,6 @@ class velhaViewController: UIViewController, tictiDelegate{
         }
         
         print("diagonal: \(diagonal)\nlinhas: \(linhas)\ncolunas:\(colunas)");
-        //
-        //        if((l[0][0] == 1 || l[0][0] == 2) || (l[2][0] == 1 || l[2][0] == 2) || (l[1][2] == 1 || l[2][3] == 2)){
-        //            if(l11 == 1 || l11 == 2){
-        //                if((l11 == l12 && l11 == l13) || (l11 == l21 && l11 == l31) || (l11 == l22 && l11 == l33)){
-        //
-        //                    AlertFunc()
-        //
-        //                }
-        //
-        //            }
-        //            if(l31 == 1 || l31 == 2){
-        //                if((l31 == l22 && l31 == l13) || (l31 == l32 && l31 == l33)){
-        //
-        //                    AlertFunc()
-        //
-        //                }
-        //            }
-        //            if(l23 == 1 || l23 == 2){
-        //                if((l23 == l22 && l23 == l21) || (l23 == l13 && l23 == l33)){
-        //
-        //                    AlertFunc()
-        //
-        //                }
-        //            }
-        //        }
-        //
-        //
-        //        if(b11.enabled == false && b12.enabled == false && b13.enabled == false){
-        //            if(b21.enabled == false && b22.enabled == false && b23.enabled == false){
-        //                if(b31.enabled == false && b32.enabled == false && b33.enabled == false){
-        //
-        //                    velhaTest = 1
-        //                    AlertFunc()
-        //
-        //                }
-        //            }
-        //        }
     }
     
     func AlertFunc(vencedor: Int){
@@ -220,6 +183,7 @@ class velhaViewController: UIViewController, tictiDelegate{
     override func viewWillDisappear(animated: Bool) {
         tic.sair()
     }
+}
     //    @IBAction func B11(sender: AnyObject) {
     //        if(!ehMinhaVez){ return }
     //        if(jogador==1){
@@ -560,5 +524,3 @@ class velhaViewController: UIViewController, tictiDelegate{
     // Pass the selected object to the new view controller.
     }
     */
-    
-
