@@ -53,6 +53,8 @@ class velhaViewController: UIViewController, tictiDelegate{
                 botoes[linha][coluna].addTarget(self, action: "numSei:", forControlEvents: UIControlEvents.TouchUpInside)
             }
         }
+        
+        (UIApplication.sharedApplication().delegate as! AppDelegate).velha=self
     }
     
     

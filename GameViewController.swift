@@ -13,14 +13,13 @@ import UIKit
 import SpriteKit
 import AVFoundation
 
-var t = ticti()
-
 var player1:Bool = true //player 1 // se for falso eh a vez do player2 :)
 var winner:Int = -1
 
-class GameViewController: UIViewController, tictiDelegate
+class GameViewController: UIViewController, tictiDelegate,  ARDAppClientDelegate, RTCEAGLVideoViewDelegate
 {
     
+    var t = ticti()
     var meu_email = ""
     var inimigo_email = ""
     var souEu_str = String()
@@ -289,12 +288,14 @@ class GameViewController: UIViewController, tictiDelegate
         txt.text = "Vez do Jogador 1"
     }
     
-    func adversarioConectou(email: String)
+    func adversarioConectou(email: String, sala_id: String)
     {
         player1 = true
         minhaVez = true
         txt.text = "Sua vez :)"
+        configVideoConferencia(sala_id)
     }
+    
     
     func aplicaDadosRecebidos(txtId:String)
     {
@@ -372,6 +373,8 @@ class GameViewController: UIViewController, tictiDelegate
         }
         
         finish()
+        
+        (UIApplication.sharedApplication().delegate as! AppDelegate).pontos=self
     }
     
     func recebeuUmMovimento(de: String, dados: String)
@@ -422,4 +425,49 @@ class GameViewController: UIViewController, tictiDelegate
         return true
     }
     
+    //MARK: -VideoConferencia!
+    
+    func recebeuIdDaSala(id: String) {
+        print("id da sala recebido:\n\(id)")
+        self.configVideoConferencia(id)
+    }
+    
+    @IBOutlet weak var remoteView: RTCEAGLVideoView!
+    let videoHost = "https://apprtc.appspot.com"
+    var client:ARDAppClient!
+    var remoteTrack:RTCVideoTrack!
+    func configVideoConferencia(sala:String){
+        //self.view.addSubview(remoteView)
+        //UIApplication.sharedApplication().keyWindow?.addSubview(remoteView)
+        client = ARDAppClient(delegate: self)
+        client.serverHostUrl=videoHost
+        client.connectToRoomWithId(sala, options: nil)
+    }
+    func appClient(client: ARDAppClient!, didChangeState state: ARDAppClientState) {
+        switch(state){
+        case ARDAppClientState.Connected:
+            print("conectado"); break;
+        case ARDAppClientState.Connecting:
+            print("conectando"); break;
+        case ARDAppClientState.Disconnected:
+            print("desconectado"); /*self.remoteDisconected();*/ break;
+        }
+    }
+    func appClient(client: ARDAppClient!, didReceiveRemoteVideoTrack remoteVideoTrack: RTCVideoTrack!) {
+        self.remoteTrack = remoteVideoTrack
+        self.remoteTrack.addRenderer(self.remoteView)
+    }
+    func appClient(client: ARDAppClient!, didReceiveLocalVideoTrack localVideoTrack: RTCVideoTrack!) {
+        // nada, pois não vemos nosso proprio video
+    }
+    func appClient(client: ARDAppClient!, didError error: NSError!) {
+        print("deu erro")
+    }
+    func videoView(videoView: RTCEAGLVideoView!, didChangeVideoSize size: CGSize) {
+        print("size changed")
+    }
+    func appWillTerminate(){
+        t.sair()
+    }
+
 }

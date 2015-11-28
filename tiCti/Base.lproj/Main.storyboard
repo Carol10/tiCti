@@ -269,7 +269,7 @@
                                 <color key="sectionIndexBackgroundColor" red="0.1137254902" green="0.2156862745" blue="0.23529411759999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="LCell" rowHeight="438" id="1Jc-Lh-AqA" customClass="LSCell" customModule="tiCti" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="768" height="438"/>
+                                        <rect key="frame" x="0.0" y="92" width="768" height="438"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="1Jc-Lh-AqA" id="4qI-eZ-4R6">
                                             <rect key="frame" x="0.0" y="0.0" width="768" height="438"/>
@@ -2210,7 +2210,7 @@
                                 <color key="textColor" red="0.92941176469999998" green="0.40393436980000003" blue="0.46714488380000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="c3N-z8-ADw">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="c3N-z8-ADw" customClass="RTCEAGLVideoView">
                                 <rect key="frame" x="377" y="45" width="200" height="250"/>
                                 <animations/>
                                 <color key="backgroundColor" red="0.058823529411764705" green="0.50196078431372548" blue="0.99215686274509807" alpha="1" colorSpace="calibratedRGB"/>
@@ -2478,6 +2478,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="remoteView" destination="c3N-z8-ADw" id="Fyh-7h-oXa"/>
                         <outlet property="txt" destination="lEH-Cc-4qI" id="Khg-Hh-NiU"/>
                         <outletCollection property="box" destination="lAK-Cl-i10" collectionClass="NSMutableArray" id="pha-Bf-vuU"/>
                         <outletCollection property="box" destination="wgW-v9-RH0" collectionClass="NSMutableArray" id="sv7-r1-l51"/>
@@ -2651,7 +2652,7 @@
         <image name="trofeu.png" width="509" height="640"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="9qb-8L-ayC"/>
         <segue reference="Te4-Tk-Xt8"/>
+        <segue reference="JiL-kU-V3y"/>
     </inferredMetricsTieBreakers>
 </document>
