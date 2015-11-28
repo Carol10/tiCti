@@ -81,17 +81,17 @@
 		7E2D47B51BF02B5100FDEA98 /* TelaCadastro.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E2D47B41BF02B5100FDEA98 /* TelaCadastro.swift */; };
 		7E2D47B71BF02B7600FDEA98 /* TelaLogin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E2D47B61BF02B7600FDEA98 /* TelaLogin.swift */; };
 		7E2D47B91BF044FF00FDEA98 /* CSCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E2D47B81BF044FF00FDEA98 /* CSCell.swift */; };
-		7E3E942A1C094E7B006DE2E0 /* DamasImagem.png in Resources */ = {isa = PBXBuildFile; fileRef = 7E3E94291C094E7B006DE2E0 /* DamasImagem.png */; };
-		7E3E942C1C094E81006DE2E0 /* PontinhosImagem.png in Resources */ = {isa = PBXBuildFile; fileRef = 7E3E942B1C094E81006DE2E0 /* PontinhosImagem.png */; };
-		7E3E942E1C094E87006DE2E0 /* JogoDaVelhaImagem.png in Resources */ = {isa = PBXBuildFile; fileRef = 7E3E942D1C094E87006DE2E0 /* JogoDaVelhaImagem.png */; };
 		7E5F79801BFB69CF0031B22F /* Jogos.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E5F797F1BFB69CF0031B22F /* Jogos.swift */; };
 		7E60003C1BF2B30F00B72AEA /* LSCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E60003B1BF2B30F00B72AEA /* LSCell.swift */; };
 		7E60003F1BF3C0B800B72AEA /* PerfilViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E60003E1BF3C0B800B72AEA /* PerfilViewController.swift */; };
+		7E66D7D41C0A113D002F6858 /* logoentradaTicti.png in Resources */ = {isa = PBXBuildFile; fileRef = 7E66D7D31C0A113D002F6858 /* logoentradaTicti.png */; };
+		7E66D7D61C0A114A002F6858 /* fundochecker.png in Resources */ = {isa = PBXBuildFile; fileRef = 7E66D7D51C0A114A002F6858 /* fundochecker.png */; };
+		7E66D7D81C0A1169002F6858 /* DamasImagem.png in Resources */ = {isa = PBXBuildFile; fileRef = 7E66D7D71C0A1169002F6858 /* DamasImagem.png */; };
+		7E66D7DA1C0A1175002F6858 /* PontinhosImagem.png in Resources */ = {isa = PBXBuildFile; fileRef = 7E66D7D91C0A1175002F6858 /* PontinhosImagem.png */; };
+		7E66D7DC1C0A117F002F6858 /* JogoDaVelhaImagem.png in Resources */ = {isa = PBXBuildFile; fileRef = 7E66D7DB1C0A117F002F6858 /* JogoDaVelhaImagem.png */; };
 		7EF595271BFE45230072215B /* AlterarDadosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EF595261BFE45230072215B /* AlterarDadosViewController.swift */; };
 		7EF595291BFE45340072215B /* velhaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EF595281BFE45340072215B /* velhaViewController.swift */; };
 		7EF5952D1BFE45530072215B /* DamasViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EF5952C1BFE45530072215B /* DamasViewController.swift */; };
-		7EF75A7B1C0A0A8B00398BA5 /* fundochecker.png in Resources */ = {isa = PBXBuildFile; fileRef = 7EF75A7A1C0A0A8B00398BA5 /* fundochecker.png */; };
-		7EF75A7D1C0A0A9100398BA5 /* logoentradaTicti.png in Resources */ = {isa = PBXBuildFile; fileRef = 7EF75A7C1C0A0A9100398BA5 /* logoentradaTicti.png */; };
 		7EFB8B261BF142EF0086F37E /* server_api_min.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EFB8B251BF142EF0086F37E /* server_api_min.swift */; };
 /* End PBXBuildFile section */
 
@@ -193,17 +193,17 @@
 		7E2D47B41BF02B5100FDEA98 /* TelaCadastro.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TelaCadastro.swift; sourceTree = "<group>"; };
 		7E2D47B61BF02B7600FDEA98 /* TelaLogin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TelaLogin.swift; sourceTree = "<group>"; };
 		7E2D47B81BF044FF00FDEA98 /* CSCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CSCell.swift; sourceTree = "<group>"; };
-		7E3E94291C094E7B006DE2E0 /* DamasImagem.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = DamasImagem.png; path = ../../DamasImagem.png; sourceTree = "<group>"; };
-		7E3E942B1C094E81006DE2E0 /* PontinhosImagem.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = PontinhosImagem.png; path = ../../PontinhosImagem.png; sourceTree = "<group>"; };
-		7E3E942D1C094E87006DE2E0 /* JogoDaVelhaImagem.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = JogoDaVelhaImagem.png; path = ../../JogoDaVelhaImagem.png; sourceTree = "<group>"; };
 		7E5F797F1BFB69CF0031B22F /* Jogos.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Jogos.swift; sourceTree = "<group>"; };
 		7E60003B1BF2B30F00B72AEA /* LSCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LSCell.swift; sourceTree = "<group>"; };
 		7E60003E1BF3C0B800B72AEA /* PerfilViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PerfilViewController.swift; sourceTree = "<group>"; };
+		7E66D7D31C0A113D002F6858 /* logoentradaTicti.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logoentradaTicti.png; sourceTree = "<group>"; };
+		7E66D7D51C0A114A002F6858 /* fundochecker.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fundochecker.png; sourceTree = "<group>"; };
+		7E66D7D71C0A1169002F6858 /* DamasImagem.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = DamasImagem.png; sourceTree = "<group>"; };
+		7E66D7D91C0A1175002F6858 /* PontinhosImagem.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = PontinhosImagem.png; sourceTree = "<group>"; };
+		7E66D7DB1C0A117F002F6858 /* JogoDaVelhaImagem.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = JogoDaVelhaImagem.png; sourceTree = "<group>"; };
 		7EF595261BFE45230072215B /* AlterarDadosViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlterarDadosViewController.swift; sourceTree = "<group>"; };
 		7EF595281BFE45340072215B /* velhaViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = velhaViewController.swift; sourceTree = "<group>"; };
 		7EF5952C1BFE45530072215B /* DamasViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DamasViewController.swift; sourceTree = "<group>"; };
-		7EF75A7A1C0A0A8B00398BA5 /* fundochecker.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = fundochecker.png; path = ../../fundochecker.png; sourceTree = "<group>"; };
-		7EF75A7C1C0A0A9100398BA5 /* logoentradaTicti.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = logoentradaTicti.png; path = ../../logoentradaTicti.png; sourceTree = "<group>"; };
 		7EFB8B251BF142EF0086F37E /* server_api_min.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = server_api_min.swift; path = servidor/server_api_min.swift; sourceTree = SOURCE_ROOT; };
 		808588D88D29D601B9F97784 /* libPods-tiCti.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-tiCti.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C7E9E5276DD1689CDC9BC65E /* Pods-tiCti.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-tiCti.debug.xcconfig"; path = "Pods/Target Support Files/Pods-tiCti/Pods-tiCti.debug.xcconfig"; sourceTree = "<group>"; };
@@ -346,11 +346,11 @@
 				7E2D47891BF017C900FDEA98 /* LaunchScreen.storyboard */,
 				7E2D478C1BF017C900FDEA98 /* Info.plist */,
 				452B4C451BFFAA710037172C /* tiCti-Bridging-Header.h */,
-				7EF75A7C1C0A0A9100398BA5 /* logoentradaTicti.png */,
-				7EF75A7A1C0A0A8B00398BA5 /* fundochecker.png */,
-				7E3E94291C094E7B006DE2E0 /* DamasImagem.png */,
-				7E3E942B1C094E81006DE2E0 /* PontinhosImagem.png */,
-				7E3E942D1C094E87006DE2E0 /* JogoDaVelhaImagem.png */,
+				7E66D7D31C0A113D002F6858 /* logoentradaTicti.png */,
+				7E66D7D51C0A114A002F6858 /* fundochecker.png */,
+				7E66D7D71C0A1169002F6858 /* DamasImagem.png */,
+				7E66D7D91C0A1175002F6858 /* PontinhosImagem.png */,
+				7E66D7DB1C0A117F002F6858 /* JogoDaVelhaImagem.png */,
 				7E2D47B31BF028AD00FDEA98 /* Cadastro */,
 				7E2D47B21BF028A300FDEA98 /* Login */,
 				7E60003D1BF3C04E00B72AEA /* Perfil */,
@@ -577,7 +577,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7EF75A7B1C0A0A8B00398BA5 /* fundochecker.png in Resources */,
 				09554BD01C08E7CE00CBA9CF /* loading-29 (arrastado).tiff in Resources */,
 				09554BE11C08EE6A00CBA9CF /* pen_sound.mp3 in Resources */,
 				09554BC51C08E7CE00CBA9CF /* loading-18 (arrastado).tiff in Resources */,
@@ -597,12 +596,12 @@
 				09554BC41C08E7CE00CBA9CF /* loading-17 (arrastado).tiff in Resources */,
 				09554BCD1C08E7CE00CBA9CF /* loading-26 (arrastado).tiff in Resources */,
 				09554BCB1C08E7CE00CBA9CF /* loading-24 (arrastado).tiff in Resources */,
-				7EF75A7D1C0A0A9100398BA5 /* logoentradaTicti.png in Resources */,
+				7E66D7D41C0A113D002F6858 /* logoentradaTicti.png in Resources */,
 				7E2D478B1BF017C900FDEA98 /* LaunchScreen.storyboard in Resources */,
-				7E3E942A1C094E7B006DE2E0 /* DamasImagem.png in Resources */,
 				09554B841C08E78600CBA9CF /* done.mp3 in Resources */,
 				09554B8B1C08E78600CBA9CF /* tracooRed.png in Resources */,
 				09554BB81C08E7CE00CBA9CF /* loading-5 (arrastado).tiff in Resources */,
+				7E66D7DA1C0A1175002F6858 /* PontinhosImagem.png in Resources */,
 				09554B8D1C08E78600CBA9CF /* trofeu.png in Resources */,
 				09554BBD1C08E7CE00CBA9CF /* loading-10 (arrastado).tiff in Resources */,
 				09554BB51C08E7CE00CBA9CF /* loading-2 (arrastado).tiff in Resources */,
@@ -622,22 +621,23 @@
 				09554B8A1C08E78600CBA9CF /* tracooHor.png in Resources */,
 				09554BC21C08E7CE00CBA9CF /* loading-15 (arrastado).tiff in Resources */,
 				452B4C431BFFA9680037172C /* azul.png in Resources */,
-				7E3E942C1C094E81006DE2E0 /* PontinhosImagem.png in Resources */,
-				7E3E942E1C094E87006DE2E0 /* JogoDaVelhaImagem.png in Resources */,
 				09554BC11C08E7CE00CBA9CF /* loading-14 (arrastado).tiff in Resources */,
 				09554B861C08E78600CBA9CF /* front.png in Resources */,
 				09554BB61C08E7CE00CBA9CF /* loading-3 (arrastado).tiff in Resources */,
 				09554B821C08E78600CBA9CF /* btPlay.png in Resources */,
 				09554BD71C08E7CE00CBA9CF /* loading-36 (arrastado).tiff in Resources */,
 				09554BC01C08E7CE00CBA9CF /* loading-13 (arrastado).tiff in Resources */,
+				7E66D7D61C0A114A002F6858 /* fundochecker.png in Resources */,
 				09554BB41C08E7CE00CBA9CF /* loading-1 (arrastado).tiff in Resources */,
 				09554BCE1C08E7CE00CBA9CF /* loading-27 (arrastado).tiff in Resources */,
 				09554B801C08E78600CBA9CF /* boxBlue.png in Resources */,
 				09554B871C08E78600CBA9CF /* jogarDenovo.png in Resources */,
+				7E66D7D81C0A1169002F6858 /* DamasImagem.png in Resources */,
 				09554BBF1C08E7CE00CBA9CF /* loading-12 (arrastado).tiff in Resources */,
 				09554BBA1C08E7CE00CBA9CF /* loading-7 (arrastado).tiff in Resources */,
 				09554B881C08E78600CBA9CF /* loser.png in Resources */,
 				09554BD41C08E7CE00CBA9CF /* loading-33 (arrastado).tiff in Resources */,
+				7E66D7DC1C0A117F002F6858 /* JogoDaVelhaImagem.png in Resources */,
 				09554B851C08E78600CBA9CF /* error.wav in Resources */,
 				09554BBC1C08E7CE00CBA9CF /* loading-9 (arrastado).tiff in Resources */,
 				09554BD61C08E7CE00CBA9CF /* loading-35 (arrastado).tiff in Resources */,
