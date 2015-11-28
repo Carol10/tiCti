@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-<<<<<<< HEAD
 		09554B801C08E78600CBA9CF /* boxBlue.png in Resources */ = {isa = PBXBuildFile; fileRef = 09554B711C08E78600CBA9CF /* boxBlue.png */; };
 		09554B811C08E78600CBA9CF /* boxRed.png in Resources */ = {isa = PBXBuildFile; fileRef = 09554B721C08E78600CBA9CF /* boxRed.png */; };
 		09554B821C08E78600CBA9CF /* btPlay.png in Resources */ = {isa = PBXBuildFile; fileRef = 09554B731C08E78600CBA9CF /* btPlay.png */; };
@@ -63,10 +62,8 @@
 		09554BDD1C08E9D100CBA9CF /* Inicio.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09554BD91C08E9D100CBA9CF /* Inicio.swift */; };
 		09554BDF1C08E9D100CBA9CF /* ViewFim.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09554BDB1C08E9D100CBA9CF /* ViewFim.swift */; };
 		09554BE11C08EE6A00CBA9CF /* pen_sound.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 09554BE01C08EE6A00CBA9CF /* pen_sound.mp3 */; };
-=======
 		451F92D01C078A7E009B6F85 /* azul_dama.png in Resources */ = {isa = PBXBuildFile; fileRef = 451F92CE1C078A7E009B6F85 /* azul_dama.png */; };
 		451F92D11C078A7E009B6F85 /* vermelho_dama.png in Resources */ = {isa = PBXBuildFile; fileRef = 451F92CF1C078A7E009B6F85 /* vermelho_dama.png */; };
->>>>>>> origin/master
 		452B4C3E1BFFA92B0037172C /* quadrado.swift in Sources */ = {isa = PBXBuildFile; fileRef = 452B4C3D1BFFA92B0037172C /* quadrado.swift */; };
 		452B4C401BFFA9550037172C /* bolinha.swift in Sources */ = {isa = PBXBuildFile; fileRef = 452B4C3F1BFFA9550037172C /* bolinha.swift */; };
 		452B4C431BFFA9680037172C /* azul.png in Resources */ = {isa = PBXBuildFile; fileRef = 452B4C411BFFA9680037172C /* azul.png */; };
@@ -111,7 +108,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-<<<<<<< HEAD
 		09554B711C08E78600CBA9CF /* boxBlue.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = boxBlue.png; sourceTree = "<group>"; };
 		09554B721C08E78600CBA9CF /* boxRed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = boxRed.png; sourceTree = "<group>"; };
 		09554B731C08E78600CBA9CF /* btPlay.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = btPlay.png; sourceTree = "<group>"; };
@@ -167,10 +163,8 @@
 		09554BD91C08E9D100CBA9CF /* Inicio.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Inicio.swift; sourceTree = "<group>"; };
 		09554BDB1C08E9D100CBA9CF /* ViewFim.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewFim.swift; sourceTree = "<group>"; };
 		09554BE01C08EE6A00CBA9CF /* pen_sound.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = pen_sound.mp3; sourceTree = "<group>"; };
-=======
 		451F92CE1C078A7E009B6F85 /* azul_dama.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = azul_dama.png; sourceTree = "<group>"; };
 		451F92CF1C078A7E009B6F85 /* vermelho_dama.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = vermelho_dama.png; sourceTree = "<group>"; };
->>>>>>> origin/master
 		452B4C3D1BFFA92B0037172C /* quadrado.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = quadrado.swift; sourceTree = "<group>"; };
 		452B4C3F1BFFA9550037172C /* bolinha.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = bolinha.swift; sourceTree = "<group>"; };
 		452B4C411BFFA9680037172C /* azul.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = azul.png; sourceTree = "<group>"; };
@@ -531,11 +525,8 @@
 				TargetAttributes = {
 					7E2D477C1BF017C900FDEA98 = {
 						CreatedOnToolsVersion = 7.1;
-<<<<<<< HEAD
 						DevelopmentTeam = 4GTRJ4E97Q;
-=======
 						DevelopmentTeam = 9T2CY2S9H2;
->>>>>>> origin/master
 					};
 					7E2D47901BF017C900FDEA98 = {
 						CreatedOnToolsVersion = 7.1;
@@ -572,14 +563,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-<<<<<<< HEAD
 				09554BD01C08E7CE00CBA9CF /* loading-29 (arrastado).tiff in Resources */,
 				09554BE11C08EE6A00CBA9CF /* pen_sound.mp3 in Resources */,
 				09554BC51C08E7CE00CBA9CF /* loading-18 (arrastado).tiff in Resources */,
-=======
 				451F92D01C078A7E009B6F85 /* azul_dama.png in Resources */,
 				451F92D11C078A7E009B6F85 /* vermelho_dama.png in Resources */,
->>>>>>> origin/master
 				452B4C441BFFA9680037172C /* vermelho.png in Resources */,
 				09554BD11C08E7CE00CBA9CF /* loading-30 (arrastado).tiff in Resources */,
 				09554BC81C08E7CE00CBA9CF /* loading-21 (arrastado).tiff in Resources */,
