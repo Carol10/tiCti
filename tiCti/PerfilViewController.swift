@@ -103,6 +103,24 @@ class PerfilViewController: UIViewController, tictiDelegate, UIImagePickerContro
         }
     }
     
+    @IBAction func TutorialtiCtiA(sender: AnyObject) {
+        let Alert = UIAlertController(title: "Tutorial tiCti", message: "Em Breve!", preferredStyle: UIAlertControllerStyle.Alert)
+        
+        Alert.addAction(UIAlertAction(title: "Close", style: .Default, handler: {
+            (action: UIAlertAction!) in
+        }))
+        self.presentViewController(Alert, animated: true, completion: nil)
+    }
+    
+    @IBAction func alterDadosA(sender: AnyObject) {
+        let Alert = UIAlertController(title: "Alterar Dados", message: "Em Breve!", preferredStyle: UIAlertControllerStyle.Alert)
+        
+        Alert.addAction(UIAlertAction(title: "Close", style: .Default, handler: {
+            (action: UIAlertAction!) in
+        }))
+        self.presentViewController(Alert, animated: true, completion: nil)
+    }
+    
     @IBAction func EditaFotoA(sender: AnyObject) {
         imageP.allowsEditing = false
         imageP.sourceType = .PhotoLibrary

@@ -57,7 +57,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     {
         let cell : ScreenCell = tableView.dequeueReusableCellWithIdentifier("MyCell") as! ScreenCell
         
-        cell.setCell("Captura de Tela 2015-09-17 às 17.13.20.png")
+        cell.setCell("fundochecker.png","logoentradaTicti.png")
         
         return cell
     }

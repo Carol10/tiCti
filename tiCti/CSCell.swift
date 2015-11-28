@@ -16,6 +16,8 @@ class CSCell: UITableViewCell {
     
     var i = 0
     
+    @IBOutlet weak var CIconCenter: UIImageView!
+   
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -34,9 +36,10 @@ class CSCell: UITableViewCell {
         Title.layer.shadowOffset = CGSize(width: 3.0, height: 2.0)
     }
    
-    func setSCCell(imageName: String)
+    func setSCCell(imageName: String, center: String)
     {
         self.CIcon.image = UIImage(named: imageName)
+        self.CIconCenter.image = UIImage(named: center)
     }
 
 }

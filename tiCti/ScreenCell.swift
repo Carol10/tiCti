@@ -11,6 +11,7 @@ import UIKit
 class ScreenCell: UITableViewCell {
 
     @IBOutlet weak var Icon: UIImageView!
+    @IBOutlet weak var IconCenter: UIImageView!
     
     
     override func awakeFromNib() {
@@ -24,9 +25,10 @@ class ScreenCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
-    func setCell(imageName: String)
+    func setCell(imageName: String, center: String)
     {
         self.Icon.image = UIImage(named: imageName)
+        self.IconCenter.image = UIImage(named: center)
     }
 
 }

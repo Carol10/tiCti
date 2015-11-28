@@ -86,12 +86,14 @@ class Jogos: UIViewController, tictiDelegate{
         tic.queroJogar(1)
     }
     func goVelha(){
+        self.J.backgroundColor = UIColor(red:(168.0/255.0),green:(200.0/255.0),blue:(89.0/255.0),alpha:1.0)
         tic.meuemail = meu_email
         tic.queroJogar(2)
-        self.J.backgroundColor = UIColor(red:(168.0/255.0),green:(200.0/255.0),blue:(89.0/255.0),alpha:1.0)
     }
     func goPontinhos(){
-       self.K.backgroundColor = UIColor(red:(168.0/255.0),green:(200.0/255.0),blue:(89.0/255.0),alpha:1.0)
+        self.K.backgroundColor = UIColor(red:(168.0/255.0),green:(200.0/255.0),blue:(89.0/255.0),alpha:1.0)
+        tic.meuemail = meu_email
+        tic.queroJogar(3)
     }
 
 
@@ -120,10 +122,15 @@ class Jogos: UIViewController, tictiDelegate{
             self.navigationController?.pushViewController(vc, animated: true)
             //3self.presentViewController(vc, animated: true, completion: nil)
         }else if(jogo == 3){
-//            let vc = pontosViewController()
-//            vc.meu_email = meu_email
-//            vc.inimigo_email = com
-//            self.presentViewController(vc, animated: true, completion: nil)
+//          let vc = pontosViewController()
+            
+            let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("PontosVC") as! GameViewController;
+            
+            vc.meu_email = meu_email
+            vc.inimigo_email = com
+           
+            self.navigationController?.pushViewController(vc, animated: true)
+            // self.presentViewController(vc, animated: true, completion: nil)
         }
         
     }

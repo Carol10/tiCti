@@ -127,7 +127,7 @@ class TelaLogin: UIViewController, UITableViewDelegate, UITableViewDataSource, t
         
         celll.backgroundColor = UIColor(red:(29.0/255.0),green:(55.0/255.0),blue:(60.0/255.0),alpha:1.0)
         
-        celll.setLSCell("Captura de Tela 2015-09-17 às 17.13.20.png")
+        celll.setLSCell("fundochecker.png", "logoentradaTicti.png")
         
         return celll
     }

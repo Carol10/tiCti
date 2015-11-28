@@ -12,6 +12,7 @@ class LSCell: UITableViewCell {
 
     
     @IBOutlet weak var LIcon: UIImageView!
+    @IBOutlet weak var LIconCenter: UIImageView!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -23,8 +24,9 @@ class LSCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
-    func setLSCell(imageName: String)
+    func setLSCell(imageName: String, center: String)
     {
         self.LIcon.image = UIImage(named: imageName)
+        self.LIconCenter.image = UIImage(named: center)
     }
 }
