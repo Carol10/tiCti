@@ -41,8 +41,8 @@ class ticti: NSObject , NSStreamDelegate{
     
     var meuemail:String = ""
     var inimigoemail:String = ""
-    let Hh =  "172.16.3.33" // "10.0.0.103" //
-    let host = "http://172.16.3.33"// "http://10.0.0.103" //
+    let Hh =  "ec2-52-35-18-221.us-west-2.compute.amazonaws.com" // "10.0.0.103" //
+    let host = "http://ec2-52-35-18-221.us-west-2.compute.amazonaws.com"// "http://10.0.0.103" //
     var delegate = tictiDelegate?()
     
     var inputStream: NSInputStream?
@@ -329,6 +329,7 @@ class ticti: NSObject , NSStreamDelegate{
             url = self.host+"?action=getImage&email=\(email)";
             
             NSURLSession.sharedSession().dataTaskWithURL(NSURL(string:url)!, completionHandler: { (Data, Response, Error) -> Void in
+                print("ola")
                 imagem = UIImage(data: Data!);
                 dispatch_async(dispatch_get_main_queue(), { () -> Void in
                     callback(nome: nome, email: email, jogando: jogando, vitorias: vitorias, derrotas: derrotas, imagem: imagem);

@@ -43,8 +43,6 @@ class PerfilViewController: UIViewController, tictiDelegate, UIImagePickerContro
             self.nomeUser.text = nome
             self.pts.text = "\(vitorias) pts"
             self.fotoPerfil.image = imagem
-            
-            
         }
 
         // Do any additional setup after loading the view.

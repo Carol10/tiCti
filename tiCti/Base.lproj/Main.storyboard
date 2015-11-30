@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9059" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="zsT-30-BIi">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9059" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
@@ -827,7 +827,6 @@
         <!--Velha View Controller-->
         <scene sceneID="Xgv-mM-sVQ">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="zJ2-mP-YJ5" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController storyboardIdentifier="VelhaVC" id="msL-hA-ECr" customClass="velhaViewController" customModule="tiCti" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="iT6-AS-zoh"/>
@@ -935,6 +934,7 @@
                         <outlet property="b33" destination="iV6-5c-UwU" id="Tgd-g2-DnW"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zJ2-mP-YJ5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3135" y="3655"/>
         </scene>
@@ -2583,11 +2583,11 @@
                         <viewControllerLayoutGuide type="bottom" id="x0f-39-lAt"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="6ve-08-XDG">
-                        <rect key="frame" x="0.0" y="0.0" width="678" height="1024"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="trofeu.png" translatesAutoresizingMaskIntoConstraints="NO" id="wYZ-rd-1bs">
-                                <rect key="frame" x="189" y="325" width="301" height="374"/>
+                                <rect key="frame" x="150" y="113" width="301" height="374"/>
                                 <animations/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="301" id="Yrt-96-AxI"/>
@@ -2595,7 +2595,7 @@
                                 </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wmj-3A-HK1">
-                                <rect key="frame" x="51" y="785" width="577" height="57"/>
+                                <rect key="frame" x="12" y="361" width="577" height="57"/>
                                 <animations/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="57" id="EBz-xD-11Y"/>
@@ -2610,7 +2610,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qbx-18-CRA">
-                                <rect key="frame" x="20" y="147" width="638" height="63"/>
+                                <rect key="frame" x="-19" y="-65" width="638" height="63"/>
                                 <animations/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="63" id="71P-Z1-OLY"/>
