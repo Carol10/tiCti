@@ -132,6 +132,7 @@ class PerfilViewController: UIViewController, tictiDelegate, UIImagePickerContro
         fotoPerfil.image = image
         
         tic.meuemail = meu_email
+        picker.dismissViewControllerAnimated(true, completion: nil)
         dispatch_async(dispatch_get_main_queue()) { () -> Void in
             self.tic.atualizarFoto(image) { (enviado) -> () in
                 if enviado {
