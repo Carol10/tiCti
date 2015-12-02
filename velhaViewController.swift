@@ -185,6 +185,7 @@ class velhaViewController: UIViewController, tictiDelegate, ARDAppClientDelegate
     
     override func viewWillDisappear(animated: Bool) {
         tic.sair()
+        remoteView.removeFromSuperview()
     }
     
     // MARK: Videoconferencia!

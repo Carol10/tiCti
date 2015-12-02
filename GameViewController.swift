@@ -471,6 +471,7 @@ class GameViewController: UIViewController, tictiDelegate,  ARDAppClientDelegate
     }
     override func viewWillDisappear(animated: Bool) {
         t.sair()
+        remoteView.removeFromSuperview()
     }
 
 }
