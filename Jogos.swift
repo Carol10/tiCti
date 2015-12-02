@@ -77,6 +77,7 @@ class Jogos: UIViewController, tictiDelegate{
         
         Bdamas.addTarget(self, action: Selector("goDama"), forControlEvents: UIControlEvents.TouchUpInside)
         Bvelha.addTarget(self, action: Selector("goVelha"), forControlEvents: UIControlEvents.TouchUpInside)
+        Bpontos.addTarget(self, action: Selector("goPontinhos"), forControlEvents: UIControlEvents.TouchUpInside)
        
     }
     
