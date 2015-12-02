@@ -16,7 +16,7 @@ class DamasViewController: UIViewController, tictiDelegate, ARDAppClientDelegate
     var tabuleiro = [String:quadrado]();
     //var mesa:UIView!
     var aresta:CGFloat = 0;
-    let t = ticti();
+    let tic_tic = ticti();
     var meu_turno = false;
     var peças_comidas:CGFloat = 0;
     
@@ -29,12 +29,12 @@ class DamasViewController: UIViewController, tictiDelegate, ARDAppClientDelegate
     }
     
     func start(){
-        t.delegate=self
+        tic_tic.delegate=self
         
-        t.connect()
-        t.meuemail=meu_email
-        t.inimigoemail=inimigo_email
-        t.entreiNoJogo()
+        tic_tic.connect()
+        tic_tic.meuemail=meu_email
+        tic_tic.inimigoemail=inimigo_email
+        tic_tic.entreiNoJogo()
     }
     func colocaTabuleiro(){
         self.view.backgroundColor=UIColor.whiteColor()
@@ -237,7 +237,7 @@ class DamasViewController: UIViewController, tictiDelegate, ARDAppClientDelegate
                 if(fez_dama == "sim"){
                     self.primeira_bolinha!.é_dama = true
                 }
-                t.movimento(string_for_server)
+                tic_tic.movimento(string_for_server)
                 ultimo_quadrado.ocupado=false
                 ultimo_quadrado.bola=nil
                 meu_turno=false
@@ -296,7 +296,7 @@ class DamasViewController: UIViewController, tictiDelegate, ARDAppClientDelegate
         }
     }
     override func viewWillDisappear(animated: Bool) {
-        t.sair()
+        tic_tic.sair()
         remoteView.removeFromSuperview()
     }
     func adversarioConectou(apelido: String, sala_id:String) {
@@ -354,7 +354,7 @@ class DamasViewController: UIViewController, tictiDelegate, ARDAppClientDelegate
         print("size changed")
     }
     func appWillTerminate(){
-        t.sair()
+        tic_tic.sair()
     }
 }
 

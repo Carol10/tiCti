@@ -15,11 +15,11 @@ import AVFoundation
 
 var player1:Bool = true //player 1 // se for falso eh a vez do player2 :)
 var winner:Int = -1
-
+var t = ticti()
 class GameViewController: UIViewController, tictiDelegate,  ARDAppClientDelegate, RTCEAGLVideoViewDelegate
 {
     
-    var t = ticti()
+    
     var meu_email = ""
     var inimigo_email = ""
     var souEu_str = String()

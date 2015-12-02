@@ -41,7 +41,7 @@ class PerfilViewController: UIViewController, tictiDelegate, UIImagePickerContro
         
         tic.dadosDoUsuario(meu_email) { (nome, email, jogando, vitorias, derrotas, imagem) -> () in
             self.nomeUser.text = nome
-            self.pts.text = "\(vitorias) pts"
+            self.pts.text = "\(vitorias*10) pts"
             self.fotoPerfil.image = imagem
         }
 
