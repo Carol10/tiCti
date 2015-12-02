@@ -608,7 +608,7 @@
         <!--Pontos View Controller-->
         <scene sceneID="oqK-ap-NlX">
             <objects>
-                <viewController storyboardIdentifier="PontosVC" id="mAM-8T-xDl" customClass="pontosViewController" customModule="tiCti" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="mAM-8T-xDl" customClass="pontosViewController" customModule="tiCti" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="oDt-ow-6h6"/>
                         <viewControllerLayoutGuide type="bottom" id="oLb-WX-91k"/>
@@ -1030,7 +1030,7 @@
         <!--Game View Controller-->
         <scene sceneID="S1p-cR-dM1">
             <objects>
-                <viewController id="ahZ-VR-q7O" customClass="GameViewController" customModule="tiCti" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="PontosVC" id="ahZ-VR-q7O" customClass="GameViewController" customModule="tiCti" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="TXE-dW-KV0"/>
                         <viewControllerLayoutGuide type="bottom" id="uQo-MM-Etv"/>
