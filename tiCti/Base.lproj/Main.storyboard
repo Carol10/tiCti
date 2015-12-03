@@ -60,7 +60,7 @@
                                 </prototypes>
                             </tableView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZSk-dV-ZDU">
-                                <rect key="frame" x="0.0" y="764" width="433" height="57"/>
+                                <rect key="frame" x="168" y="758" width="433" height="57"/>
                                 <animations/>
                                 <color key="backgroundColor" red="0.98823529409999999" green="0.58431372550000005" blue="0.031372549020000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="37"/>
@@ -72,7 +72,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ATE-hn-1Wi">
-                                <rect key="frame" x="335" y="880" width="433" height="57"/>
+                                <rect key="frame" x="168" y="874" width="433" height="57"/>
                                 <animations/>
                                 <color key="backgroundColor" red="0.86274509799999999" green="0.3803921569" blue="0.035294117649999998" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="37"/>
@@ -269,7 +269,7 @@
                                 <color key="sectionIndexBackgroundColor" red="0.1137254902" green="0.2156862745" blue="0.23529411759999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="LCell" rowHeight="438" id="1Jc-Lh-AqA" customClass="LSCell" customModule="tiCti" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="92" width="768" height="438"/>
+                                        <rect key="frame" x="0.0" y="28" width="768" height="438"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="1Jc-Lh-AqA" id="4qI-eZ-4R6">
                                             <rect key="frame" x="0.0" y="0.0" width="768" height="438"/>
@@ -764,23 +764,18 @@
                                             <animations/>
                                             <state key="normal" image="DamasImagem.png"/>
                                         </button>
-                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3fA-dy-Ra4">
-                                            <rect key="frame" x="321" y="28" width="126" height="124"/>
-                                            <animations/>
-                                            <state key="normal" backgroundImage="JogoDaVelhaImagem.png"/>
-                                        </button>
-                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ffl-GR-Hz8">
-                                            <rect key="frame" x="575" y="28" width="126" height="125"/>
-                                            <animations/>
-                                            <state key="normal" backgroundImage="PontinhosImagem.png"/>
-                                        </button>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wmu-q0-fuB">
-                                            <rect key="frame" x="293" y="11" width="182" height="159"/>
+                                            <rect key="frame" x="293" y="10" width="182" height="159"/>
                                             <animations/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
+                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3fA-dy-Ra4">
+                                            <rect key="frame" x="321" y="28" width="126" height="124"/>
+                                            <animations/>
+                                            <state key="normal" backgroundImage="JogoDaVelhaImagem.png"/>
+                                        </button>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="syr-e6-raJ">
                                             <rect key="frame" x="547" y="11" width="182" height="159"/>
                                             <animations/>
@@ -788,6 +783,11 @@
                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
+                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ffl-GR-Hz8">
+                                            <rect key="frame" x="575" y="28" width="126" height="125"/>
+                                            <animations/>
+                                            <state key="normal" backgroundImage="PontinhosImagem.png"/>
+                                        </button>
                                     </subviews>
                                     <animations/>
                                 </view>
@@ -2652,7 +2652,7 @@
         <image name="trofeu.png" width="509" height="640"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="9qb-8L-ayC"/>
         <segue reference="Te4-Tk-Xt8"/>
-        <segue reference="JiL-kU-V3y"/>
     </inferredMetricsTieBreakers>
 </document>
