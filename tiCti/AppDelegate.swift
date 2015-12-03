@@ -43,8 +43,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func applicationWillTerminate(application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
         //let da = DamasViewController
-        dama?.t.sair()
-        pontos?.t.sair()
+        dama?.tic_tic.sair()
+        try! t.sair()
         velha?.tic.sair()
     }
 

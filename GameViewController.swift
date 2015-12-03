@@ -474,5 +474,4 @@ class GameViewController: UIViewController, tictiDelegate,  ARDAppClientDelegate
         client.disconnect()
         remoteView.removeFromSuperview()
     }
-
 }
