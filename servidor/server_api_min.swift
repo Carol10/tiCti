@@ -84,10 +84,11 @@ class ticti: NSObject , NSStreamDelegate{
                     len = self.inputStream!.read(&buffer, maxLength: bufferSize*sizeof(UInt8))
                     let dString = NSData(bytes: buffer, length: len!)
                     let str = String(data: dString, encoding: NSASCIIStringEncoding)
-                    print("ola")
                     print(str!)
-                    let dic:NSDictionary = try! NSJSONSerialization.JSONObjectWithData(dString, options: NSJSONReadingOptions(rawValue: 0)) as! NSDictionary
-                    self.manageRecievedData(dic)
+                    if(str != ""){
+                        let dic:NSDictionary = try! NSJSONSerialization.JSONObjectWithData(dString, options: NSJSONReadingOptions(rawValue: 0)) as! NSDictionary
+                        self.manageRecievedData(dic)
+                    }
                 }
             }
             break;
