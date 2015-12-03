@@ -66,9 +66,13 @@ class Jogos: UIViewController, tictiDelegate{
             self.nome2.text = (dados[1] as! NSDictionary)["nome"] as? String
             self.nome3.text = (dados[2] as! NSDictionary)["nome"] as? String
             
-            self.pedestal1.setTitle("\((dados[0] as! NSDictionary)["vitorias"] as! String) pts", forState: .Disabled)
-            self.pedestal2.setTitle("\((dados[1] as! NSDictionary)["vitorias"] as! String) pts", forState: .Disabled)
-            self.pedestal3.setTitle("\((dados[2] as! NSDictionary)["vitorias"] as! String) pts", forState: .Disabled)
+            let v1 = Int((dados[0] as! NSDictionary)["vitorias"] as! String)!*10
+            let v2 = Int((dados[1] as! NSDictionary)["vitorias"] as! String)!*10
+            let v3 = Int((dados[2] as! NSDictionary)["vitorias"] as! String)!*10
+            
+            self.pedestal1.setTitle("\(v1) pts", forState: .Disabled)
+            self.pedestal2.setTitle("\(v2) pts", forState: .Disabled)
+            self.pedestal3.setTitle("\(v3) pts", forState: .Disabled)
             
             self.foto1.image = imagens[0] as? UIImage;
             self.foto2.image = imagens[1] as? UIImage;
