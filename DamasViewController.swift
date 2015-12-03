@@ -297,6 +297,7 @@ class DamasViewController: UIViewController, tictiDelegate, ARDAppClientDelegate
     }
     override func viewWillDisappear(animated: Bool) {
         tic_tic.sair()
+        client.disconnect()
         remoteView.removeFromSuperview()
     }
     func adversarioConectou(apelido: String, sala_id:String) {
