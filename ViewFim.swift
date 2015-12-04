@@ -11,10 +11,9 @@ import UIKit
 class ViewFim: UIViewController
 {
     @IBOutlet var text: UILabel!
+    
+    @IBOutlet var img:UIImageView!
 
-    @IBAction func jogarDenovo(sender: AnyObject)
-    {
-    }
     override func viewDidLoad()
     {
         super.viewDidLoad()
@@ -25,11 +24,13 @@ class ViewFim: UIViewController
             {
                 text.text = "Você Venceu!"
                 t.venceu()
+                img.image = UIImage(named:"winner2.png")
             }
             else
             {
                 text.text = "Jogador 1 Venceu!"
                 t.perdeu()
+                img.image = UIImage(named: "loser.jpg")
             }
             
         }
@@ -39,11 +40,13 @@ class ViewFim: UIViewController
             {
                 text.text = "Jogador 2 Venceu!"
                 t.perdeu()
+                img.image = UIImage(named: "loser.jpg")
             }
             else
             {
                 text.text = "Você Venceu!"
                 t.venceu()
+                img.image = UIImage(named:"winner2.png")
             }
         }
         else//0

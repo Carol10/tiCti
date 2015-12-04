@@ -15,13 +15,10 @@
 		09554B851C08E78600CBA9CF /* error.wav in Resources */ = {isa = PBXBuildFile; fileRef = 09554B761C08E78600CBA9CF /* error.wav */; };
 		09554B861C08E78600CBA9CF /* front.png in Resources */ = {isa = PBXBuildFile; fileRef = 09554B771C08E78600CBA9CF /* front.png */; };
 		09554B871C08E78600CBA9CF /* jogarDenovo.png in Resources */ = {isa = PBXBuildFile; fileRef = 09554B781C08E78600CBA9CF /* jogarDenovo.png */; };
-		09554B881C08E78600CBA9CF /* loser.png in Resources */ = {isa = PBXBuildFile; fileRef = 09554B791C08E78600CBA9CF /* loser.png */; };
 		09554B891C08E78600CBA9CF /* tracoo.png in Resources */ = {isa = PBXBuildFile; fileRef = 09554B7A1C08E78600CBA9CF /* tracoo.png */; };
 		09554B8A1C08E78600CBA9CF /* tracooHor.png in Resources */ = {isa = PBXBuildFile; fileRef = 09554B7B1C08E78600CBA9CF /* tracooHor.png */; };
 		09554B8B1C08E78600CBA9CF /* tracooRed.png in Resources */ = {isa = PBXBuildFile; fileRef = 09554B7C1C08E78600CBA9CF /* tracooRed.png */; };
 		09554B8C1C08E78600CBA9CF /* tracooRedHor.png in Resources */ = {isa = PBXBuildFile; fileRef = 09554B7D1C08E78600CBA9CF /* tracooRedHor.png */; };
-		09554B8D1C08E78600CBA9CF /* trofeu.png in Resources */ = {isa = PBXBuildFile; fileRef = 09554B7E1C08E78600CBA9CF /* trofeu.png */; };
-		09554B8E1C08E78600CBA9CF /* winner.png in Resources */ = {isa = PBXBuildFile; fileRef = 09554B7F1C08E78600CBA9CF /* winner.png */; };
 		09554BB41C08E7CE00CBA9CF /* loading-1 (arrastado).tiff in Resources */ = {isa = PBXBuildFile; fileRef = 09554B901C08E7CE00CBA9CF /* loading-1 (arrastado).tiff */; };
 		09554BB51C08E7CE00CBA9CF /* loading-2 (arrastado).tiff in Resources */ = {isa = PBXBuildFile; fileRef = 09554B911C08E7CE00CBA9CF /* loading-2 (arrastado).tiff */; };
 		09554BB61C08E7CE00CBA9CF /* loading-3 (arrastado).tiff in Resources */ = {isa = PBXBuildFile; fileRef = 09554B921C08E7CE00CBA9CF /* loading-3 (arrastado).tiff */; };
@@ -128,13 +125,10 @@
 		09554B761C08E78600CBA9CF /* error.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = error.wav; sourceTree = "<group>"; };
 		09554B771C08E78600CBA9CF /* front.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = front.png; sourceTree = "<group>"; };
 		09554B781C08E78600CBA9CF /* jogarDenovo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = jogarDenovo.png; sourceTree = "<group>"; };
-		09554B791C08E78600CBA9CF /* loser.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = loser.png; sourceTree = "<group>"; };
 		09554B7A1C08E78600CBA9CF /* tracoo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tracoo.png; sourceTree = "<group>"; };
 		09554B7B1C08E78600CBA9CF /* tracooHor.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tracooHor.png; sourceTree = "<group>"; };
 		09554B7C1C08E78600CBA9CF /* tracooRed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tracooRed.png; sourceTree = "<group>"; };
 		09554B7D1C08E78600CBA9CF /* tracooRedHor.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tracooRedHor.png; sourceTree = "<group>"; };
-		09554B7E1C08E78600CBA9CF /* trofeu.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = trofeu.png; sourceTree = "<group>"; };
-		09554B7F1C08E78600CBA9CF /* winner.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = winner.png; sourceTree = "<group>"; };
 		09554B901C08E7CE00CBA9CF /* loading-1 (arrastado).tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = "loading-1 (arrastado).tiff"; sourceTree = "<group>"; };
 		09554B911C08E7CE00CBA9CF /* loading-2 (arrastado).tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = "loading-2 (arrastado).tiff"; sourceTree = "<group>"; };
 		09554B921C08E7CE00CBA9CF /* loading-3 (arrastado).tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = "loading-3 (arrastado).tiff"; sourceTree = "<group>"; };
@@ -263,13 +257,10 @@
 				09554B761C08E78600CBA9CF /* error.wav */,
 				09554B771C08E78600CBA9CF /* front.png */,
 				09554B781C08E78600CBA9CF /* jogarDenovo.png */,
-				09554B791C08E78600CBA9CF /* loser.png */,
 				09554B7A1C08E78600CBA9CF /* tracoo.png */,
 				09554B7B1C08E78600CBA9CF /* tracooHor.png */,
 				09554B7C1C08E78600CBA9CF /* tracooRed.png */,
 				09554B7D1C08E78600CBA9CF /* tracooRedHor.png */,
-				09554B7E1C08E78600CBA9CF /* trofeu.png */,
-				09554B7F1C08E78600CBA9CF /* winner.png */,
 			);
 			name = arquivos;
 			sourceTree = "<group>";
@@ -617,7 +608,6 @@
 				09554BBB1C08E7CE00CBA9CF /* loading-8 (arrastado).tiff in Resources */,
 				09554BCC1C08E7CE00CBA9CF /* loading-25 (arrastado).tiff in Resources */,
 				09554BCA1C08E7CE00CBA9CF /* loading-23 (arrastado).tiff in Resources */,
-				09554B8E1C08E78600CBA9CF /* winner.png in Resources */,
 				09554B811C08E78600CBA9CF /* boxRed.png in Resources */,
 				09554BD31C08E7CE00CBA9CF /* loading-32 (arrastado).tiff in Resources */,
 				09554BC71C08E7CE00CBA9CF /* loading-20 (arrastado).tiff in Resources */,
@@ -632,7 +622,6 @@
 				09554B8B1C08E78600CBA9CF /* tracooRed.png in Resources */,
 				09554BB81C08E7CE00CBA9CF /* loading-5 (arrastado).tiff in Resources */,
 				7E66D7DA1C0A1175002F6858 /* PontinhosImagem.png in Resources */,
-				09554B8D1C08E78600CBA9CF /* trofeu.png in Resources */,
 				09554BBD1C08E7CE00CBA9CF /* loading-10 (arrastado).tiff in Resources */,
 				0990008E1C11D9A400601037 /* x.png in Resources */,
 				09554BB51C08E7CE00CBA9CF /* loading-2 (arrastado).tiff in Resources */,
@@ -668,7 +657,6 @@
 				7E66D7D81C0A1169002F6858 /* DamasImagem.png in Resources */,
 				09554BBF1C08E7CE00CBA9CF /* loading-12 (arrastado).tiff in Resources */,
 				09554BBA1C08E7CE00CBA9CF /* loading-7 (arrastado).tiff in Resources */,
-				09554B881C08E78600CBA9CF /* loser.png in Resources */,
 				09554BD41C08E7CE00CBA9CF /* loading-33 (arrastado).tiff in Resources */,
 				099000961C11DA1400601037 /* o.png in Resources */,
 				099000901C11D9F700601037 /* winner2.png in Resources */,
