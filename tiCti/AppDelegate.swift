@@ -14,7 +14,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
     var dama:DamasViewController?
     var pontos:GameViewController?
-    var velha:velhaViewController?
+    var velha:TicTacViewController?
 
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
@@ -45,7 +45,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         //let da = DamasViewController
         dama?.tic_tic.sair()
         try! t.sair()
-        velha?.tic.sair()
+        t.sair() //velha?.tic.sair()
+
     }
 
 

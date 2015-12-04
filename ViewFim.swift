@@ -29,7 +29,7 @@ class ViewFim: UIViewController
             else
             {
                 text.text = "Jogador 1 Venceu!"
-                //t.perdeu()
+                t.perdeu()
             }
             
         }
@@ -38,12 +38,12 @@ class ViewFim: UIViewController
             if player1 == true //eh o jogador 1 entao:
             {
                 text.text = "Jogador 2 Venceu!"
-                //t.perdeu()
+                t.perdeu()
             }
             else
             {
                 text.text = "Você Venceu!"
-                //t.venceu()
+                t.venceu()
             }
         }
         else//0
@@ -51,12 +51,6 @@ class ViewFim: UIViewController
             text.text = "Empate!"
             //t.empate()
         }
-    }
-
-    override func didReceiveMemoryWarning()
-    {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
 
 }

@@ -62,13 +62,20 @@
 		09554BDD1C08E9D100CBA9CF /* Inicio.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09554BD91C08E9D100CBA9CF /* Inicio.swift */; };
 		09554BDF1C08E9D100CBA9CF /* ViewFim.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09554BDB1C08E9D100CBA9CF /* ViewFim.swift */; };
 		09554BE11C08EE6A00CBA9CF /* pen_sound.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 09554BE01C08EE6A00CBA9CF /* pen_sound.mp3 */; };
+		0990008B1C11D8DD00601037 /* TicTacViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0990008A1C11D8DD00601037 /* TicTacViewController.swift */; };
+		0990008E1C11D9A400601037 /* x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0990008D1C11D9A400601037 /* x.png */; };
+		099000901C11D9F700601037 /* winner2.png in Resources */ = {isa = PBXBuildFile; fileRef = 0990008F1C11D9F700601037 /* winner2.png */; };
+		099000921C11DA0400601037 /* top.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 099000911C11DA0400601037 /* top.jpg */; };
+		099000951C11DA1400601037 /* loser.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 099000931C11DA1400601037 /* loser.jpg */; };
+		099000961C11DA1400601037 /* o.png in Resources */ = {isa = PBXBuildFile; fileRef = 099000941C11DA1400601037 /* o.png */; };
+		099000981C11DA6100601037 /* FimTicTacToe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 099000971C11DA6100601037 /* FimTicTacToe.swift */; };
+		0990009C1C11DB7400601037 /* grade.png in Resources */ = {isa = PBXBuildFile; fileRef = 0990009B1C11DB7400601037 /* grade.png */; };
 		451F92D01C078A7E009B6F85 /* azul_dama.png in Resources */ = {isa = PBXBuildFile; fileRef = 451F92CE1C078A7E009B6F85 /* azul_dama.png */; };
 		451F92D11C078A7E009B6F85 /* vermelho_dama.png in Resources */ = {isa = PBXBuildFile; fileRef = 451F92CF1C078A7E009B6F85 /* vermelho_dama.png */; };
 		452B4C3E1BFFA92B0037172C /* quadrado.swift in Sources */ = {isa = PBXBuildFile; fileRef = 452B4C3D1BFFA92B0037172C /* quadrado.swift */; };
 		452B4C401BFFA9550037172C /* bolinha.swift in Sources */ = {isa = PBXBuildFile; fileRef = 452B4C3F1BFFA9550037172C /* bolinha.swift */; };
 		452B4C431BFFA9680037172C /* azul.png in Resources */ = {isa = PBXBuildFile; fileRef = 452B4C411BFFA9680037172C /* azul.png */; };
 		452B4C441BFFA9680037172C /* vermelho.png in Resources */ = {isa = PBXBuildFile; fileRef = 452B4C421BFFA9680037172C /* vermelho.png */; };
-		45F5A1711C063B9C004D13B7 /* botao_ttt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45F5A1701C063B9C004D13B7 /* botao_ttt.swift */; };
 		7348760DB427A3584D2C1C43 /* libPods-tiCti.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 808588D88D29D601B9F97784 /* libPods-tiCti.a */; };
 		7E2D47811BF017C900FDEA98 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E2D47801BF017C900FDEA98 /* AppDelegate.swift */; };
 		7E2D47831BF017C900FDEA98 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E2D47821BF017C900FDEA98 /* ViewController.swift */; };
@@ -168,6 +175,14 @@
 		09554BD91C08E9D100CBA9CF /* Inicio.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Inicio.swift; sourceTree = "<group>"; };
 		09554BDB1C08E9D100CBA9CF /* ViewFim.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewFim.swift; sourceTree = "<group>"; };
 		09554BE01C08EE6A00CBA9CF /* pen_sound.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = pen_sound.mp3; sourceTree = "<group>"; };
+		0990008A1C11D8DD00601037 /* TicTacViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TicTacViewController.swift; sourceTree = "<group>"; };
+		0990008D1C11D9A400601037 /* x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = x.png; sourceTree = "<group>"; };
+		0990008F1C11D9F700601037 /* winner2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = winner2.png; sourceTree = "<group>"; };
+		099000911C11DA0400601037 /* top.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = top.jpg; sourceTree = "<group>"; };
+		099000931C11DA1400601037 /* loser.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = loser.jpg; sourceTree = "<group>"; };
+		099000941C11DA1400601037 /* o.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = o.png; sourceTree = "<group>"; };
+		099000971C11DA6100601037 /* FimTicTacToe.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FimTicTacToe.swift; sourceTree = "<group>"; };
+		0990009B1C11DB7400601037 /* grade.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = grade.png; sourceTree = "<group>"; };
 		451F92CE1C078A7E009B6F85 /* azul_dama.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = azul_dama.png; sourceTree = "<group>"; };
 		451F92CF1C078A7E009B6F85 /* vermelho_dama.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = vermelho_dama.png; sourceTree = "<group>"; };
 		452B4C3D1BFFA92B0037172C /* quadrado.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = quadrado.swift; sourceTree = "<group>"; };
@@ -175,7 +190,6 @@
 		452B4C411BFFA9680037172C /* azul.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = azul.png; sourceTree = "<group>"; };
 		452B4C421BFFA9680037172C /* vermelho.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = vermelho.png; sourceTree = "<group>"; };
 		452B4C451BFFAA710037172C /* tiCti-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "tiCti-Bridging-Header.h"; sourceTree = SOURCE_ROOT; };
-		45F5A1701C063B9C004D13B7 /* botao_ttt.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = botao_ttt.swift; sourceTree = "<group>"; };
 		7E2D477D1BF017C900FDEA98 /* tiCti.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = tiCti.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7E2D47801BF017C900FDEA98 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7E2D47821BF017C900FDEA98 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -301,6 +315,19 @@
 				09554BB31C08E7CE00CBA9CF /* loading-36 (arrastado).tiff */,
 			);
 			name = "load-imgs";
+			sourceTree = "<group>";
+		};
+		0990008C1C11D94900601037 /* imgs */ = {
+			isa = PBXGroup;
+			children = (
+				099000931C11DA1400601037 /* loser.jpg */,
+				0990009B1C11DB7400601037 /* grade.png */,
+				099000941C11DA1400601037 /* o.png */,
+				0990008F1C11D9F700601037 /* winner2.png */,
+				099000911C11DA0400601037 /* top.jpg */,
+				0990008D1C11D9A400601037 /* x.png */,
+			);
+			name = imgs;
 			sourceTree = "<group>";
 		};
 		2C6480D55EA97ADD1EEEB472 /* Pods */ = {
@@ -447,7 +474,9 @@
 			isa = PBXGroup;
 			children = (
 				7EF595281BFE45340072215B /* velhaViewController.swift */,
-				45F5A1701C063B9C004D13B7 /* botao_ttt.swift */,
+				0990008A1C11D8DD00601037 /* TicTacViewController.swift */,
+				099000971C11DA6100601037 /* FimTicTacToe.swift */,
+				0990008C1C11D94900601037 /* imgs */,
 			);
 			name = JogoDaVelha;
 			path = ..;
@@ -593,6 +622,7 @@
 				09554BD31C08E7CE00CBA9CF /* loading-32 (arrastado).tiff in Resources */,
 				09554BC71C08E7CE00CBA9CF /* loading-20 (arrastado).tiff in Resources */,
 				09554B831C08E78600CBA9CF /* circle-loading-gif.gif in Resources */,
+				099000921C11DA0400601037 /* top.jpg in Resources */,
 				09554BC41C08E7CE00CBA9CF /* loading-17 (arrastado).tiff in Resources */,
 				09554BCD1C08E7CE00CBA9CF /* loading-26 (arrastado).tiff in Resources */,
 				09554BCB1C08E7CE00CBA9CF /* loading-24 (arrastado).tiff in Resources */,
@@ -604,9 +634,11 @@
 				7E66D7DA1C0A1175002F6858 /* PontinhosImagem.png in Resources */,
 				09554B8D1C08E78600CBA9CF /* trofeu.png in Resources */,
 				09554BBD1C08E7CE00CBA9CF /* loading-10 (arrastado).tiff in Resources */,
+				0990008E1C11D9A400601037 /* x.png in Resources */,
 				09554BB51C08E7CE00CBA9CF /* loading-2 (arrastado).tiff in Resources */,
 				09554BB71C08E7CE00CBA9CF /* loading-4 (arrastado).tiff in Resources */,
 				09554BD51C08E7CE00CBA9CF /* loading-34 (arrastado).tiff in Resources */,
+				0990009C1C11DB7400601037 /* grade.png in Resources */,
 				09554BCF1C08E7CE00CBA9CF /* loading-28 (arrastado).tiff in Resources */,
 				09554B891C08E78600CBA9CF /* tracoo.png in Resources */,
 				09554B8C1C08E78600CBA9CF /* tracooRedHor.png in Resources */,
@@ -620,6 +652,7 @@
 				7E2D47861BF017C900FDEA98 /* Main.storyboard in Resources */,
 				09554B8A1C08E78600CBA9CF /* tracooHor.png in Resources */,
 				09554BC21C08E7CE00CBA9CF /* loading-15 (arrastado).tiff in Resources */,
+				099000951C11DA1400601037 /* loser.jpg in Resources */,
 				452B4C431BFFA9680037172C /* azul.png in Resources */,
 				09554BC11C08E7CE00CBA9CF /* loading-14 (arrastado).tiff in Resources */,
 				09554B861C08E78600CBA9CF /* front.png in Resources */,
@@ -637,6 +670,8 @@
 				09554BBA1C08E7CE00CBA9CF /* loading-7 (arrastado).tiff in Resources */,
 				09554B881C08E78600CBA9CF /* loser.png in Resources */,
 				09554BD41C08E7CE00CBA9CF /* loading-33 (arrastado).tiff in Resources */,
+				099000961C11DA1400601037 /* o.png in Resources */,
+				099000901C11D9F700601037 /* winner2.png in Resources */,
 				7E66D7DC1C0A117F002F6858 /* JogoDaVelhaImagem.png in Resources */,
 				09554B851C08E78600CBA9CF /* error.wav in Resources */,
 				09554BBC1C08E7CE00CBA9CF /* loading-9 (arrastado).tiff in Resources */,
@@ -714,6 +749,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				09554BDD1C08E9D100CBA9CF /* Inicio.swift in Sources */,
+				0990008B1C11D8DD00601037 /* TicTacViewController.swift in Sources */,
 				7E5F79801BFB69CF0031B22F /* Jogos.swift in Sources */,
 				7E2D47B51BF02B5100FDEA98 /* TelaCadastro.swift in Sources */,
 				7E2D47AF1BF0195000FDEA98 /* ScreenCell.swift in Sources */,
@@ -723,9 +759,9 @@
 				7E60003F1BF3C0B800B72AEA /* PerfilViewController.swift in Sources */,
 				09554BDF1C08E9D100CBA9CF /* ViewFim.swift in Sources */,
 				7EF595271BFE45230072215B /* AlterarDadosViewController.swift in Sources */,
-				45F5A1711C063B9C004D13B7 /* botao_ttt.swift in Sources */,
 				7EFB8B261BF142EF0086F37E /* server_api_min.swift in Sources */,
 				7EF595291BFE45340072215B /* velhaViewController.swift in Sources */,
+				099000981C11DA6100601037 /* FimTicTacToe.swift in Sources */,
 				7E2D47831BF017C900FDEA98 /* ViewController.swift in Sources */,
 				7E2D47811BF017C900FDEA98 /* AppDelegate.swift in Sources */,
 				09554BDC1C08E9D100CBA9CF /* GameViewController.swift in Sources */,

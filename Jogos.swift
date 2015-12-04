@@ -120,7 +120,7 @@ class Jogos: UIViewController, tictiDelegate{
         }else if(jogo == 2){
 //            let vc = velhaViewController()
             
-            let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("VelhaVC") as! velhaViewController;
+            let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("VelhaVC") as! TicTacViewController;
             
             vc.meu_email = meu_email
             vc.inimigo_email = com
