@@ -132,6 +132,19 @@ class TelaLogin: UIViewController, UITableViewDelegate, UITableViewDataSource, t
         return celll
     }
     
+    //fecha teclado com toque fora
+    
+    override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?)
+    {
+        
+        self.view.endEditing(true)//fecha teclado
+    }
+    
+    func textFieldShouldReturn(textField: UITextField) -> Bool
+    {
+        return true
+    }
+    
     
 
     /*
