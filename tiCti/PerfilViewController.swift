@@ -8,12 +8,13 @@
 
 import UIKit
 
-class PerfilViewController: UIViewController, tictiDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate{
+class PerfilViewController: UIViewController, tictiDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate
+{
     
     var meu_email:String = ""
     
-    //conestando com o servidor 
-    let tic = ticti()
+    //conectando com o servidor
+    let tic = t
     
     
     //outras variáveis
@@ -32,6 +33,7 @@ class PerfilViewController: UIViewController, tictiDelegate, UIImagePickerContro
     @IBOutlet weak var tutorial: UIButton!
     @IBOutlet weak var alterarDados: UIButton!
     
+    let maxFileSize = 1024
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -119,7 +121,8 @@ class PerfilViewController: UIViewController, tictiDelegate, UIImagePickerContro
         self.presentViewController(Alert, animated: true, completion: nil)
     }
     
-    @IBAction func EditaFotoA(sender: AnyObject) {
+    @IBAction func EditaFotoA(sender: AnyObject)
+    {
         imageP.allowsEditing = false
         imageP.sourceType = .PhotoLibrary
         dispatch_async(dispatch_get_main_queue()) { () -> Void in
@@ -129,12 +132,27 @@ class PerfilViewController: UIViewController, tictiDelegate, UIImagePickerContro
     
     func imagePickerController(picker: UIImagePickerController, didFinishPickingImage image: UIImage, editingInfo: [String : AnyObject]?) {
         
-        fotoPerfil.image = image
+        //comprime imagem
+        var comp:CGFloat = 0.5
+        let maxCompression:CGFloat = 0.1
+        var imageData = UIImageJPEGRepresentation(image, comp)
+        
+        while (imageData!.length > maxFileSize) && (comp > maxCompression)
+        {
+            comp -= 0.1
+            imageData = UIImageJPEGRepresentation(image, comp)
+        }
+    
+        print("comprimindo imagem...");
+        
+        fotoPerfil.image = UIImage(data: imageData!);
+        
+        //fim [ comprime imagem
         
         tic.meuemail = meu_email
         picker.dismissViewControllerAnimated(true, completion: nil)
         dispatch_async(dispatch_get_main_queue()) { () -> Void in
-            self.tic.atualizarFoto(image) { (enviado) -> () in
+            self.tic.atualizarFoto(self.fotoPerfil.image!) { (enviado) -> () in
                 if enviado {
                     let Alert1 = UIAlertController(title: "Editar foto", message:"sua foto foi alterada com sucesso!", preferredStyle: UIAlertControllerStyle.Alert)
                     

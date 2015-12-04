@@ -236,15 +236,12 @@ class GameViewController: UIViewController, tictiDelegate,  ARDAppClientDelegate
         super.viewDidLoad()
         
         //server
-        t.delegate = self
-        t.connect()
-        
-        t.meuemail = meu_email
-        t.inimigoemail = inimigo_email
-        
-        souEu_str = t.meuemail
-        //aqui eu decido quem vai ser o player 1 ou o 2
-        t.entreiNoJogo()
+        t.delegate      = self;
+        t.connect();
+        t.meuemail      = meu_email;
+        t.inimigoemail  = inimigo_email;
+        souEu_str       = t.meuemail;
+        t.entreiNoJogo();
         
         //--------
 
