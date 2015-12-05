@@ -6,7 +6,7 @@ var winnerTicTacToe:String = String();
 
 class TicTacViewController: UIViewController, tictiDelegate,  ARDAppClientDelegate, RTCEAGLVideoViewDelegate
 {
-    
+    let tic = ticti()
     // 1 = o, 2 = x
     
     var player1:Bool    = false;
@@ -42,7 +42,7 @@ class TicTacViewController: UIViewController, tictiDelegate,  ARDAppClientDelega
         if gameState[sender.tag] == 0 && minhaVez == true
         {
             
-            t.movimento("\(sender.tag!)");
+            tic.movimento("\(sender.tag!)");
             
             if player1//bola
             {
@@ -110,14 +110,14 @@ class TicTacViewController: UIViewController, tictiDelegate,  ARDAppClientDelega
         super.viewDidLoad()
         
         //server
-        t.delegate      = self;
-        t.connect();
+        tic.delegate      = self;
+        tic.connect();
         
-        t.meuemail      = meu_email;
-        t.inimigoemail  = inimigo_email;
-        souEu_str       = t.meuemail;
+        tic.meuemail      = meu_email;
+        tic.inimigoemail  = inimigo_email;
+        souEu_str       = tic.meuemail;
     
-        t.entreiNoJogo();
+        tic.entreiNoJogo();
         
         if player1
         {
@@ -270,7 +270,7 @@ class TicTacViewController: UIViewController, tictiDelegate,  ARDAppClientDelega
     }
     func appWillTerminate()
     {
-        t.sair()
+        tic.sair()
     }
 
 }
