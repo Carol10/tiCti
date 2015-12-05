@@ -94,7 +94,6 @@
 		7E66D7DA1C0A1175002F6858 /* PontinhosImagem.png in Resources */ = {isa = PBXBuildFile; fileRef = 7E66D7D91C0A1175002F6858 /* PontinhosImagem.png */; };
 		7E66D7DC1C0A117F002F6858 /* JogoDaVelhaImagem.png in Resources */ = {isa = PBXBuildFile; fileRef = 7E66D7DB1C0A117F002F6858 /* JogoDaVelhaImagem.png */; };
 		7EF595271BFE45230072215B /* AlterarDadosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EF595261BFE45230072215B /* AlterarDadosViewController.swift */; };
-		7EF595291BFE45340072215B /* velhaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EF595281BFE45340072215B /* velhaViewController.swift */; };
 		7EF5952D1BFE45530072215B /* DamasViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EF5952C1BFE45530072215B /* DamasViewController.swift */; };
 		7EFB8B261BF142EF0086F37E /* server_api_min.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EFB8B251BF142EF0086F37E /* server_api_min.swift */; };
 /* End PBXBuildFile section */
@@ -210,7 +209,6 @@
 		7E66D7D91C0A1175002F6858 /* PontinhosImagem.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = PontinhosImagem.png; sourceTree = "<group>"; };
 		7E66D7DB1C0A117F002F6858 /* JogoDaVelhaImagem.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = JogoDaVelhaImagem.png; sourceTree = "<group>"; };
 		7EF595261BFE45230072215B /* AlterarDadosViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlterarDadosViewController.swift; sourceTree = "<group>"; };
-		7EF595281BFE45340072215B /* velhaViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = velhaViewController.swift; sourceTree = "<group>"; };
 		7EF5952C1BFE45530072215B /* DamasViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DamasViewController.swift; sourceTree = "<group>"; };
 		7EFB8B251BF142EF0086F37E /* server_api_min.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = server_api_min.swift; path = servidor/server_api_min.swift; sourceTree = SOURCE_ROOT; };
 		808588D88D29D601B9F97784 /* libPods-tiCti.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-tiCti.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -464,7 +462,6 @@
 		7ECAAFA51BFCF33800B26C0E /* JogoDaVelha */ = {
 			isa = PBXGroup;
 			children = (
-				7EF595281BFE45340072215B /* velhaViewController.swift */,
 				0990008A1C11D8DD00601037 /* TicTacViewController.swift */,
 				099000971C11DA6100601037 /* FimTicTacToe.swift */,
 				0990008C1C11D94900601037 /* imgs */,
@@ -560,7 +557,7 @@
 				TargetAttributes = {
 					7E2D477C1BF017C900FDEA98 = {
 						CreatedOnToolsVersion = 7.1;
-						DevelopmentTeam = 9T2CY2S9H2;
+						DevelopmentTeam = 4GTRJ4E97Q;
 					};
 					7E2D47901BF017C900FDEA98 = {
 						CreatedOnToolsVersion = 7.1;
@@ -748,7 +745,6 @@
 				09554BDF1C08E9D100CBA9CF /* ViewFim.swift in Sources */,
 				7EF595271BFE45230072215B /* AlterarDadosViewController.swift in Sources */,
 				7EFB8B261BF142EF0086F37E /* server_api_min.swift in Sources */,
-				7EF595291BFE45340072215B /* velhaViewController.swift in Sources */,
 				099000981C11DA6100601037 /* FimTicTacToe.swift in Sources */,
 				7E2D47831BF017C900FDEA98 /* ViewController.swift in Sources */,
 				7E2D47811BF017C900FDEA98 /* AppDelegate.swift in Sources */,

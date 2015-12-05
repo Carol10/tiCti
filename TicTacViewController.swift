@@ -6,7 +6,7 @@ var winnerTicTacToe:String = String();
 
 class TicTacViewController: UIViewController, tictiDelegate,  ARDAppClientDelegate, RTCEAGLVideoViewDelegate
 {
-    let tic = ticti()
+    let tic = t
     // 1 = o, 2 = x
     
     var player1:Bool    = false;
@@ -71,14 +71,13 @@ class TicTacViewController: UIViewController, tictiDelegate,  ARDAppClientDelega
                 
                 if gameState[combination[0]] != 0 && gameState[combination[0]] == gameState[combination[1]] && gameState[combination[1]] == gameState[combination[2]]
                 {
+                    winnerTicTacToe = "1\(player1)";
                     
                     if gameState[combination[0]] == 2
                     {
-                        winnerTicTacToe = "2\(player1)";print(winnerTicTacToe);
-                        self.performSegueWithIdentifier("fimDeJogo", sender: self);
+                        winnerTicTacToe = "2\(player1)";
                     }
                     
-                    winnerTicTacToe = "1\(player1)";print(winnerTicTacToe);
                     self.performSegueWithIdentifier("fimDeJogo", sender: self);
                     
                 }
@@ -183,13 +182,13 @@ class TicTacViewController: UIViewController, tictiDelegate,  ARDAppClientDelega
             if gameState[combination[0]] != 0 && gameState[combination[0]] == gameState[combination[1]] && gameState[combination[1]] == gameState[combination[2]]
             {
                 
+                winnerTicTacToe = "1\(player1)";print(winnerTicTacToe);
+                
                 if gameState[combination[0]] == 2
                 {
                     winnerTicTacToe = "2\(player1)";print(winnerTicTacToe);
-                    self.performSegueWithIdentifier("fimDeJogo", sender: self);
                 }
                 
-                winnerTicTacToe = "1\(player1)";print(winnerTicTacToe);
                 self.performSegueWithIdentifier("fimDeJogo", sender: self);
             }
             

@@ -40,7 +40,8 @@ class Jogos: UIViewController, tictiDelegate{
     @IBOutlet weak var pedestal3: UIButton!
     
     
-    override func viewDidLoad() {
+    override func viewDidLoad()
+    {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
