@@ -13,7 +13,7 @@ import UIKit
 import SpriteKit
 import AVFoundation
 
-var player1:Bool = true //player 1 // se for falso eh a vez do player2 :)
+var player1:Bool = false //player 1 // se for falso eh a vez do player2 :)
 var winner:Int = -1
 var t = ticti()
 class GameViewController: UIViewController, tictiDelegate,  ARDAppClientDelegate, RTCEAGLVideoViewDelegate
@@ -23,7 +23,7 @@ class GameViewController: UIViewController, tictiDelegate,  ARDAppClientDelegate
     var meu_email = ""
     var inimigo_email = ""
     var souEu_str = String()
-    var minhaVez:Bool = true
+    var minhaVez:Bool = false
     
     let jogadaAudioPath = NSBundle.mainBundle().pathForResource("pen_sound", ofType: "mp3")!
     let errorAudioPath = NSBundle.mainBundle().pathForResource("error", ofType: "wav")!
