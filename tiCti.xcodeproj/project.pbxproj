@@ -557,7 +557,7 @@
 				TargetAttributes = {
 					7E2D477C1BF017C900FDEA98 = {
 						CreatedOnToolsVersion = 7.1;
-						DevelopmentTeam = 4GTRJ4E97Q;
+						DevelopmentTeam = 9T2CY2S9H2;
 					};
 					7E2D47901BF017C900FDEA98 = {
 						CreatedOnToolsVersion = 7.1;
@@ -905,7 +905,7 @@
 				INFOPLIST_FILE = tiCti/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = br.ufpe.cin.bepid.Carol.tiCti;
+				PRODUCT_BUNDLE_IDENTIFIER = bigChallenge.ticti;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "tiCti-Bridging-Header.h";
@@ -926,7 +926,7 @@
 				INFOPLIST_FILE = tiCti/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = br.ufpe.cin.bepid.Carol.tiCti;
+				PRODUCT_BUNDLE_IDENTIFIER = bigChallenge.ticti;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "tiCti-Bridging-Header.h";
@@ -1034,7 +1034,7 @@
 				INFOPLIST_FILE = tiCti/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = br.ufpe.cin.bepid.Carol.tiCti;
+				PRODUCT_BUNDLE_IDENTIFIER = bigChallenge.ticti;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "tiCti-Bridging-Header.h";

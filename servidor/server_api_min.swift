@@ -183,6 +183,7 @@ class ticti: NSObject , NSStreamDelegate{
     
     func queroJogar(jogo:UInt){
         let dic = ["type":"queroJogar","jogo":"\(jogo)","email":meuemail];
+        print(dic)
         send(dic)
     }
     

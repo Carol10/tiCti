@@ -8,7 +8,7 @@
 
 import UIKit
 
-class DamasViewController: UIViewController, tictiDelegate, ARDAppClientDelegate, RTCEAGLVideoViewDelegate {
+class DamasViewController: UIViewController, tictiDelegate/*, ARDAppClientDelegate, RTCEAGLVideoViewDelegate*/ {
     
     var meu_email = ""
     var inimigo_email = ""
@@ -297,23 +297,24 @@ class DamasViewController: UIViewController, tictiDelegate, ARDAppClientDelegate
     }
     override func viewWillDisappear(animated: Bool) {
         tic_tic.sair()
-        client.disconnect()
-        remoteView.removeFromSuperview()
+//        client.disconnect()
+//        remoteView.removeFromSuperview()
     }
     func adversarioConectou(apelido: String, sala_id:String) {
         print("\(apelido) conectou.")
         meu_turno=true;
-        let y = fabs(self.view.frame.size.width - self.view.frame.size.height) - 2*aresta
-        self.configVideoConferencia(y, sala: sala_id)
+        //let y = fabs(self.view.frame.size.width - self.view.frame.size.height) - 2*aresta
+        //self.configVideoConferencia(y, sala: sala_id)
     }
     
     func recebeuIdDaSala(id: String) {
         print("id da sala recebido:\n\(id)")
-        let y = fabs(self.view.frame.size.width - self.view.frame.size.height) - 2*aresta
-        self.configVideoConferencia(y, sala: id)
+        //let y = fabs(self.view.frame.size.width - self.view.frame.size.height) - 2*aresta
+        //self.configVideoConferencia(y, sala: id)
     }
     
     // MARK: Videoconferencia!
+    /*
     let videoHost = "https://apprtc.appspot.com"
     var remoteView: RTCEAGLVideoView!//(frame: CGRect())
     var client:ARDAppClient!
@@ -356,6 +357,6 @@ class DamasViewController: UIViewController, tictiDelegate, ARDAppClientDelegate
     }
     func appWillTerminate(){
         tic_tic.sair()
-    }
+    }*/
 }
 

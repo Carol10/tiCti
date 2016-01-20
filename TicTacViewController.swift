@@ -4,7 +4,7 @@ import UIKit
 
 var winnerTicTacToe:String = String();
 
-class TicTacViewController: UIViewController, tictiDelegate,  ARDAppClientDelegate, RTCEAGLVideoViewDelegate
+class TicTacViewController: UIViewController, tictiDelegate
 {
     let tic = t
     // 1 = o, 2 = x
@@ -212,6 +212,7 @@ class TicTacViewController: UIViewController, tictiDelegate,  ARDAppClientDelega
     }
 
     // MARK: Videoconferencia!
+    /*
     func recebeuIdDaSala(id: String)
     {
         configVideoConferencia(id)
@@ -270,7 +271,7 @@ class TicTacViewController: UIViewController, tictiDelegate,  ARDAppClientDelega
     func appWillTerminate()
     {
         tic.sair()
-    }
+    }*/
 
 }
 

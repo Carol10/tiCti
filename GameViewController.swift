@@ -17,7 +17,7 @@ var player1:Bool = false //player 1 // se for falso eh a vez do player2 :)
 var winner:Int = -1
 var t = ticti()
 
-class GameViewController: UIViewController, tictiDelegate,  ARDAppClientDelegate, RTCEAGLVideoViewDelegate
+class GameViewController: UIViewController, tictiDelegate
 {
     
     
@@ -291,7 +291,7 @@ class GameViewController: UIViewController, tictiDelegate,  ARDAppClientDelegate
         player1 = true
         minhaVez = true
         txt.text = "Sua vez :)"
-        configVideoConferencia(sala_id)
+        //configVideoConferencia(sala_id)
     }
     
     
@@ -424,13 +424,12 @@ class GameViewController: UIViewController, tictiDelegate,  ARDAppClientDelegate
     }
     
     //MARK: -VideoConferencia!
-    
+    /*
     func recebeuIdDaSala(id: String) {
         print("id da sala recebido:\n\(id)")
         self.configVideoConferencia(id)
     }
     
-    @IBOutlet weak var remoteView: RTCEAGLVideoView!
     let videoHost = "https://apprtc.appspot.com"
     var client:ARDAppClient!
     var remoteTrack:RTCVideoTrack!
@@ -466,10 +465,10 @@ class GameViewController: UIViewController, tictiDelegate,  ARDAppClientDelegate
     }
     func appWillTerminate(){
         t.sair()
-    }
+    }*/
     override func viewWillDisappear(animated: Bool) {
         t.sair()
-        client.disconnect()
-        remoteView.removeFromSuperview()
+        //client.disconnect()
+        //remoteView.removeFromSuperview()
     }
 }

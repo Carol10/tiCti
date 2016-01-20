@@ -17,20 +17,20 @@ class ViewFim: UIViewController
     override func viewDidLoad()
     {
         super.viewDidLoad()
-
+        img.removeFromSuperview();
         if(winner == 1)
         {
             if player1 == true //eh o jogador 1 entao:
             {
                 text.text = "Você Venceu!"
                 t.venceu()
-                img.image = UIImage(named:"winner2.png")
+                //img.image = UIImage(named:"winner2.png")
             }
             else
             {
                 text.text = "Jogador 1 Venceu!"
                 t.perdeu()
-                img.image = UIImage(named: "loser.jpg")
+                //img.image = UIImage(named: "loser.jpg")
             }
             
         }
@@ -40,13 +40,13 @@ class ViewFim: UIViewController
             {
                 text.text = "Jogador 2 Venceu!"
                 t.perdeu()
-                img.image = UIImage(named: "loser.jpg")
+                //img.image = UIImage(named: "loser.jpg")
             }
             else
             {
                 text.text = "Você Venceu!"
                 t.venceu()
-                img.image = UIImage(named:"winner2.png")
+                //img.image = UIImage(named:"winner2.png")
             }
         }
         else//0
