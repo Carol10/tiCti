@@ -65,8 +65,8 @@ class TelaCadastro: UIViewController, UITableViewDataSource, UITableViewDelegate
         tic.connect()
         
         
-        emailField.placeholder = "email@exemplo.com"
-        nomeField.placeholder = "Ana Caroline"
+//        emailField.placeholder = "email@exemplo.com"
+//        nomeField.placeholder = "Ana Caroline"
         senhaField.secureTextEntry = true
         
         
