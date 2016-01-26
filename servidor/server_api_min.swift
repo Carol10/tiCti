@@ -233,7 +233,9 @@ class ticti: NSObject , NSStreamDelegate{
         task.resume()
         
     }
-    func cadastra(nome:String, senha:String, email:String, callback:(sucesso:Bool) -> ()){
+    func cadastra(var nome:String, var senha:String, email:String, callback:(sucesso:Bool) -> ()){
+        nome = nome.stringByAddingPercentEncodingWithAllowedCharacters(NSCharacterSet.URLQueryAllowedCharacterSet())!;
+        senha = senha.stringByAddingPercentEncodingWithAllowedCharacters(NSCharacterSet.URLQueryAllowedCharacterSet())!;
         let url: NSURL = NSURL(string: host+"?action=cadastra&nome=\(nome)&senha=\(senha)&email=\(email)")!
         var result = NSDictionary()
         let task = NSURLSession.sharedSession().dataTaskWithURL(url) { (data, response, error) -> Void in

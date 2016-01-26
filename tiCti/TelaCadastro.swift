@@ -150,7 +150,7 @@ class TelaCadastro: UIViewController, UITableViewDataSource, UITableViewDelegate
                     self.presentViewController(Alert2, animated: true, completion: nil)
                     
                 }
-            })
+             })
             
 
             
