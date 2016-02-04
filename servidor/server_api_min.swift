@@ -216,7 +216,8 @@ class ticti: NSObject , NSStreamDelegate{
     }
     
     // MARK: funções de interface
-    func login(email:String, var senha:String, callback:(sucesso:Bool, nome:String)->()){
+    func login(var email:String, var senha:String, callback:(sucesso:Bool, nome:String)->()){
+        email = email.stringByAddingPercentEncodingWithAllowedCharacters(NSCharacterSet.URLQueryAllowedCharacterSet())!
         senha = senha.stringByAddingPercentEncodingWithAllowedCharacters(NSCharacterSet.URLQueryAllowedCharacterSet())!
         let url: NSURL = NSURL(string: host+"?action=login&email=\(email)&senha=\(senha)")!
         var result = NSDictionary()
