@@ -79,15 +79,17 @@ class ticti: NSObject , NSStreamDelegate{
                 // read bytes
                 let bufferSize = 7168
                 var buffer = Array<UInt8>(count: bufferSize, repeatedValue: 0)
-                var len:Int?;
+                //var len:Int?;
                 while(self.inputStream!.hasBytesAvailable){
-                    len = self.inputStream!.read(&buffer, maxLength: bufferSize*sizeof(UInt8))
-                    let dString = NSData(bytes: buffer, length: len!)
-                    let str = String(data: dString, encoding: NSASCIIStringEncoding)
-                    print(str!)
-                    if(str != ""){
-                        let dic:NSDictionary = try! NSJSONSerialization.JSONObjectWithData(dString, options: NSJSONReadingOptions(rawValue: 0)) as! NSDictionary
-                        self.manageRecievedData(dic)
+                    let mxLength = bufferSize*sizeof(UInt8)
+                    if let len = self.inputStream?.read(&buffer, maxLength: mxLength){
+                        let dString = NSData(bytes: buffer, length: len)
+                        let str = String(data: dString, encoding: NSASCIIStringEncoding)
+                        print(str!)
+                        if(str != ""){
+                            let dic:NSDictionary = try! NSJSONSerialization.JSONObjectWithData(dString, options: NSJSONReadingOptions(rawValue: 0)) as! NSDictionary
+                            self.manageRecievedData(dic)
+                        }
                     }
                 }
             }
@@ -214,7 +216,8 @@ class ticti: NSObject , NSStreamDelegate{
     }
     
     // MARK: funções de interface
-    func login(email:String, senha:String, callback:(sucesso:Bool, nome:String)->()){
+    func login(email:String, var senha:String, callback:(sucesso:Bool, nome:String)->()){
+        senha = senha.stringByAddingPercentEncodingWithAllowedCharacters(NSCharacterSet.URLQueryAllowedCharacterSet())!
         let url: NSURL = NSURL(string: host+"?action=login&email=\(email)&senha=\(senha)")!
         var result = NSDictionary()
         let task = NSURLSession.sharedSession().dataTaskWithURL(url) { (data, response, error) -> Void in

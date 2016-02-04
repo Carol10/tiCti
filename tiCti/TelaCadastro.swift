@@ -126,19 +126,17 @@ class TelaCadastro: UIViewController, UITableViewDataSource, UITableViewDelegate
                 if(disponivel){
                     self.tic.cadastra(self.arrayDados[2], senha: self.arrayDados[1], email: self.arrayDados[0], callback: { (sucesso) -> () in
                         if(sucesso){
-                            
-                            self.performSegueWithIdentifier("ligaLogin", sender: self)
+                            NSOperationQueue.mainQueue().addOperationWithBlock({ () -> Void in
+                                self.performSegueWithIdentifier("ligaLogin", sender: self)
+                            })
                         }
                         else{
-                            let Alert1 = UIAlertController(title: "Inconsistencia no cadastro", message: "vc pode não estar conectado a internet", preferredStyle: UIAlertControllerStyle.Alert)
+                            let Alert1 = UIAlertController(title: "Erro", message: "Você pode não estar conectado a internet", preferredStyle: UIAlertControllerStyle.Alert)
                             
                             Alert1.addAction(UIAlertAction(title: "Close", style: .Default, handler: {
                                 (action: UIAlertAction!) in
                             }))
                             self.presentViewController(Alert1, animated: true, completion: nil)
-                            
-                            
-                            
                         }
                     })
                 }else{

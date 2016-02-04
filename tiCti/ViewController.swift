@@ -33,11 +33,25 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         cadastrado.layer.cornerRadius = 10.0
         Ncadastrado.layer.cornerRadius = 10.0
         
+        //segues
+        cadastrado.addTarget(self, action: "vaiLogin", forControlEvents: UIControlEvents.TouchUpInside)
+        Ncadastrado.addTarget(self, action: "vaiCadastro", forControlEvents: UIControlEvents.TouchUpInside)
         
         //tableView
         self.IconTable.dataSource = self
         self.IconTable.delegate = self
         
+    }
+    
+    func vaiLogin(){
+        NSOperationQueue.mainQueue().addOperationWithBlock({ () -> Void in
+            self.performSegueWithIdentifier("proLogin", sender: self)
+        })
+    }
+    func vaiCadastro(){
+        NSOperationQueue.mainQueue().addOperationWithBlock({ () -> Void in
+            self.performSegueWithIdentifier("proCadastro", sender: self)
+        })
     }
 
     override func didReceiveMemoryWarning() {

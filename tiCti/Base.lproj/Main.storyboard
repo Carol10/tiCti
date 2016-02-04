@@ -65,9 +65,6 @@
                                 <state key="normal" title="Já sou cadastrado.">
                                     <color key="titleColor" red="0.96862745100000003" green="0.94509803920000002" blue="0.92941176469999998" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
-                                <connections>
-                                    <segue destination="0Vd-7S-9Bo" kind="show" id="9qb-8L-ayC"/>
-                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ATE-hn-1Wi">
                                 <rect key="frame" x="168" y="874" width="433" height="57"/>
@@ -76,9 +73,6 @@
                                 <state key="normal" title="Não sou cadastrado.">
                                     <color key="titleColor" red="0.96862745100000003" green="0.94509803920000002" blue="0.92941176469999998" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
-                                <connections>
-                                    <segue destination="YOe-Rh-coN" kind="show" id="Te4-Tk-Xt8"/>
-                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.6588235294" green="0.7843137255" blue="0.34901960780000002" alpha="1" colorSpace="calibratedRGB"/>
@@ -88,11 +82,13 @@
                         <outlet property="IconTable" destination="VOd-na-RBn" id="hUr-or-Gls"/>
                         <outlet property="Ncadastrado" destination="ATE-hn-1Wi" id="5RG-VI-Rl4"/>
                         <outlet property="cadastrado" destination="ZSk-dV-ZDU" id="rj4-UI-0bo"/>
+                        <segue destination="YOe-Rh-coN" kind="show" identifier="proCadastro" id="O3x-Fd-Le5"/>
+                        <segue destination="0Vd-7S-9Bo" kind="show" identifier="proLogin" id="3t8-uE-WHq"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-30" y="337"/>
+            <point key="canvasLocation" x="-31" y="518"/>
         </scene>
         <!--Tela Cadastro-->
         <scene sceneID="uQJ-Nw-c8M">
@@ -2526,7 +2522,7 @@
         <image name="x.png" width="359" height="359"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="guF-kB-DRu"/>
-        <segue reference="Te4-Tk-Xt8"/>
+        <segue reference="3t8-uE-WHq"/>
+        <segue reference="O3x-Fd-Le5"/>
     </inferredMetricsTieBreakers>
 </document>
