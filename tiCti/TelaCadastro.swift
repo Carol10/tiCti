@@ -170,7 +170,9 @@ class TelaCadastro: UIViewController, UITableViewDataSource, UITableViewDelegate
             Alert3.addAction(UIAlertAction(title: "Close", style: .Default, handler: {
                 (action: UIAlertAction!) in
             }))
-            self.presentViewController(Alert3, animated: true, completion: nil)
+            dispatch_async(dispatch_get_main_queue(), { () -> Void in
+                self.presentViewController(Alert3, animated: true, completion: nil)
+            })
             
             j = 2
         }else{
