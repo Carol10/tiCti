@@ -136,7 +136,10 @@ class TelaCadastro: UIViewController, UITableViewDataSource, UITableViewDelegate
                             Alert1.addAction(UIAlertAction(title: "Close", style: .Default, handler: {
                                 (action: UIAlertAction!) in
                             }))
-                            self.presentViewController(Alert1, animated: true, completion: nil)
+                            NSOperationQueue.mainQueue().addOperationWithBlock({ () -> Void in
+                                self.presentViewController(Alert1, animated: true, completion: nil)
+                            })
+                            
                         }
                     })
                 }else{
@@ -145,8 +148,9 @@ class TelaCadastro: UIViewController, UITableViewDataSource, UITableViewDelegate
                     Alert2.addAction(UIAlertAction(title: "Close", style: .Default, handler: {
                         (action: UIAlertAction!) in
                     }))
-                    self.presentViewController(Alert2, animated: true, completion: nil)
-                    
+                    NSOperationQueue.mainQueue().addOperationWithBlock({ () -> Void in
+                        self.presentViewController(Alert2, animated: true, completion: nil)
+                    })
                 }
              })
             
