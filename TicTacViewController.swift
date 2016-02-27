@@ -77,8 +77,9 @@ class TicTacViewController: UIViewController, tictiDelegate
                     {
                         winnerTicTacToe = "2\(player1)";
                     }
-                    
-                    self.performSegueWithIdentifier("fimDeJogo", sender: self);
+                    NSOperationQueue.mainQueue().addOperationWithBlock({ () -> Void in
+                        self.performSegueWithIdentifier("fimDeJogo", sender: self);
+                    })
                     
                 }
                 
@@ -95,7 +96,9 @@ class TicTacViewController: UIViewController, tictiDelegate
                 {
                     winnerTicTacToe = "E\(player1)"; //empate
                     print(winnerTicTacToe);
-                    self.performSegueWithIdentifier("fimDeJogo", sender: self);
+                    NSOperationQueue.mainQueue().addOperationWithBlock({ () -> Void in
+                        self.performSegueWithIdentifier("fimDeJogo", sender: self);
+                    })
                 }
             }
             
@@ -188,8 +191,9 @@ class TicTacViewController: UIViewController, tictiDelegate
                 {
                     winnerTicTacToe = "2\(player1)";print(winnerTicTacToe);
                 }
-                
-                self.performSegueWithIdentifier("fimDeJogo", sender: self);
+                NSOperationQueue.mainQueue().addOperationWithBlock({ () -> Void in
+                    self.performSegueWithIdentifier("fimDeJogo", sender: self);
+                })
             }
             
         }
@@ -205,7 +209,9 @@ class TicTacViewController: UIViewController, tictiDelegate
             {
                 winnerTicTacToe = "E\(player1)"; //empate
                 print(winnerTicTacToe);
-                self.performSegueWithIdentifier("fimDeJogo", sender: self);
+                NSOperationQueue.mainQueue().addOperationWithBlock({ () -> Void in
+                    self.performSegueWithIdentifier("fimDeJogo", sender: self);
+                })
                 
             }
         }

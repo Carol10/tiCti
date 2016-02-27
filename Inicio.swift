@@ -26,7 +26,9 @@ class Inicio: UIViewController
             
             timer.invalidate()
             
-            self.performSegueWithIdentifier("start", sender: self)
+            NSOperationQueue.mainQueue().addOperationWithBlock({ () -> Void in
+                    self.performSegueWithIdentifier("start", sender: self)
+            })
         }
     }
 

@@ -84,17 +84,23 @@ class GameViewController: UIViewController, tictiDelegate
             if(contP1 > contP2)//p1 ganha
             {
                 winner = 1
-                self.performSegueWithIdentifier("telaFim", sender: self)
+                NSOperationQueue.mainQueue().addOperationWithBlock({ () -> Void in
+                    self.performSegueWithIdentifier("telaFim", sender: self)
+                })
             }
             else if(contP2 > contP1)//p2 ganha
             {
                 winner = 2
-                self.performSegueWithIdentifier("telaFim", sender: self)
+                NSOperationQueue.mainQueue().addOperationWithBlock({ () -> Void in
+                    self.performSegueWithIdentifier("telaFim", sender: self)
+                })
             }
             else//empate
             {
                 winner = 0
-                self.performSegueWithIdentifier("telaFim", sender: self)
+                NSOperationQueue.mainQueue().addOperationWithBlock({ () -> Void in
+                    self.performSegueWithIdentifier("telaFim", sender: self)
+                })
             }
         }
     }

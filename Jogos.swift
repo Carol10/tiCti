@@ -124,7 +124,9 @@ class Jogos: UIViewController, tictiDelegate{
             let vc = DamasViewController()
             vc.meu_email = meu_email
             vc.inimigo_email = com
-            self.navigationController?.pushViewController(vc, animated: true)
+            NSOperationQueue.mainQueue().addOperationWithBlock({ () -> Void in
+                self.navigationController?.pushViewController(vc, animated: true)
+            })
             //self.presentViewController(vc, animated: true, completion: nil)
         }else if(jogo == 2){
 //            let vc = velhaViewController()
@@ -133,7 +135,9 @@ class Jogos: UIViewController, tictiDelegate{
             
             vc.meu_email = meu_email
             vc.inimigo_email = com
-            self.navigationController?.pushViewController(vc, animated: true)
+            NSOperationQueue.mainQueue().addOperationWithBlock({ () -> Void in
+                self.navigationController?.pushViewController(vc, animated: true)
+            })
             //3self.presentViewController(vc, animated: true, completion: nil)
         }else if(jogo == 3){
 //          let vc = pontosViewController()
@@ -143,7 +147,9 @@ class Jogos: UIViewController, tictiDelegate{
             vc.meu_email = meu_email
             vc.inimigo_email = com
            
-            self.navigationController?.pushViewController(vc, animated: true)
+            NSOperationQueue.mainQueue().addOperationWithBlock({ () -> Void in
+                self.navigationController?.pushViewController(vc, animated: true)
+            })
             // self.presentViewController(vc, animated: true, completion: nil)
         }
         

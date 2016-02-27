@@ -79,14 +79,18 @@ class TelaLogin: UIViewController, UITableViewDelegate, UITableViewDataSource, t
         tic.login(Email.text!, senha: Senha.text!) { (sucesso, nome) -> () in
             if(sucesso){
                 //self.presentViewController(nav, animated: true, completion: nil)
-                self.performSegueWithIdentifier("Logar", sender: self)
+                NSOperationQueue.mainQueue().addOperationWithBlock({ () -> Void in
+                    self.performSegueWithIdentifier("Logar", sender: self)
+                })
             }else{
                 let Alert1 = UIAlertController(title: "Inconsistencia no login", message:"Usuário ou senha incorretos.", preferredStyle: UIAlertControllerStyle.Alert)
                 
                 Alert1.addAction(UIAlertAction(title: "Close", style: .Default, handler: {
                     (action: UIAlertAction!) in
                 }))
-                self.presentViewController(Alert1, animated: true, completion: nil)
+                NSOperationQueue.mainQueue().addOperationWithBlock({ () -> Void in
+                    self.presentViewController(Alert1, animated: true, completion: nil)
+                })
                 
             }
             

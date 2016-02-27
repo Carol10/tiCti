@@ -109,7 +109,10 @@ class PerfilViewController: UIViewController, tictiDelegate, UIImagePickerContro
         Alert.addAction(UIAlertAction(title: "Close", style: .Default, handler: {
             (action: UIAlertAction!) in
         }))
-        self.presentViewController(Alert, animated: true, completion: nil)
+         NSOperationQueue.mainQueue().addOperationWithBlock({ () -> Void in
+            self.presentViewController(Alert, animated: true, completion: nil)
+        })
+        
     }
     
     @IBAction func alterDadosA(sender: AnyObject) {
@@ -118,7 +121,10 @@ class PerfilViewController: UIViewController, tictiDelegate, UIImagePickerContro
         Alert.addAction(UIAlertAction(title: "Close", style: .Default, handler: {
             (action: UIAlertAction!) in
         }))
-        self.presentViewController(Alert, animated: true, completion: nil)
+         NSOperationQueue.mainQueue().addOperationWithBlock({ () -> Void in
+            self.presentViewController(Alert, animated: true, completion: nil)
+        })
+        
     }
     
     @IBAction func EditaFotoA(sender: AnyObject)
@@ -159,7 +165,9 @@ class PerfilViewController: UIViewController, tictiDelegate, UIImagePickerContro
                     Alert1.addAction(UIAlertAction(title: "Close", style: .Default, handler: {
                         (action: UIAlertAction!) in
                     }))
-                    self.presentViewController(Alert1, animated: true, completion: nil)
+                    NSOperationQueue.mainQueue().addOperationWithBlock({ () -> Void in
+                        self.presentViewController(Alert1, animated: true, completion: nil)
+                    })
                     
                 }else{
                     let Alert2 = UIAlertController(title: "Editar foto", message: "Não foi possível alterar sua foto no momento, tente novamente mais tarde.", preferredStyle: UIAlertControllerStyle.Alert)
@@ -167,7 +175,9 @@ class PerfilViewController: UIViewController, tictiDelegate, UIImagePickerContro
                     Alert2.addAction(UIAlertAction(title: "Close", style: .Default, handler: {
                         (action: UIAlertAction!) in
                     }))
-                    self.presentViewController(Alert2, animated: true, completion: nil)
+                    NSOperationQueue.mainQueue().addOperationWithBlock({ () -> Void in
+                        self.presentViewController(Alert2, animated: true, completion: nil)
+                    })
                     
                 }
                 
