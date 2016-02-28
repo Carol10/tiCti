@@ -75,6 +75,9 @@ class ticti: NSObject , NSStreamDelegate{
             print("Conectado com o servidor")
             break
         case NSStreamEvent.HasBytesAvailable :
+            if self.inputStream == nil{
+                return;
+            }
             if(self.inputStream!.hasBytesAvailable){
                 // read bytes
                 let bufferSize = 7168
