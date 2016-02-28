@@ -357,12 +357,14 @@ class ticti: NSObject , NSStreamDelegate{
                 let URL = self.host+"?action=getImage&email=\(p["email"])"
                 print(URL)
                 NSURLSession.sharedSession().dataTaskWithURL(NSURL(string: URL)!, completionHandler: { (data, response, error) -> Void in
-                    iarr.addObject(UIImage(data: data!)!)
-                    n++;
-                    if(n == 3){
-                        dispatch_async(self.tictiQueue, { () -> Void in
-                            callback(dados: arr, imagens: iarr)
-                        })
+                    if (data != nil){
+                        iarr.addObject(UIImage(data: data!)!)
+                        n++;
+                        if(n == 3){
+                            dispatch_async(self.tictiQueue, { () -> Void in
+                                callback(dados: arr, imagens: iarr)
+                            })
+                        }
                     }
                 }).resume()
             }

@@ -154,8 +154,6 @@ class TelaCadastro: UIViewController, UITableViewDataSource, UITableViewDelegate
                 }
              })
             
-
-            
         }
         
         
