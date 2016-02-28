@@ -140,8 +140,9 @@ class ticti: NSObject , NSStreamDelegate{
     // MARK: Send and recieve
     func send(let data:NSDictionary){
         dispatch_async(tictiQueue) { () -> Void in
-            let jdata = try! NSJSONSerialization.dataWithJSONObject(data, options: NSJSONWritingOptions(rawValue: 0))
-            self.outputStream!.write(UnsafePointer<UInt8>(jdata.bytes), maxLength: jdata.length)
+            if let jdata = try? NSJSONSerialization.dataWithJSONObject(data, options: NSJSONWritingOptions(rawValue: 0)){
+                self.outputStream?.write(UnsafePointer<UInt8>(jdata.bytes), maxLength: jdata.length)
+            }
         }
     }
     
@@ -220,18 +221,23 @@ class ticti: NSObject , NSStreamDelegate{
         email = email.stringByAddingPercentEncodingWithAllowedCharacters(NSCharacterSet.URLQueryAllowedCharacterSet())!
         senha = senha.stringByAddingPercentEncodingWithAllowedCharacters(NSCharacterSet.URLQueryAllowedCharacterSet())!
         let url: NSURL = NSURL(string: host+"?action=login&email=\(email)&senha=\(senha)")!
-        var result = NSDictionary()
+        //var result = NSDictionary()
         let task = NSURLSession.sharedSession().dataTaskWithURL(url) { (data, response, error) -> Void in
-            result = try! NSJSONSerialization.JSONObjectWithData(data!, options: NSJSONReadingOptions(rawValue: 0)) as! NSDictionary
-            print(result)
-            if(result["status"] as! String == "sucess" ){
-                dispatch_async(self.tictiQueue, { () -> Void in
-                    callback(sucesso: true, nome: result["nome"] as! String)
-                })
-            }else{
-                dispatch_async(self.tictiQueue, { () -> Void in
-                    callback(sucesso: false, nome: "")
-                })
+            if error != nil{
+                callback(sucesso: false, nome: "")
+                return;
+            }
+            if let result = try? NSJSONSerialization.JSONObjectWithData(data!, options: NSJSONReadingOptions(rawValue: 0)) as! NSDictionary{
+                print(result)
+                if(result["status"] as! String == "sucess" ){
+                    dispatch_async(self.tictiQueue, { () -> Void in
+                        callback(sucesso: true, nome: result["nome"] as! String)
+                    })
+                }else{
+                    dispatch_async(self.tictiQueue, { () -> Void in
+                        callback(sucesso: false, nome: "")
+                    })
+                }
             }
         }
         task.resume()
@@ -258,13 +264,18 @@ class ticti: NSObject , NSStreamDelegate{
     }
     func verificaDisponibilidadeDoemail(email: String, callback:(disponivel:Bool) -> ()){
         let url: NSURL = NSURL(string: host+"?action=disponibilidade&email=\(email)")!
-        var result = NSDictionary()
+        //var result = NSDictionary()
         let task = NSURLSession.sharedSession().dataTaskWithURL(url) { (data, response, error) -> Void in
-            result = try! NSJSONSerialization.JSONObjectWithData(data!, options: NSJSONReadingOptions(rawValue: 0)) as! NSDictionary
-            if(result["status"] as! String == "sucess" ){
-                callback(disponivel: true)
-            }else{
-                callback(disponivel: false)
+            if error != nil{
+                //callback(disponivel: false)
+                return;
+            }
+            if let result = try? NSJSONSerialization.JSONObjectWithData(data!, options: NSJSONReadingOptions(rawValue: 0)) as! NSDictionary{
+                if(result["status"] as! String == "sucess" ){
+                    callback(disponivel: true)
+                }else{
+                    callback(disponivel: false)
+                }
             }
         }
         task.resume()
@@ -308,6 +319,12 @@ class ticti: NSObject , NSStreamDelegate{
             request.HTTPBody = body
             
             NSURLSession.sharedSession().dataTaskWithRequest(request, completionHandler: { (data, response, error) -> Void in
+                if error != nil{
+                    dispatch_async(self.tictiQueue, { () -> Void in
+                        callback(enviado: false)
+                    })
+                    return;
+                }
                 let result = try! NSJSONSerialization.JSONObjectWithData(data!, options: NSJSONReadingOptions(rawValue: 0)) as! NSDictionary
                 //print(result)
                 
@@ -338,10 +355,13 @@ class ticti: NSObject , NSStreamDelegate{
             
             NSURLSession.sharedSession().dataTaskWithURL(NSURL(string:url)!, completionHandler: { (Data, Response, Error) -> Void in
                 print("ola")
-                imagem = UIImage(data: Data!);
-                dispatch_async(dispatch_get_main_queue(), { () -> Void in
-                    callback(nome: nome, email: email, jogando: jogando, vitorias: vitorias, derrotas: derrotas, imagem: imagem);
-                })
+                if Data != nil{
+                    imagem = UIImage(data: Data!);
+                    dispatch_async(dispatch_get_main_queue(), { () -> Void in
+                        callback(nome: nome, email: email, jogando: jogando, vitorias: vitorias, derrotas: derrotas, imagem: imagem);
+                    })
+                }
+                
             }).resume()
         }
         task.resume()
@@ -350,6 +370,9 @@ class ticti: NSObject , NSStreamDelegate{
         let urlStr = host+"?action=getRanking"
         let url = NSURL(string: urlStr)!;
         let task = NSURLSession.sharedSession().dataTaskWithURL(url) { (data, response, error) -> Void in
+            if error != nil{
+                return;
+            }
             let arr = try! NSJSONSerialization.JSONObjectWithData(data!, options: NSJSONReadingOptions(rawValue: 0)) as! NSArray
             let iarr = NSMutableArray();
             var n = 0;
