@@ -29,7 +29,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "247"
             endingLineNumber = "247"
-            landmarkName = "cadastra(_:senha:email:callback:)"
+            landmarkName = "login(_:senha:callback:)"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
