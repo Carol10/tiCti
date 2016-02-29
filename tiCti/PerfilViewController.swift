@@ -93,7 +93,8 @@ class PerfilViewController: UIViewController, tictiDelegate, UIImagePickerContro
     }
     override func viewDidAppear(animated: Bool) {
         if let url = NSURL(string: "http://52.35.18.221/?action=saiuDoJogo&email=\(meu_email)"){
-            NSURLSession.sharedSession().dataTaskWithURL(url)
+            let task = NSURLSession.sharedSession().dataTaskWithURL(url)
+            task.resume()
         }
     }
 
