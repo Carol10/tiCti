@@ -34,7 +34,7 @@ class PerfilViewController: UIViewController, tictiDelegate, UIImagePickerContro
     @IBOutlet weak var alterarDados: UIButton!
     
     let maxFileSize = 1024
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         print("email: \(meu_email)")
@@ -136,20 +136,36 @@ class PerfilViewController: UIViewController, tictiDelegate, UIImagePickerContro
         }
     }
     
-    func imagePickerController(picker: UIImagePickerController, didFinishPickingImage image: UIImage, editingInfo: [String : AnyObject]?) {
+    func imagePickerController(picker: UIImagePickerController, var didFinishPickingImage image: UIImage, editingInfo: [String : AnyObject]?)
+    {
+        //resize image
+        var tempImage = UIImage();
+        let targetSize = CGSizeMake(200,200);
         
+        UIGraphicsBeginImageContext(targetSize);
+        
+        var thumbnailRect = CGRectMake(0, 0, 0, 0);
+        thumbnailRect.origin = CGPointMake(0.0,0.0);
+        thumbnailRect.size.width  = targetSize.width;
+        thumbnailRect.size.height = targetSize.height;
+        
+        image.drawInRect(thumbnailRect);
+        tempImage = UIGraphicsGetImageFromCurrentImageContext();
+        
+        UIGraphicsEndImageContext();
+        //fim -resize image
+
         //comprime imagem
-        var comp:CGFloat = 0.5
-        let maxCompression:CGFloat = 0.1
-        var imageData = UIImageJPEGRepresentation(image, comp)
+        let imageData = UIImageJPEGRepresentation(tempImage, 0.1);
         
-        while (imageData!.length > maxFileSize) && (comp > maxCompression)
-        {
-            comp -= 0.1
-            imageData = UIImageJPEGRepresentation(image, comp)
-        }
-    
+//        while (imageData!.length > maxFileSize) && (comp > maxCompression)
+//        {
+//            comp -= 0.1
+//            imageData = UIImageJPEGRepresentation(image, comp)
+//        }
+        
         print("comprimindo imagem...");
+        print("tam final: \(imageData!.length) / tam ideal:\(maxFileSize)");
         
         fotoPerfil.image = UIImage(data: imageData!);
         
