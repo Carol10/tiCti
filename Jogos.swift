@@ -87,23 +87,30 @@ class Jogos: UIViewController, tictiDelegate{
     }
     
     func goDama(){
-        self.I.backgroundColor = UIColor(red:(168.0/255.0),green:(200.0/255.0),blue:(89.0/255.0),alpha:1.0)
-        tic.meuemail = meu_email
-        tic.queroJogar(1)
+        dispatch_async(dispatch_get_main_queue()) { () -> Void in
+            self.I.backgroundColor = UIColor(red:(168.0/255.0),green:(200.0/255.0),blue:(89.0/255.0),alpha:1.0)
+            self.tic.meuemail = self.meu_email
+            self.tic.queroJogar(1)
+        }
     }
     func goVelha(){
-        self.J.backgroundColor = UIColor(red:(168.0/255.0),green:(200.0/255.0),blue:(89.0/255.0),alpha:1.0)
-        tic.meuemail = meu_email
-        tic.queroJogar(2)
+        dispatch_async(dispatch_get_main_queue()) { () -> Void in
+            self.J.backgroundColor = UIColor(red:(168.0/255.0),green:(200.0/255.0),blue:(89.0/255.0),alpha:1.0)
+            self.tic.meuemail = self.meu_email
+            self.tic.queroJogar(2)
+        }
         self.Bvelha.userInteractionEnabled=false
         dispatch_after(dispatch_time(DISPATCH_TIME_NOW, Int64(NSEC_PER_SEC)), dispatch_get_main_queue(), { () -> Void in
             self.Bvelha.userInteractionEnabled=true
         })
     }
     func goPontinhos(){
-        self.K.backgroundColor = UIColor(red:(168.0/255.0),green:(200.0/255.0),blue:(89.0/255.0),alpha:1.0)
-        tic.meuemail = meu_email
-        tic.queroJogar(3)
+        dispatch_async(dispatch_get_main_queue()) { () -> Void in
+            self.K.backgroundColor = UIColor(red:(168.0/255.0),green:(200.0/255.0),blue:(89.0/255.0),alpha:1.0)
+            self.tic.meuemail = self.meu_email
+            self.tic.queroJogar(3)
+        }
+        
         self.Bpontos.userInteractionEnabled=false
         dispatch_after(dispatch_time(DISPATCH_TIME_NOW, Int64(NSEC_PER_SEC)), dispatch_get_main_queue(), { () -> Void in
             self.Bpontos.userInteractionEnabled=true

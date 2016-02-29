@@ -91,6 +91,11 @@ class PerfilViewController: UIViewController, tictiDelegate, UIImagePickerContro
         alterarDados.layer.shadowOffset = CGSize(width: 3.0, height: 2.0)
         alterarDados.layer.cornerRadius = 10.0
     }
+    override func viewDidAppear(animated: Bool) {
+        if let url = NSURL(string: "http://52.35.18.221/?action=saiuDoJogo&email=\(meu_email)"){
+            NSURLSession.sharedSession().dataTaskWithURL(url)
+        }
+    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
